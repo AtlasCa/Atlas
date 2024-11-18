@@ -1,0 +1,835 @@
+<header class="main-header">
+    <div class="container">
+        <div class="brand">
+ <h1>AtlasCard</h1>
+        </div>
+        <nav class="main-nav">
+            <ul class="center-nav">
+                <li><a href="index.html" class="nav-link">Главная</a></li>
+                <li><a href="#tariffs-section" class="nav-link">Тарифы</a></li>
+                <li><a href="index.html" class="learn-more">FAQ</a></li>
+                <li><a href="index.html" class="nav-link">О нас</a></li>
+                <li><a href="index.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div id="qr-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img src="img/QRcode.png" alt="QR Code to chat bot">
+        <h2>AtlasCard - это удобное мини-приложение в Telegram</h2>
+        <p>Нажмите "Продолжить", чтобы открыть с текущего устройства</p>
+        <a href="https://t.me/AtlasCard_bot" class="continue-button">Продолжить →</a>
+    </div>
+</div>
+
+<section class="card-animation-section">
+    <div class="container card-layout">
+        <div class="card-animation">
+            <img src="img/animated-card.png" alt="Animated Card" class="animated-card">
+        </div>
+        <div class="card-info">
+            <h2>Выпустить зарубежную карту</h2>
+            <p>Стоимость выпуска виртуальных и предоплаченных карт AtlasCard</p>
+        </div>
+    </div>
+</section>
+
+<section class="tariffs-section" id="tariffs-section">
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="prepaid">Предоплаченная</button>
+            <button class="tab-button" data-tab="virtual">Виртуальная</button>
+            <button class="tab-button" data-tab="gift">Подарочная</button>
+        </div>
+        
+        <!-- Секция для Предоплаченной карты -->
+        <div class="tab-content" id="prepaid" style="display: block;">
+            <div class="card-content">
+                <img src="img/prepaid-card.png" alt="Prepaid Card" style="width: 30%;" class="animated-card">
+                <div class="card-info">
+                    <h3>Предоплаченная</h3>
+                    <p>Предоплаченная карта с фиксированным номиналом баланса от 5 $ до 1,000 $</p>
+                    <button class="card-button open-qr-modal">Выпустить карту</button>
+                </div>
+            </div>
+            <table class="tariffs-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Prepaid</th>
+                    <th>Virtual</th>
+                    <th>Gift (ваучеры)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Выпуск карты</td>
+                    <td>от 790 RUB*</td>
+                    <td>3,490 RUB</td>
+                    <td>от 1,280 RUB</td>
+                </tr>
+                <tr>
+                    <td>Ежемесячное обслуживание</td>
+                    <td>0 RUB</td>
+                    <td>690 RUB</td>
+                    <td>0 RUB</td>
+                </tr>
+                <tr>
+                    <td>Валюта баланса</td>
+                    <td>USD/EUR</td>
+                    <td>USD/EUR</td>
+                    <td>USD</td>
+                </tr>
+                <tr>
+                    <td>Номиналы карт</td>
+                    <td>от 5 до 1,000 USD</td>
+                    <td>до 100,000 USD</td>
+                    <td>от 10 до 100 USD</td>
+                </tr>
+                <tr>
+                    <td>Срок действия карты</td>
+                    <td>60 дней</td>
+                    <td>36 месяцев</td>
+                    <td>Одноразовая</td>
+                </tr>
+                <tr>
+                    <td>Пополнение баланса</td>
+                    <td>Нет</td>
+                    <td>Да</td>
+                    <td>Нет</td>
+                </tr>
+                <tr>
+                    <td>Apple & Google Pay</td>
+                    <td>Нет</td>
+                    <td>Да</td>
+                    <td>Нет</td>
+                </tr>
+                <tr>
+                    <td>Поддержка 3D-secure</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                </tr>
+                    <tr>
+                        <td>Пополнение в USDT</td>
+                        <td>Нет</td>
+                        <td>Да</td>
+                        <td>Нетtd>
+                    </tr>
+                    <tr>
+                        <td>Возврат/Обмен</td>
+                        <td>Нет**</td>
+                        <td>Нет**</td>
+                        <td>Нет**</td>
+                    </tr>
+                    <tr>
+                        <td>Служба поддержки</td>
+                        <td>Да</td>
+                        <td>Да</td>
+                        <td>Да</td>
+                    </tr>
+            </tbody>
+
+            </table>
+        <p class="tariffs-note">*стоимость карты включена в стоимость номинала согласно тарифам Telegram-бота<br>
+        **возврат карты возможен только при технической неисправности самой карты и соблюдении условий, читайте более подробно условия возврата и использования в разделе FAQ</p>
+        </div>
+
+        <!-- Секция для Виртуальной карты -->
+        <div class="tab-content" id="virtual" style="display: none;">
+            <div class="card-content">
+                <img src="img/virtual-card.png" alt="Virtual Card" style="width: 30%;" class="animated-card">
+                <div class="card-info">
+                    <h3>Виртуальная</h3>
+                    <p>Виртуальная карта с балансом и выгодными тарифами на пополнение от 5 $ до 100,000 $</p>
+                    <button class="card-button open-qr-modal">Выпустить карту</button>
+                </div>
+            </div>
+            <table class="tariffs-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Prepaid</th>
+                    <th>Virtual</th>
+                    <th>Gift (ваучеры)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Выпуск карты</td>
+                    <td>от 790 RUB*</td>
+                    <td>3,490 RUB</td>
+                    <td>от 1,280 RUB</td>
+                </tr>
+                <tr>
+                    <td>Ежемесячное обслуживание</td>
+                    <td>0 RUB</td>
+                    <td>690 RUB</td>
+                    <td>0 RUB</td>
+                </tr>
+                <tr>
+                    <td>Валюта баланса</td>
+                    <td>USD/EUR</td>
+                    <td>USD/EUR</td>
+                    <td>USD</td>
+                </tr>
+                <tr>
+                    <td>Номиналы карт</td>
+                    <td>от 5 до 1,000 USD</td>
+                    <td>до 100,000 USD</td>
+                    <td>от 10 до 100 USD</td>
+                </tr>
+                <tr>
+                    <td>Срок действия карты</td>
+                    <td>60 дней</td>
+                    <td>36 месяцев</td>
+                    <td>Одноразовая</td>
+                </tr>
+                <tr>
+                    <td>Пополнение баланса</td>
+                    <td>Нет</td>
+                    <td>Да</td>
+                    <td>Нет</td>
+                </tr>
+                <tr>
+                    <td>Apple & Google Pay</td>
+                    <td>Нет</td>
+                    <td>Да</td>
+                    <td>Нет</td>
+                </tr>
+                <tr>
+                    <td>Поддержка 3D-secure</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                </tr>
+                    <tr>
+                        <td>Пополнение в USDT</td>
+                        <td>Нет</td>
+                        <td>Да</td>
+                        <td>Нетtd>
+                    </tr>
+                    <tr>
+                        <td>Возврат/Обмен</td>
+                        <td>Нет**</td>
+                        <td>Нет**</td>
+                        <td>Нет**</td>
+                    </tr>
+                    <tr>
+                        <td>Служба поддержки</td>
+                        <td>Да</td>
+                        <td>Да</td>
+                        <td>Да</td>
+                    </tr>
+            </tbody>
+
+            </table>
+        <p class="tariffs-note">*стоимость карты включена в стоимость номинала согласно тарифам Telegram-бота<br>
+        **возврат карты возможен только при технической неисправности самой карты и соблюдении условий, читайте более подробно условия возврата и использования в разделе FAQ</p>
+        </div>
+
+        <!-- Секция для Подарочной карты -->
+        <div class="tab-content" id="gift" style="display: none;">
+            <div class="card-content">
+                <img src="img/gift-card.png" alt="Gift Card" style="width: 30%;" class="animated-card">
+                <div class="card-info">
+                    <h3>Подарочная</h3>
+                    <p>Подарочная карта с фиксированным номиналом баланса от 10$ до 100$</p>
+                    <button class="card-button open-qr-modal">Выпустить карту</button>
+                </div>
+            </div>
+            <table class="tariffs-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Prepaid</th>
+                    <th>Virtual</th>
+                    <th>Gift (ваучеры)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Выпуск карты</td>
+                    <td>от 790 RUB*</td>
+                    <td>3,490 RUB</td>
+                    <td>от 1,280 RUB</td>
+                </tr>
+                <tr>
+                    <td>Ежемесячное обслуживание</td>
+                    <td>0 RUB</td>
+                    <td>690 RUB</td>
+                    <td>0 RUB</td>
+                </tr>
+                <tr>
+                    <td>Валюта баланса</td>
+                    <td>USD/EUR</td>
+                    <td>USD/EUR</td>
+                    <td>USD</td>
+                </tr>
+                <tr>
+                    <td>Номиналы карт</td>
+                    <td>от 5 до 1,000 USD</td>
+                    <td>до 100,000 USD</td>
+                    <td>от 10 до 100 USD</td>
+                </tr>
+                <tr>
+                    <td>Срок действия карты</td>
+                    <td>60 дней</td>
+                    <td>36 месяцев</td>
+                    <td>Одноразовая</td>
+                </tr>
+                <tr>
+                    <td>Пополнение баланса</td>
+                    <td>Нет</td>
+                    <td>Да</td>
+                    <td>Нет</td>
+                </tr>
+                <tr>
+                    <td>Apple & Google Pay</td>
+                    <td>Нет</td>
+                    <td>Да</td>
+                    <td>Нет</td>
+                </tr>
+                <tr>
+                    <td>Поддержка 3D-secure</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                </tr>
+                    <tr>
+                        <td>Пополнение в USDT</td>
+                        <td>Нет</td>
+                        <td>Да</td>
+                        <td>Нетtd>
+                    </tr>
+                    <tr>
+                        <td>Возврат/Обмен</td>
+                        <td>Нет**</td>
+                        <td>Нет**</td>
+                        <td>Нет**</td>
+                    </tr>
+                    <tr>
+                        <td>Служба поддержки</td>
+                        <td>Да</td>
+                        <td>Да</td>
+                        <td>Да</td>
+                    </tr>
+            </tbody>
+
+            </table>
+        <p class="tariffs-note">*стоимость карты включена в стоимость номинала согласно тарифам Telegram-бота<br>
+        **возврат карты возможен только при технической неисправности самой карты и соблюдении условий, читайте более подробно условия возврата и использования в разделе FAQ</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="features-section">
+    <div class="container">
+        <div class="feature-card">
+            <img src="img/debit-card.png" alt="Мультивалютные платежи">
+            <h3>Мультивалютные платежи</h3>
+            <p>Оплачивайте покупки по всему миру в иностранной валюте</p>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-lock.png" alt="Поддержка 3D-Secure">
+            <h3>Поддержка 3D-Secure</h3>
+            <p>Безопасные платежи с 3D-верификацией</p>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-shield.png" alt="Гарантия оплаты">
+            <h3>Гарантия оплаты</h3>
+            <p>Гарантируем оплату или вернем вам средства</p>
+        </div>
+    </div>
+<!-- Button for All Services -->
+<div class="all-services-button-container">
+    <a href="services.html" class="all-services-button-link">
+        <button class="all-services-button">Все сервисы</button>
+    </a>
+</div>
+
+
+<div class="footer">
+    <div class="container">
+        <button class="privacy-policy-button">Политика конфиденциальности</button>
+    </div>
+</div>
+
+</section>
+
+<style>
+    .features-section {
+        padding: 60px 20px;
+        background-color: #F1F1F1
+    }
+
+    .features-section .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .feature-card {
+        background-color: #00154D;
+        color: #FFFFFF;
+        padding: 20px;
+        border-radius: 15px;
+        width: 30%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .feature-card img {
+        width: 60px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .feature-card p {
+        font-size: 1.5rem;
+        color: #D1D1D1;
+    }
+
+    .all-services-button-container {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .all-services-button {
+        background-color: #FF9F00;
+        color: #FFFFFF;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .all-services-button:hover {
+        background-color: #12401E;
+    }
+</style>
+
+<style>
+    /* Footer Styling */
+    .footer {
+        background-color: #F1F1F1;
+        color: #FFFFFF;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .privacy-policy-button {
+        background-color: #F1F1F1;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .privacy-policy-button:hover {
+        background-color: #FFFFFF;
+        color: #12401E;
+    }
+
+    /* Main Header Styling */
+    body {
+        background-color: #F1F1F1;
+        color: #12401E;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-header {
+        background-color: #FFFFFF;
+        padding: 5px;
+    }
+
+    .main-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-header .brand img {
+        max-height: 50px;
+        margin-right: auto;
+    }
+
+    .main-header .main-nav {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-header .main-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .main-header .main-nav ul.center-nav {
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .main-header .main-nav ul li {
+        margin-left: 20px;
+    }
+
+    .main-header .main-nav ul li a {
+        color: #12401E;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+        font-weight: bold; /* Добавляем жирный шрифт */
+    }
+
+    .main-header .main-nav ul li a:hover {
+        color: #FF9F00;
+    }
+
+    /* Modal Styling */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 40%;
+        margin: auto;
+        position: relative;
+        text-align: center;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close-button:hover, .close-button:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .continue-button {
+        background-color: #FF9F00;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .continue-button:hover {
+        background-color: #12401E;
+    }
+
+    /* Card Animation Section */
+    .card-animation-section {
+        padding: 60px 210px;
+    }
+
+    .card-layout {
+        display: flex;
+        align-items: left;
+        justify-content: space-between;
+        flex-direction: row; /* Фотография слева, текст справа */
+    }
+
+    .card-animation {
+        width: 75%;
+        animation: floatCard 3s ease-in-out infinite;
+    }
+
+    .card-info {
+        width: 60%;
+        text-align: left;
+  margin-left: -200px; /* Сдвинуть текст левее */
+    }
+
+    .animated-card {
+        width: 50%;
+        animation: floatCard 3s ease-in-out infinite;
+    }
+
+    .card-info h2 {
+        font-size: 5rem;
+        color: #12401E;
+    }
+
+    .card-info p {
+        font-size: 2.5rem;
+        color: #6A6A6A;
+    }
+
+    @keyframes floatCard {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+</style>
+
+<style>
+    .tariffs-section {
+        padding: 60px 20px;
+        background-color: #F1F1F1;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .tab-button {
+        background-color: #12401E;
+        color: #FFFFFF;
+        border: none;
+        padding: 15px 30px;
+        margin: 0 35px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 10px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .tab-button.active {
+        background-color: #FF9F00;
+        transform: scale(1.1);
+    }
+
+    .card-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px 0;
+    }
+
+    .tab-button:hover {
+        background-color: #FF9F00;
+        transform: scale(1.1);
+    }
+
+    .card-info {
+        max-width: 40%;
+    }
+
+    .card-info h3 {
+        font-size: 3rem;
+        color: #12401E;
+    }
+
+    .card-info p {
+        font-size: 1.8rem;
+        color: #6A6A6A;
+    }
+
+    .card-button {
+        background-color: #FF9F00;
+        color: #FFFFFF;
+        padding: 20px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+    }
+
+    .card-button:hover {
+        background-color: #12401E;
+    }
+
+    .tariffs-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .tariffs-table th, .tariffs-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    .tariffs-table th {
+        background-color: #12401E;
+        color: #FFFFFF;
+    }
+
+    .tariffs-table td {
+        color: #6A6A6A;
+    }
+
+</style>
+
+<style>
+    /* Existing styles */
+    .modal-content {
+        background-color: #12401E; /* Замените этот цвет на нужный вам */
+        color: #FFFFFF; /* Цвет текста в модальном окне */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 40%;
+        margin: auto;
+        position: relative;
+        text-align: center;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #FFFFFF; /* Цвет крестика */
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close-button:hover, .close-button:focus {
+        color: #FF9F00; /* Цвет крестика при наведении */
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .continue-button {
+        background-color: #FF9F00;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .continue-button:hover {
+        background-color: #FFFFFF;
+        color: #12401E;
+    }
+</style>
+
+<script>
+    // Tabs functionality
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+            document.getElementById(this.getAttribute('data-tab')).style.display = 'block';
+            this.classList.add('active');
+        });
+    });
+</script>
+
+<script>
+    // Modal functionality for QR code
+    document.querySelectorAll('.open-qr-modal').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('qr-modal').style.display = 'flex';
+        });
+    });
+
+    document.querySelector('.close-button').addEventListener('click', function() {
+        document.getElementById('qr-modal').style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == document.getElementById('qr-modal')) {
+            document.getElementById('qr-modal').style.display = 'none';
+        }
+    });
+
+    // Tabs functionality
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+            document.getElementById(this.getAttribute('data-tab')).style.display = 'block';
+            this.classList.add('active');
+        });
+    });
+
+<script>
+    // Tabs functionality to switch between Prepaid, Pro, and Gift sections
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', function () {
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            this.classList.add('active');
+
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+
+            // Show the selected tab content
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById(tabId).style.display = 'block';
+        });
+    });
+</script>
+
+<script>
+    // Modal functionality for QR code
+    document.querySelectorAll('.open-qr-modal').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('qr-modal').style.display = 'flex';
+        });
+    });
+
+    document.querySelector('.close-button').addEventListener('click', function() {
+        document.getElementById('qr-modal').style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == document.getElementById('qr-modal')) {
+            document.getElementById('qr-modal').style.display = 'none';
+        }
+    });
+</script>
+
+    <footer>
+<section id="contact" class="contact">
+        <p>&copy; 2024 AtlasCard. Все права защищены.</p>
+        <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
+    </footer>
