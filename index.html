@@ -335,6 +335,37 @@
             animation: fadeIn 0.6s;
         }
 
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    .continue-button {
+        background-color: #FF9F00;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .continue-button:hover {
+        background-color: #FFFFFF;
+        color: #12401E;
+    }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -402,7 +433,7 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            transform: translate(-50%, -50%) scale(0.6); /* Центрирование видео */
+            transform: translate(-50%, -50%) scale(0.7); /* Центрирование видео */
             object-fit: cover; /* Обрезка видео для заполнения */
         }
 
@@ -591,6 +622,8 @@ function toggleMenu() {
 <!-- Modal window -->
 <div id="modal" class="modal">
     <div class="modal-content">
+<button class="close-button" onclick="closeModal()">&#10005;</button>
+
         <div class="modal-left">
             <img src="img/vipustit.png" alt="AtlasCard Phone" style="max-width: 250%; height: auto;">
         </div>
@@ -598,7 +631,7 @@ function toggleMenu() {
             <h2>AtlasCard - это удобное мини-приложение в Telegram</h2>
             <img src="img/QRcode.png" alt="QR code" style="max-width: 300px; height: auto;">
             <p>Нажмите "Продолжить", чтобы открыть с текущего устройства</p>
-            <a href="https://t.me/AtlasCard_bot" class="hero-button">Продолжить</a>
+            <a href="https://t.me/AtlasCard_bot" class="hero-button" style="padding: 8px 20px; font-size: 1rem;">Продолжить</a>
         </div>
     </div>
 </div>
@@ -944,6 +977,7 @@ function toggleMenu() {
             }
         }
 
+
 </style>
 
 
@@ -1205,6 +1239,23 @@ function toggleMenu() {
             right: 15px;
         }
 
+            .footer {
+            background-color: #12401E;
+            color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .footer a {
+            color: #FF9F00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #FFFFFF;
+        }
 </style>
 
 <script>
@@ -1306,13 +1357,14 @@ function toggleMenu() {
     /* Основные элементы */
     body {
         font-size: 16px;
+        overflow-x: hidden;
     }
 
     /* Шапка */
     header {
         flex-direction: column;
-        padding: 10px;
-        height: auto;
+        padding: 15px;
+        height: 60px;
         position: relative;
     }
 
@@ -1330,8 +1382,9 @@ function toggleMenu() {
         color: #12401E;
         z-index: 1001;
         background: white;
-        padding: 5px 10px;
+        padding: 8px 12px;
         border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .mobile-menu {
@@ -1340,10 +1393,16 @@ function toggleMenu() {
         top: 0;
         left: 0;
         width: 100%;
-        background: #12401E;
-        padding: 60px 20px 20px;
+        background: rgba(18, 64, 30, 0.98);
+        padding: 80px 20px 20px;
         padding-top: 70px;
         z-index: 999;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .mobile-menu.active {
+        display: block;
+        transform: translateX(0);
     }
 
     .mobile-menu ul {
@@ -1353,15 +1412,29 @@ function toggleMenu() {
     }
 
     .mobile-menu li {
-        margin: 15px 0;
+        margin: 20px 0;
         text-align: center;
         border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding-bottom: 15px;
     }
 
     .mobile-menu a {
         color: white;
+        font-size: 1.4rem;
         text-decoration: none;
-        font-size: 1.2rem;
+        display: block;
+        padding: 10px;
+    }
+
+    /* Секции */
+    .hero-section,
+    .features-section,
+    .cards-online-section,
+    .services-section,
+    .reviews-section,
+    .faq-section,
+    .start-section {
+        padding: 40px 15px;
     }
 
     /* Видео секция */
@@ -1396,20 +1469,22 @@ function toggleMenu() {
         font-size: 1.2rem !important;
     }
 
-    /* Карточки и сетки */
-    .features-container,
-    .cards-online-container,
-    .reviews-container {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 15px;
-    }
 
     /* Карточка в герой секции */
     .hero-section div[style*="width: 450px"] {
         width: 90% !important;
         height: auto !important;
         margin: 20px auto !important;
+    }
+
+    /* Контейнеры и сетки */
+    .container,
+    .features-container,
+    .cards-online-container,
+    .reviews-container {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        padding: 20px;
     }
 
     /* Кнопки */
@@ -1420,12 +1495,6 @@ function toggleMenu() {
         display: inline-block !important;
     }
 
-    /* Сетки */
-    .container, .features-container {
-        grid-template-columns: 1fr !important;
-        gap: 20px;
-        padding: 20px;
-    }
 
     /* Карточки */
     .feature-card {
@@ -1435,11 +1504,11 @@ function toggleMenu() {
 
     /* Модальное окно */
     .modal-content {
-        width: 90%;
+        width: 95%;
         padding: 20px;
         flex-direction: column;
-        margin: 10% auto;
-        border-radius: 20px;
+        margin: 5% auto;
+        border-radius: 15px;
     }
 
     .modal-left img {
@@ -1486,6 +1555,15 @@ function toggleMenu() {
         font-size: 1rem !important;
     }
 
+    .hero-section h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .feature-card,
+    .review-item {
+        padding: 15px;
+    }
+
     .feature-card h3 {
         font-size: 1.4rem;
     }
@@ -1508,18 +1586,13 @@ function toggleMenu() {
 
     /* Начальная секция */
     .start-section h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .start-section p {
         font-size: 1.2rem;
     }
 
-    /* Карточки онлайн */
-    .cards-online-container {
-        flex-direction: column;
-        gap: 20px;
-    }
 
     .card-type {
         width: 100%;
@@ -1539,9 +1612,11 @@ function toggleMenu() {
 </style>
 
 
-    <footer>
-<section id="contact" class="contact">
+<footer id="footer" class="footer">
+    <section id="contact" class="contact">
         <p>&copy; 2024 AtlasCard. Все права защищены.</p>
         <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
-    </footer>
+    </section>
+</footer>
+
 
