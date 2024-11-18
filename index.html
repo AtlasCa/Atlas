@@ -406,52 +406,26 @@
             object-fit: cover; /* Обрезка видео для заполнения */
         }
 
-
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 10px;
-        align-items: center;
-    }
-
-    .features-section .container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .feature-card {
-        width: 100%; /* Карточки займут всю ширину экрана на маленьких устройствах */
-    }
-
-    .video-section {
-        height: 50vh; /* Уменьшаем высоту видео на мобильных устройствах */
-    }
-
-    .all-services-button {
-        width: 90%;
-    }
-
-    .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .modal-content {
-        width: 90%; /* Увеличиваем ширину модального окна на мобильных устройствах */
-    }
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
 }
 
-@media (max-width: 768px) {
-    video {
-        transform: translate(-50%, -50%) scale(1); /* Возвращаем стандартный масштаб */
-        min-width: auto; 
-        min-height: auto;
-        width: 100vw; /* Ширина видео - вся ширина экрана */
-        height: auto; /* Высота пропорциональна */
-    }
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #12401E;
+    z-index: 999;
 }
 
+.mobile-menu.active {
+    display: block;
+}
 
     </style>
 </head>
@@ -472,51 +446,22 @@
 </nav>
 
 <script>
-    function toggleMenu() {
-        const menu = document.getElementById('mobileMenu');
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const burger = document.querySelector('.burger-menu');
+    
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        burger.innerHTML = '☰';
+        document.body.style.overflow = '';
+    } else {
+        menu.classList.add('active');
+        burger.innerHTML = '✕';
+        document.body.style.overflow = 'hidden';
     }
+}
 </script>
 
-    </style>
-.burger-menu {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #FFFFFF;
-}
-
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #12401E;
-}
-
-@media (max-width: 768px) {
-    .burger-menu {
-        display: block;
-    }
-
-    .main-nav ul {
-        display: none;
-    }
-}
-
-/* Уменьшаем размер иконок в карточках на мобильных устройствах */
-@media (max-width: 768px) {
-    .feature-card img {
-        width: 30px;
-    }
-}
-
-/* Уменьшаем размер кнопок на мобильных устройствах */
-@media (max-width: 768px) {
-    .all-services-button, .feature-card button {
-        padding: 15px 20px;
-        font-size: 1rem;
-    }
-}
     </style>
     <!-- Видеосекция -->
     <section class="video-section">
@@ -1260,46 +1205,6 @@
             right: 15px;
         }
 
-
-.burger-menu {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #FFFFFF;
-}
-
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #12401E;
-}
-
-@media (max-width: 768px) {
-    .burger-menu {
-        display: block;
-    }
-
-    .main-nav ul {
-        display: none;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .feature-card img {
-        width: 30px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .all-services-button, .feature-card button {
-        padding: 15px 20px;
-        font-size: 1rem;
-    }
-}
-
 </style>
 
 <script>
@@ -1309,26 +1214,6 @@
             faqItem.classList.toggle('open');
         });
     });
-</script>
-
-<div class="burger-menu" onclick="toggleMenu()">
-    ☰
-</div>
-<nav class="mobile-menu" id="mobileMenu">
-    <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#tariffs-section">Тарифы</a></li>
-        <li><a href="#faq-section">FAQ</a></li>
-        <li><a href="#about-section">О нас</a></li>
-        <li><a href="#contact">Контакты</a></li>
-    </ul>
-</nav>
-
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('mobileMenu');
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    }
 </script>
 
 
@@ -1415,55 +1300,244 @@
     .start-button:hover {
         background-color: #12401E;
     }
-</style>
 
-
-
-    <style>
 @media (max-width: 768px) {
+
+    /* Основные элементы */
+    body {
+        font-size: 16px;
+    }
+
+    /* Шапка */
     header {
         flex-direction: column;
         padding: 10px;
-        align-items: center;
+        height: auto;
+        position: relative;
     }
 
-    .features-section .container {
+    .nav-container {
+        display: none; /* Скрываем стандартное меню */
+    }
+
+    /* Бургер-меню */
+    .burger-menu {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        color: #12401E;
+        z-index: 1001;
+        background: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #12401E;
+        padding: 60px 20px 20px;
+        padding-top: 70px;
+        z-index: 999;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu li {
+        margin: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .mobile-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    /* Видео секция */
+    .video-section {
+        height: 50vh;
+    }
+
+    video {
+        transform: translate(-50%, -50%) scale(1);
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    /* Герой секция */
+    .hero-section {
+        padding: 20px;
+        padding-top: 80px;
+        height: auto;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem !important;
+        margin-bottom: 15px;
+    }
+
+    .hero-section h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem !important;
+    }
+
+    /* Карточки и сетки */
+    .features-container,
+    .cards-online-container,
+    .reviews-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* Карточка в герой секции */
+    .hero-section div[style*="width: 450px"] {
+        width: 90% !important;
+        height: auto !important;
+        margin: 20px auto !important;
+    }
+
+    /* Кнопки */
+    .hero-button, .small-hero-button, .modal-button {
+        padding: 15px 25px !important;
+        font-size: 1.2rem !important;
+        width: auto !important;
+        display: inline-block !important;
+    }
+
+    /* Сетки */
+    .container, .features-container {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    /* Карточки */
+    .feature-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Модальное окно */
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+        flex-direction: column;
+        margin: 10% auto;
+        border-radius: 20px;
+    }
+
+    .modal-left img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Секция сервисов */
+    .services-section .container {
+        flex-direction: column !important;
+    }
+
+    .service-logos img {
+        width: 60px !important;
+    }
+
+    /* Бегущая строка */
+    .marquee img {
+        width: 50px !important;
+    }
+
+    /* Секция "Начать" */
+    .start-section .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    /* Отступы секций */
+    section {
+        padding: 40px 15px;
+    }
+}
+
+/* Дополнительные медиа-запросы для очень маленьких экранов */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+
+    .hero-button, 
+    .small-hero-button {
+        padding: 12px 20px !important;
+        font-size: 1rem !important;
+    }
+
+    .feature-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+    }
+}
+
+    /* FAQ секция */
+    .faq-question {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    /* Отзывы */
+    .reviews-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Начальная секция */
+    .start-section h2 {
+        font-size: 2rem;
+    }
+
+    .start-section p {
+        font-size: 1.2rem;
+    }
+
+    /* Карточки онлайн */
+    .cards-online-container {
         flex-direction: column;
         gap: 20px;
     }
 
-    .feature-card {
-        width: 100%; /* Карточки займут всю ширину экрана на маленьких устройствах */
-    }
-
-    .video-section {
-        height: 50vh; /* Уменьшаем высоту видео на мобильных устройствах */
-    }
-
-    .all-services-button {
-        width: 90%;
-    }
-
-    .main-nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .modal-content {
-        width: 90%; /* Увеличиваем ширину модального окна на мобильных устройствах */
+    .card-type {
+        width: 100%;
+        margin: 10px 0;
     }
 }
 
-@media (max-width: 768px) {
-    video {
-        transform: translate(-50%, -50%) scale(1); /* Возвращаем стандартный масштаб */
-        min-width: auto; 
-        min-height: auto;
-        width: 100vw; /* Ширина видео - вся ширина экрана */
-        height: auto; /* Высота пропорциональна */
-    }
+.mobile-menu {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
 }
-    </style>
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+</style>
+
 
     <footer>
 <section id="contact" class="contact">
