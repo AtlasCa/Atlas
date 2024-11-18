@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AtlasCard - Тарифы, FAQ, Новости, О нас</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -453,130 +453,44 @@
 }
 
 
-// ... existing code ...
+    </style>
+</head>
 
-/* Добавьте эти медиа-запросы в конец вашего CSS */
-@media (max-width: 768px) {
-    /* Шапка */
-    header {
-        padding: 10px;
+<body>
+
+<div class="burger-menu" onclick="toggleMenu()">
+    ☰
+</div>
+<nav class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="#tariffs-section">Тарифы</a></li>
+        <li><a href="#faq-section">FAQ</a></li>
+        <li><a href="#about-section">О нас</a></li>
+        <li><a href="#contact">Контакты</a></li>
+    </ul>
+</nav>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     }
+</script>
 
-    .nav-container {
-        display: none; /* Скрываем обычное меню */
-    }
-
-    /* Герой секция */
-    .hero-section h1 {
-        font-size: 3rem; /* Уменьшаем размер заголовка */
-    }
-
-    .hero-section h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero-section p {
-        font-size: 1.2rem;
-    }
-
-    /* Карточка */
-    .hero-section div[style*="width: 450px"] {
-        width: 90% !important; /* Изменяем фиксированную ширину карточки */
-        height: 200px !important;
-    }
-
-    /* Кнопки */
-    .hero-button, .small-hero-button {
-        padding: 15px 30px;
-        font-size: 1.2rem;
-        width: 80%;
-        margin: 10px auto;
-    }
-
-    /* Сетки */
-    .container, .features-container {
-        grid-template-columns: 1fr; /* Одна колонка на мобильных */
-        gap: 20px;
-        padding: 10px;
-    }
-
-    /* Модальное окно */
-    .modal-content {
-        flex-direction: column;
-        padding: 20px;
-        border-radius: 20px;
-    }
-
-    .modal-right h2 {
-        font-size: 1.5rem;
-    }
-
-    /* FAQ секция */
-    .faq-question {
-        font-size: 1.4rem;
-        padding: 10px 15px;
-    }
-
-    /* Секция сервисов */
-    .services-section .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .service-text {
-        padding-right: 0;
-        margin-bottom: 30px;
-    }
-
-    .service-logos img {
-        width: 60px; /* Уменьшаем размер логотипов */
-    }
-
-    /* Отзывы */
-    .review-item {
-        margin: 10px;
-    }
-
-    /* Начальная секция */
-    .start-section h2 {
-        font-size: 2rem;
-    }
-
-    .start-section p {
-        font-size: 1.2rem;
-    }
-}
-
-/* Дополнительные стили для очень маленьких экранов */
-@media (max-width: 480px) {
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
-
-    .feature-card {
-        padding: 15px;
-    }
-
-    .feature-card h3 {
-        font-size: 1.4rem;
-    }
-
-    .feature-card p {
-        font-size: 1.1rem;
-    }
-}
-
-/* Стили для бургер-меню */
+    </style>
 .burger-menu {
     display: none;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1001;
-    background: #12401E;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #12401E;
 }
 
 @media (max-width: 768px) {
@@ -584,37 +498,26 @@
         display: block;
     }
 
-    .mobile-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: #12401E;
-        padding: 60px 20px 20px;
-        z-index: 1000;
-    }
-
-    .mobile-menu ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .mobile-menu li {
-        margin: 15px 0;
-    }
-
-    .mobile-menu a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
+    .main-nav ul {
+        display: none;
     }
 }
 
+/* Уменьшаем размер иконок в карточках на мобильных устройствах */
+@media (max-width: 768px) {
+    .feature-card img {
+        width: 30px;
+    }
+}
+
+/* Уменьшаем размер кнопок на мобильных устройствах */
+@media (max-width: 768px) {
+    .all-services-button, .feature-card button {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+}
     </style>
-</head>
-
-<body>
-
     <!-- Видеосекция -->
     <section class="video-section">
         <video autoplay loop muted playsinline>
@@ -1400,22 +1303,6 @@
 </style>
 
 <script>
-    const burgerMenu = document.querySelector('.burger-menu');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    
-    burgerMenu.addEventListener('click', () => {
-        mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
-    });
-
-    // Закрытие меню при клике на пункт меню
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.style.display = 'none';
-        });
-    });
-</script>
-
-<script>
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
             const faqItem = button.parentElement;
@@ -1531,6 +1418,52 @@
 </style>
 
 
+
+    <style>
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .features-section .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature-card {
+        width: 100%; /* Карточки займут всю ширину экрана на маленьких устройствах */
+    }
+
+    .video-section {
+        height: 50vh; /* Уменьшаем высоту видео на мобильных устройствах */
+    }
+
+    .all-services-button {
+        width: 90%;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-content {
+        width: 90%; /* Увеличиваем ширину модального окна на мобильных устройствах */
+    }
+}
+
+@media (max-width: 768px) {
+    video {
+        transform: translate(-50%, -50%) scale(1); /* Возвращаем стандартный масштаб */
+        min-width: auto; 
+        min-height: auto;
+        width: 100vw; /* Ширина видео - вся ширина экрана */
+        height: auto; /* Высота пропорциональна */
+    }
+}
+    </style>
 
     <footer>
 <section id="contact" class="contact">
