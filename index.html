@@ -335,17 +335,6 @@
             animation: fadeIn 0.6s;
         }
 
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            color: #FFFFFF;
-            cursor: pointer;
-        }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -463,6 +452,163 @@
     }
 }
 
+
+// ... existing code ...
+
+/* Добавьте эти медиа-запросы в конец вашего CSS */
+@media (max-width: 768px) {
+    /* Шапка */
+    header {
+        padding: 10px;
+    }
+
+    .nav-container {
+        display: none; /* Скрываем обычное меню */
+    }
+
+    /* Герой секция */
+    .hero-section h1 {
+        font-size: 3rem; /* Уменьшаем размер заголовка */
+    }
+
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    /* Карточка */
+    .hero-section div[style*="width: 450px"] {
+        width: 90% !important; /* Изменяем фиксированную ширину карточки */
+        height: 200px !important;
+    }
+
+    /* Кнопки */
+    .hero-button, .small-hero-button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    /* Сетки */
+    .container, .features-container {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных */
+        gap: 20px;
+        padding: 10px;
+    }
+
+    /* Модальное окно */
+    .modal-content {
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .modal-right h2 {
+        font-size: 1.5rem;
+    }
+
+    /* FAQ секция */
+    .faq-question {
+        font-size: 1.4rem;
+        padding: 10px 15px;
+    }
+
+    /* Секция сервисов */
+    .services-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .service-logos img {
+        width: 60px; /* Уменьшаем размер логотипов */
+    }
+
+    /* Отзывы */
+    .review-item {
+        margin: 10px;
+    }
+
+    /* Начальная секция */
+    .start-section h2 {
+        font-size: 2rem;
+    }
+
+    .start-section p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .feature-card {
+        padding: 15px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .feature-card p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Стили для бургер-меню */
+.burger-menu {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+    background: #12401E;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #12401E;
+        padding: 60px 20px 20px;
+        z-index: 1000;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-menu li {
+        margin: 15px 0;
+    }
+
+    .mobile-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+}
 
     </style>
 </head>
@@ -597,7 +743,6 @@
 <!-- Modal window -->
 <div id="modal" class="modal">
     <div class="modal-content">
-<button class="close-button" onclick="closeModal()">&#10005;</button>
         <div class="modal-left">
             <img src="img/vipustit.png" alt="AtlasCard Phone" style="max-width: 250%; height: auto;">
         </div>
@@ -605,7 +750,7 @@
             <h2>AtlasCard - это удобное мини-приложение в Telegram</h2>
             <img src="img/QRcode.png" alt="QR code" style="max-width: 300px; height: auto;">
             <p>Нажмите "Продолжить", чтобы открыть с текущего устройства</p>
-            <a href="https://t.me/AtlasCard_bot" class="hero-button" style="padding: 30px 20px; font-size: 1rem;">Продолжить</a>
+            <a href="https://t.me/AtlasCard_bot" class="hero-button">Продолжить</a>
         </div>
     </div>
 </div>
@@ -1255,6 +1400,22 @@
 </style>
 
 <script>
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    burgerMenu.addEventListener('click', () => {
+        mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Закрытие меню при клике на пункт меню
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.style.display = 'none';
+        });
+    });
+</script>
+
+<script>
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
             const faqItem = button.parentElement;
@@ -1367,16 +1528,9 @@
     .start-button:hover {
         background-color: #12401E;
     }
-
 </style>
 
 
-
-    <style>
-        0%); }
-            to { transform: translateX(-100%); }
-        }
-    </style>
 
     <footer>
 <section id="contact" class="contact">
