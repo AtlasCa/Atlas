@@ -335,6 +335,17 @@
             animation: fadeIn 0.6s;
         }
 
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -586,6 +597,7 @@
 <!-- Modal window -->
 <div id="modal" class="modal">
     <div class="modal-content">
+<button class="close-button" onclick="closeModal()">&#10005;</button>
         <div class="modal-left">
             <img src="img/vipustit.png" alt="AtlasCard Phone" style="max-width: 250%; height: auto;">
         </div>
@@ -593,7 +605,7 @@
             <h2>AtlasCard - это удобное мини-приложение в Telegram</h2>
             <img src="img/QRcode.png" alt="QR code" style="max-width: 300px; height: auto;">
             <p>Нажмите "Продолжить", чтобы открыть с текущего устройства</p>
-            <a href="https://t.me/AtlasCard_bot" class="hero-button">Продолжить</a>
+            <a href="https://t.me/AtlasCard_bot" class="hero-button" style="padding: 8px 20px; font-size: 1rem;">Продолжить</a>
         </div>
     </div>
 </div>
@@ -1355,6 +1367,7 @@
     .start-button:hover {
         background-color: #12401E;
     }
+
 </style>
 
 
