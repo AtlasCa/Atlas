@@ -308,6 +308,50 @@
             margin-bottom: 40px;
         }
 
+.hero-section img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Установите ограничение по ширине для мобильных */
+}
+
+.small-button, .hero-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.features-section h2 {
+    font-size: 2rem; /* Уменьшите размер заголовка на мобильных */
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    font-size: 1.2rem;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature-card {
+    flex: 1 1 calc(100% - 40px);
+    max-width: 100%;
+}
+
+.marquee-section {
+    padding: 20px;
+}
+
+.features-section {
+    padding: 20px 10px;
+}
+
         /* Modal styles */
         .modal {
             display: none;
@@ -402,7 +446,7 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            transform: translate(-50%, -50%) scale(0.7); /* Центрирование видео */
+            transform: translate(-50%, -50%) scale(0.6); /* Центрирование видео */
             object-fit: cover; /* Обрезка видео для заполнения */
         }
 
@@ -1265,10 +1309,15 @@
 </nav>
 
 <script>
-    function toggleMenu() {
-        const menu = document.getElementById('mobileMenu');
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
     }
+}
+
 </script>
 
 
@@ -1314,6 +1363,55 @@
 </section>
 
 <style>
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    header nav {
+        gap: 15px; /* Уменьшите отступы для навигации */
+        position: static; /* Устраните смещение влево */
+    }
+
+    .hero-section {
+        height: auto; /* Уберите фиксированную высоту */
+        padding: 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    .hero-button, .small-button {
+        padding: 15px 30px; /* Уменьшите размер кнопок для мобильных */
+        font-size: 1.2rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Один элемент в строке для мобильных */
+        gap: 20px;
+    }
+
+    .feature-card {
+        width: 100%; /* Карточки займут всю ширину экрана */
+    }
+}
+
+
     /* Improved "Не знаете с чего начать?" section */
     .start-section {
         padding: 80px 20px;
@@ -1355,6 +1453,33 @@
     .start-button:hover {
         background-color: #12401E;
     }
+
+.burger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #12401E;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #12401E;
+        width: 100%;
+    }
+
+    .main-nav ul.open {
+        display: flex;
+    }
+}
+
 </style>
 
 
