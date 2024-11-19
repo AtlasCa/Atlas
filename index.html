@@ -1531,9 +1531,16 @@ function toggleMenu() {
     }
 
     /* Бегущая строка */
-    .marquee img {
-        width: 50px !important;
+@media (max-width: 768px) {
+    .marquee {
+        gap: 30px; /* Уменьшаем расстояние между логотипами на мобильной версии */
     }
+
+    .marquee img {
+        width: 120px; /* Увеличиваем ширину логотипов для мобильных устройств */
+        height: auto; /* Сохраняем пропорции логотипов */
+    }
+}
 
     /* Секция "Начать" */
     .start-section .container {
