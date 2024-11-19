@@ -1438,15 +1438,18 @@ function toggleMenu() {
     }
 
     /* Видео секция */
-@media screen and (orientation: portrait) 
+@media (max-width: 768px) 
     .video-section {
-        height: 90vh; /* Почти весь экран в вертикальной ориентации */
+        height: 70vh; /* Увеличение высоты контейнера на 70% от видимой части экрана */
     }
 
     video {
-        height: 100%;
-        width: auto;
-        object-fit: cover;
+        height: 100vh; /* Видео занимает 100% высоты экрана */
+        width: auto; /* Автоматическая ширина, чтобы сохранить пропорции */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover; /* Обрезка видео для заполнения контейнера */
     }
 
     /* Герой секция */
