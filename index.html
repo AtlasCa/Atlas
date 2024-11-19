@@ -1438,14 +1438,14 @@ function toggleMenu() {
     }
 
     /* Видео секция */
+@media screen and (orientation: portrait) 
     .video-section {
-        height: 50vh;
+        height: 90vh; /* Почти весь экран в вертикальной ориентации */
     }
 
     video {
-        transform: translate(-50%, -50%) scale(1);
-        width: 100vw;
-        height: 100vh;
+        height: 100%;
+        width: auto;
         object-fit: cover;
     }
 
