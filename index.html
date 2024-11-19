@@ -729,9 +729,11 @@ function toggleMenu() {
         }
 
         .cards-online-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
+    display: flex;
+    gap: 30px; /* Расстояние между карточками */
+    justify-content: center; /* Распределяем карточки с равными отступами */
+    max-width: 1200px;
+    margin: 0 auto; /* Центрируем секцию */
         }
 
         .card-type {
@@ -1480,12 +1482,24 @@ function toggleMenu() {
     /* Контейнеры и сетки */
     .container,
     .features-container,
-    .cards-online-container,
     .reviews-container {
         grid-template-columns: 1fr !important;
         gap: 80px;
         padding: 20px;
     }
+
+/* Стили для мобильной версии */
+@media (max-width: 768px) {
+    .cards-online-container {
+        flex-direction: column; /* Изменяем расположение карточек на вертикальное */
+        gap: 20px; /* Расстояние между карточками для мобильных устройств */
+        align-items: center; /* Центрируем карточки на экране */
+    }
+
+    .card-type {
+        width: 100%; /* Карточки занимают всю ширину экрана на мобильных */
+    }
+}
 
     /* Кнопки */
     .hero-button, .small-hero-button, .modal-button {
@@ -1601,12 +1615,6 @@ function toggleMenu() {
         font-size: 1.2rem;
     }
 
-
-
-    .card-type {
-        width: 100%;
-        margin: 10px 0;
-    }
 }
 
 .mobile-menu {
