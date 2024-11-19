@@ -1452,6 +1452,12 @@ function toggleMenu() {
         object-fit: cover; /* Обрезка видео для заполнения контейнера */
     }
 
+@media (max-width: 768px) 
+    .hero-section div[style*="width: 450px"] {
+        transform: none !important; /* Убираем трансформации на малых экранах */
+    }
+
+
     /* Герой секция */
     .hero-section {
         padding: 20px;
