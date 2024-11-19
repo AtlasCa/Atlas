@@ -221,7 +221,7 @@
             margin: 40px auto 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 60px;
         }
 
         @keyframes slideIn {
@@ -729,14 +729,19 @@ function toggleMenu() {
         }
 
         .cards-online-container {
-        flex-direction: column;
-        align-items: center;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
         }
 
         .card-type {
-        width: 100%;
-        max-width: 100%;
-        margin: 10px 0;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card-type:hover {
@@ -1363,16 +1368,6 @@ function toggleMenu() {
         position: relative;
     }
 
-/* Мобильная версия */
-@media (max-width: 768px) {
-    video {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-    }
-
-
     .nav-container {
         display: none; /* Скрываем стандартное меню */
     }
@@ -1442,39 +1437,32 @@ function toggleMenu() {
         padding: 40px 15px;
     }
 
+    /* Видео секция */
     .video-section {
-    height: 100vh;
-    position: relative;
-    margin-top: 60px;
-    width: 100%;
-    overflow: hidden;
+        height: 50vh;
     }
 
     video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
+        transform: translate(-50%, -50%) scale(1);
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
     }
 
     /* Герой секция */
-    .hero-section div[style*="width: 450px"] {
-        width: 90% !important;
-        height: auto !important;
-        margin: 20px auto !important;
-        display: block !important; /* Показываем карту */
+    .hero-section {
+        padding: 20px;
+        padding-top: 80px;
+        height: auto;
     }
 
-
     .hero-section h1 {
-        font-size: 2.5rem !important;
+        font-size: 2rem !important;
         margin-bottom: 15px;
     }
 
     .hero-section h2 {
-        font-size: 1.8rem !important;
+        font-size: 1.5rem !important;
     }
 
     .hero-section p {
@@ -1492,48 +1480,32 @@ function toggleMenu() {
     /* Контейнеры и сетки */
     .container,
     .features-container,
+    .cards-online-container,
     .reviews-container {
         grid-template-columns: 1fr !important;
         gap: 20px;
         padding: 20px;
     }
 
-/* Исправление секции карт */
-.cards-online-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
     /* Кнопки */
     .hero-button, .small-hero-button, .modal-button {
-        padding: 15px 25px !important;
-        font-size: 1.2rem !important;
-        width: auto !important;
-        display: inline-block !important;
+        padding: 12px 20px !important;
+        font-size: 1rem !important;
     }
 
 
     /* Карточки */
     .feature-card {
-        width: 100%;
-        margin: 10px 0;
+        padding: 15px;
     }
 
     /* Модальное окно */
     .modal-content {
-        width: 90%;
+        width: 95%;
         padding: 20px;
         flex-direction: column;
-        margin: 20% auto;
-        border-radius: 20px;
-    }
-
-    .modal-right h2 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        margin: 5% auto;
+        border-radius: 15px;
     }
 
     .modal-left img {
@@ -1547,16 +1519,12 @@ function toggleMenu() {
     }
 
     .service-logos img {
-        width: 80px !important;
+        width: 60px !important;
     }
 
-    /* 4. Бегущая строка */
-    .marquee {
-        gap: 20px; /* Уменьшаем отступы между иконками */
-    }
-
+    /* Бегущая строка */
     .marquee img {
-        width: 40px; /* Уменьшаем размер иконок */
+        width: 50px !important;
     }
 
     /* Секция "Начать" */
@@ -1624,10 +1592,10 @@ function toggleMenu() {
 
 
 
-.card-type {
-    flex: 1;
-    max-width: 380px;
-}
+    .card-type {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
 
 .mobile-menu {
