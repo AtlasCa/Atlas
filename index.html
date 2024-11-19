@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AtlasCard - Тарифы, FAQ, Новости, О нас</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -338,33 +338,13 @@
         .close-button {
             position: absolute;
             top: 10px;
-            right: 15px;
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #FFFFFF;
             cursor: pointer;
         }
-
-        .close-button:hover,
-        .close-button:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-    .continue-button {
-        background-color: #FF9F00;
-        color: #FFFFFF;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .continue-button:hover {
-        background-color: #FFFFFF;
-        color: #12401E;
-    }
 
         @keyframes fadeIn {
             from {
@@ -433,37 +413,62 @@
             min-height: 100%;
             width: auto;
             height: auto;
-            transform: translate(-50%, -50%) scale(0.7); /* Центрирование видео */
+            transform: translate(-50%, -50%) scale(0.6); /* Центрирование видео */
             object-fit: cover; /* Обрезка видео для заполнения */
         }
 
-.burger-menu {
-    display: none;
-    cursor: pointer;
-    z-index: 1000;
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .features-section .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature-card {
+        width: 100%; /* Карточки займут всю ширину экрана на маленьких устройствах */
+    }
+
+    .video-section {
+        height: 50vh; /* Уменьшаем высоту видео на мобильных устройствах */
+    }
+
+    .all-services-button {
+        width: 90%;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-content {
+        width: 90%; /* Увеличиваем ширину модального окна на мобильных устройствах */
+    }
 }
 
-.mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #12401E;
-    z-index: 999;
+@media (max-width: 768px) {
+    video {
+        transform: translate(-50%, -50%) scale(1); /* Возвращаем стандартный масштаб */
+        min-width: auto; 
+        min-height: auto;
+        width: 100vw; /* Ширина видео - вся ширина экрана */
+        height: auto; /* Высота пропорциональна */
+    }
 }
 
-.mobile-menu.active {
-    display: block;
-}
 
     </style>
 </head>
 
 <body>
 
-    </style>
     <!-- Видеосекция -->
     <section class="video-section">
         <video autoplay loop muted playsinline>
@@ -486,36 +491,6 @@
             </nav>
         </div>
     </header>
-
-<div class="burger-menu" onclick="toggleMenu()">
-    ☰
-</div>
-<nav class="mobile-menu" id="mobileMenu">
-    <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#tariffs-section">Тарифы</a></li>
-        <li><a href="#faq-section">FAQ</a></li>
-        <li><a href="#about-section">О нас</a></li>
-        <li><a href="#contact">Контакты</a></li>
-    </ul>
-</nav>
-
-<script>
-function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    const burger = document.querySelector('.burger-menu');
-    
-    if (menu.classList.contains('active')) {
-        menu.classList.remove('active');
-        burger.innerHTML = '☰';
-        document.body.style.overflow = '';
-    } else {
-        menu.classList.add('active');
-        burger.innerHTML = '✕';
-        document.body.style.overflow = 'hidden';
-    }
-}
-</script>
 
     <section class="hero-section" style="background-color: #F1F1F1; padding-top: 30px;">
         <div style="margin-top: -50px;">
@@ -623,7 +598,6 @@ function toggleMenu() {
 <div id="modal" class="modal">
     <div class="modal-content">
 <button class="close-button" onclick="closeModal()">&#10005;</button>
-
         <div class="modal-left">
             <img src="img/vipustit.png" alt="AtlasCard Phone" style="max-width: 250%; height: auto;">
         </div>
@@ -631,7 +605,7 @@ function toggleMenu() {
             <h2>AtlasCard - это удобное мини-приложение в Telegram</h2>
             <img src="img/QRcode.png" alt="QR code" style="max-width: 300px; height: auto;">
             <p>Нажмите "Продолжить", чтобы открыть с текущего устройства</p>
-            <a href="https://t.me/AtlasCard_bot" class="hero-button" style="padding: 8px 20px; font-size: 1rem;">Продолжить</a>
+            <a href="https://t.me/AtlasCard_bot" class="hero-button" style="padding: 30px 20px; font-size: 1rem;">Продолжить</a>
         </div>
     </div>
 </div>
@@ -977,7 +951,6 @@ function toggleMenu() {
             }
         }
 
-
 </style>
 
 
@@ -1239,23 +1212,46 @@ function toggleMenu() {
             right: 15px;
         }
 
-            .footer {
-            background-color: #12401E;
-            color: #FFFFFF;
-            padding: 40px 20px;
-            text-align: center;
-            font-size: 1rem;
-        }
 
-        .footer a {
-            color: #FF9F00;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+.burger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #FFFFFF;
+}
 
-        .footer a:hover {
-            color: #FFFFFF;
-        }
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #12401E;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .main-nav ul {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .feature-card img {
+        width: 30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .all-services-button, .feature-card button {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+}
+
 </style>
 
 <script>
@@ -1265,6 +1261,26 @@ function toggleMenu() {
             faqItem.classList.toggle('open');
         });
     });
+</script>
+
+<div class="burger-menu" onclick="toggleMenu()">
+    ☰
+</div>
+<nav class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#tariffs-section">Тарифы</a></li>
+        <li><a href="#faq-section">FAQ</a></li>
+        <li><a href="#about-section">О нас</a></li>
+        <li><a href="#contact">Контакты</a></li>
+    </ul>
+</nav>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
 </script>
 
 
@@ -1352,269 +1368,19 @@ function toggleMenu() {
         background-color: #12401E;
     }
 
-@media (max-width: 768px) {
-
-    /* Основные элементы */
-    body {
-        font-size: 16px;
-        overflow-x: hidden;
-    }
-
-    /* Шапка */
-    header {
-        flex-direction: column;
-        padding: 15px;
-        height: 60px;
-        position: relative;
-    }
-
-    .nav-container {
-        display: none; /* Скрываем стандартное меню */
-    }
-
-    /* Бургер-меню */
-    .burger-menu {
-        display: block;
-        position: fixed;
-        top: 15px;
-        right: 15px;
-        font-size: 24px;
-        color: #12401E;
-        z-index: 1001;
-        background: white;
-        padding: 8px 12px;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .mobile-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(18, 64, 30, 0.98);
-        padding: 80px 20px 20px;
-        padding-top: 70px;
-        z-index: 999;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .mobile-menu.active {
-        display: block;
-        transform: translateX(0);
-    }
-
-    .mobile-menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .mobile-menu li {
-        margin: 20px 0;
-        text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        padding-bottom: 15px;
-    }
-
-    .mobile-menu a {
-        color: white;
-        font-size: 1.4rem;
-        text-decoration: none;
-        display: block;
-        padding: 10px;
-    }
-
-    /* Секции */
-    .hero-section,
-    .features-section,
-    .cards-online-section,
-    .services-section,
-    .reviews-section,
-    .faq-section,
-    .start-section {
-        padding: 40px 15px;
-    }
-
-    /* Видео секция */
-    .video-section {
-        height: 50vh;
-    }
-
-    video {
-        transform: translate(-50%, -50%) scale(1);
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    /* Герой секция */
-    .hero-section {
-        padding: 20px;
-        padding-top: 80px;
-        height: auto;
-    }
-
-    .hero-section h1 {
-        font-size: 2rem !important;
-        margin-bottom: 15px;
-    }
-
-    .hero-section h2 {
-        font-size: 1.5rem !important;
-    }
-
-    .hero-section p {
-        font-size: 1.2rem !important;
-    }
-
-
-    /* Карточка в герой секции */
-    .hero-section div[style*="width: 450px"] {
-        width: 90% !important;
-        height: auto !important;
-        margin: 20px auto !important;
-    }
-
-    /* Контейнеры и сетки */
-    .container,
-    .features-container,
-    .cards-online-container,
-    .reviews-container {
-        grid-template-columns: 1fr !important;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    /* Кнопки */
-    .hero-button, .small-hero-button, .modal-button {
-        padding: 12px 20px !important;
-        font-size: 1rem !important;
-    }
-
-
-    /* Карточки */
-    .feature-card {
-        padding: 15px;
-    }
-
-    /* Модальное окно */
-    .modal-content {
-        width: 95%;
-        padding: 20px;
-        flex-direction: column;
-        margin: 5% auto;
-        border-radius: 15px;
-    }
-
-    .modal-left img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Секция сервисов */
-    .services-section .container {
-        flex-direction: column !important;
-    }
-
-    .service-logos img {
-        width: 60px !important;
-    }
-
-    /* Бегущая строка */
-    .marquee img {
-        width: 50px !important;
-    }
-
-    /* Секция "Начать" */
-    .start-section .container {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    /* Отступы секций */
-    section {
-        padding: 40px 15px;
-    }
-}
-
-/* Дополнительные медиа-запросы для очень маленьких экранов */
-@media (max-width: 480px) {
-    .hero-section h1 {
-        font-size: 2rem !important;
-    }
-
-    .hero-button, 
-    .small-hero-button {
-        padding: 12px 20px !important;
-        font-size: 1rem !important;
-    }
-
-    .hero-section h2 {
-        font-size: 1.5rem !important;
-    }
-
-    .feature-card,
-    .review-item {
-        padding: 15px;
-    }
-
-    .feature-card h3 {
-        font-size: 1.4rem;
-    }
-
-    .feature-card p {
-        font-size: 1rem;
-    }
-}
-
-    /* FAQ секция */
-    .faq-question {
-        font-size: 1.2rem;
-        padding: 10px 15px;
-    }
-
-    /* Отзывы */
-    .reviews-container {
-        grid-template-columns: 1fr !important;
-    }
-
-    /* Начальная секция */
-    .start-section h2 {
-        font-size: 1.8rem;
-    }
-
-    .start-section p {
-        font-size: 1.2rem;
-    }
-
-
-
-    .card-type {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
-.mobile-menu {
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%);
-}
-
-.mobile-menu.active {
-    transform: translateX(0);
-}
-
 </style>
 
 
-<footer id="footer" class="footer">
-    <section id="contact" class="contact">
+
+    <style>
+        0%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+
+    <footer>
+<section id="contact" class="contact">
         <p>&copy; 2024 AtlasCard. Все права защищены.</p>
         <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
-    </section>
-</footer>
-
+    </footer>
 
