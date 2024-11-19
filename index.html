@@ -1563,24 +1563,26 @@ function toggleMenu() {
     
 
     /* Карта внутри контейнера */
-    .hero-section div[style*="width: 450px"] > div {
-        padding: 15px !important;  /* Уменьшаем padding для карты, чтобы она не выглядела перегруженной */
-        border-radius: 15px !important;  /* Уменьшаем скругление углов, чтобы лучше смотрелось на мобильных */
-        box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.1), 0 0 15px rgba(0, 255, 0, 0.3); /* Легкий эффект свечения */
-    
-
 @media (max-width: 768px) {
+    /* Адаптация контейнера с картой в hero-секции */
     .hero-section div[style*="width: 450px"] {
-        display: block !important; /* Устанавливаем отображение блока */
-        visibility: visible !important; /* Гарантируем, что элемент будет видим */
+        width: 90% !important;  /* Используем 90% ширины экрана */
+        height: auto !important;  /* Высота адаптируется автоматически */
+        margin: 20px auto !important;  /* Центрируем карту */
+        transform: none !important;  /* Убираем любые трансформации */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Легкая тень */
+        display: block !important; /* Гарантируем отображение */
+        visibility: visible !important; /* Делаем элемент видимым */
+    }
+
+    /* Адаптация текста на карте */
+    .hero-section div[style*="width: 450px"] h1, 
+    .hero-section div[style*="width: 450px"] h2, 
+    .hero-section div[style*="width: 450px"] p {
+        font-size: 1.2rem !important; /* Уменьшаем размер текста */
+        text-align: center !important; /* Центрируем текст */
     }
 }
-
-/* Дополнительные медиа-запросы для очень маленьких экранов */
-@media (max-width: 480px) {
-    .hero-section h1 {
-        font-size: 2rem !important;
-    }
 
     .hero-button, 
     .small-hero-button {
