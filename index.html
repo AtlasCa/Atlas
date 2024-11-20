@@ -1725,21 +1725,16 @@ function toggleMenu() {
         color: #12401E !important;
     }
 
-    /* Центрирование кнопки */
+    /* Уменьшенная центрированная кнопка */
     .text-section ~ .small-hero-button {
-        display: block !important;
+        display: inline-block !important;
         margin: 20px auto 40px auto !important;
-        position: static !important;
-        transform: none !important;
-        left: auto !important;
+        padding: 15px 30px !important; /* Уменьшаем padding */
+        font-size: 1.2rem !important; /* Уменьшаем размер шрифта */
         width: auto !important;
-    }
-
-    /* Убираем все возможные флоаты и абсолютные позиционирования */
-    .text-section,
-    .text-section ~ .small-hero-button {
-        float: none !important;
-        position: static !important;
+        min-width: 200px !important; /* Минимальная ширина */
+        max-width: 80% !important; /* Максимальная ширина */
+        text-align: center !important;
     }
 }
 
