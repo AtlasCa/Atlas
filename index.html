@@ -1455,7 +1455,7 @@ function toggleMenu() {
     /* Герой секция */
     .hero-section {
         padding-top: 40px;
-        margin-top: 0px !important; /* Поднимаем секцию ближе к видео */
+        margin-top: 20px !important; /* Поднимаем секцию ближе к видео */
         min-height: auto !important; /* Убираем фиксированную высоту */
         margin: 0 auto;
         display: flex;
@@ -1478,10 +1478,10 @@ function toggleMenu() {
     /* Определяем keyframes для анимации, если их еще нет */
     @keyframes floatCard {
         0%, 100% {
-            transform: perspective(1000px) rotateY(0deg) translateY(0) translateX(8px);
+            transform: perspective(1000px) rotateY(0deg) translateY(0) ;
         }
         50% {
-            transform: perspective(1000px) rotateY(0deg) translateY(-15px) translateX(8px);
+            transform: perspective(1000px) rotateY(0deg) translateY(-15px) ;
         }
     }
 
