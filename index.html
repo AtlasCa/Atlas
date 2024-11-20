@@ -58,6 +58,7 @@
 
         .hero-section {
             background-color: #F1F1F1;
+            padding: 50px 20px; /* Увеличиваем отступы сверху и снизу */
             height: 70vh;
             display: flex;
             justify-content: center;
@@ -1471,12 +1472,18 @@ function toggleMenu() {
 
 
     /* Исправление отображения карты в hero секции */
-    .hero-section div[style*="width: 450px"] {
+    .hero-section (max-width: 768px) {
+        padding: 40px 15px; /* Добавляем больше пространства для мобильной версии */
         width: 90% !important;
         height: auto !important;
         margin: 20px auto !important;
         display: block !important;
         transform: none !important;
+    }
+
+    .hero-section .card-container {
+        width: 90%; /* Увеличиваем ширину контейнера, чтобы вписать карту */
+        margin: 30px auto; /* Центрируем карту и добавляем отступ сверху и снизу */
     }
 
     /* Контейнеры и сетки */
