@@ -1455,9 +1455,11 @@ function toggleMenu() {
         padding: 20px;
         padding-top: 80px;
         height: auto;
-        width: 70% !important;
-        transform: translateX(20%); /* Смещаем карту вправо на 20% от ее ширины */
-        margin: 0 auto; /* Центрируем при необходимости */
+        width: 100% !important; /* Полная ширина секции */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero-section h1 {
