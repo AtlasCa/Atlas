@@ -1456,6 +1456,8 @@ function toggleMenu() {
         padding-top: 80px;
         height: auto;
         width: 70% !important;
+        transform: translateX(20%); /* Смещаем карту вправо на 20% от ее ширины */
+        margin: 0 auto; /* Центрируем при необходимости */
     }
 
     .hero-section h1 {
@@ -1557,16 +1559,6 @@ function toggleMenu() {
     /* Отступы секций */
     section {
         padding: 40px 15px;
-    }
-}
-
-
-/* Адаптивные стили для мобильных устройств */
-@media (max-width: 768px) {
-    .hero-section .card-container {
-        transform: translateX(20%); /* Смещаем карту вправо на 20% от ее ширины */
-        width: 70%; /* Ограничиваем ширину карты для лучшего отображения */
-        margin: 0 auto; /* Центрируем при необходимости */
     }
 }
 
