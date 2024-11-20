@@ -1474,10 +1474,19 @@ function toggleMenu() {
 
 @media screen and (max-width: 768px) {
     .hero-section {
-        zoom: 1; /* Добавляем масштабирование для мобильных устройств */
-        -moz-transform: scale(1); /* Для Firefox */
+        zoom: 0.8; /* Добавляем масштабирование для мобильных устройств */
+        -moz-transform: scale(0.8); /* Для Firefox */
         -moz-transform-origin: 0 0;
         min-height: auto !important;
+    }
+
+    /* Корректируем размеры контента */
+    .hero-section > div {
+        transform: scale(1);
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
 
     }
