@@ -1455,7 +1455,6 @@ function toggleMenu() {
         padding: 20px;
         padding-top: 80px;
         height: auto;
-        width: 70% !important;
     }
 
     .hero-section h1 {
@@ -1472,7 +1471,20 @@ function toggleMenu() {
     }
 
 
+    /* Исправление отображения карты в hero секции */
+    .hero-section (max-width: 768px) {
+        padding: 40px 15px; /* Добавляем больше пространства для мобильной версии */
+        width: 90% !important;
+        height: auto !important;
+        margin: 20px auto !important;
+        display: block !important;
+        transform: none !important;
+    }
 
+    .hero-section .card-container {
+        width: 90%; /* Увеличиваем ширину контейнера, чтобы вписать карту */
+        margin: 30px auto; /* Центрируем карту и добавляем отступ сверху и снизу */
+    }
 
     /* Контейнеры и сетки */
     .container,
@@ -1560,21 +1572,6 @@ function toggleMenu() {
     }
 }
 
-
-/* Адаптивные стили для мобильной версии */
-@media (max-width: 768px) {
-    .hero-section .card-container {
-        width: 200px; /* Уменьшаем ширину карты для мобильных устройств */
-        margin: 40px auto; /* Уменьшаем отступы сверху и снизу */
-    }
-
-    .hero-section .card {
-        padding: 10px; /* Уменьшаем внутренние отступы на карте для мобильных устройств */
-        font-size: 0.8rem; /* Уменьшение текста на мобильных устройствах */
-        transform: scale(0.85); /* Дополнительно уменьшаем размер карты для мобильных до 85% */
-    }
-}
-
 /* Дополнительные медиа-запросы для очень маленьких экранов */
 @media (max-width: 480px) {
     .hero-section h1 {
@@ -1645,3 +1642,4 @@ function toggleMenu() {
         <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
     </section>
 </footer>
+
