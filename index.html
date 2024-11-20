@@ -1466,22 +1466,32 @@ function toggleMenu() {
         width: 400px !important; /* Уменьшаем ширину */
         height: 240px !important; /* Уменьшаем высоту пропорционально */
         margin: 30px auto !important;
-        transform: perspective(1000px) rotateY(0deg) !important;
+        animation: floatCard 3s ease-in-out infinite !important;
+    }
+
+    /* Определяем keyframes для анимации, если их еще нет */
+    @keyframes floatCard {
+        0%, 100% {
+            transform: perspective(1000px) rotateY(0deg) translateY(0);
+        }
+        50% {
+            transform: perspective(1000px) rotateY(0deg) translateY(-15px);
+        }
     }
 
     /* Уменьшаем размеры внутренних элементов карты */
     .hero-section div[style*="width: 450px"] > div {
-        padding: 15px !important;
+        padding: 10px !important;
     }
 
     .hero-section div[style*="width: 450px"] div[style*="font-size"] {
-        font-size: 1.6rem !important; /* Уменьшаем размер шрифта */
+        font-size: 1.2rem !important; /* Уменьшаем размер шрифта */
     }
 
     /* Уменьшаем размер кружков на карте */
     .hero-section div[style*="width: 450px"] div[style*="width: 35px"] {
-        width: 25px !important;
-        height: 25px !important;
+        width: 15px !important;
+        height: 15px !important;
     }
 
     .hero-section h1 {
