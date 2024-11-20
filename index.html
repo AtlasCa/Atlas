@@ -313,6 +313,16 @@
             padding: 20px;
         }
 
+.text-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
         .text-section {
             text-align: center;
             font-size: 1.8rem;
@@ -320,6 +330,12 @@
             font-weight: 700;
             margin-bottom: 20px;
         }
+
+.text-section-container .small-hero-button {
+    margin: 0; /* Убираем margin у кнопки */
+    white-space: nowrap; /* Предотвращаем перенос текста кнопки */
+}
+
 
         .button-section {
             text-align: center;
@@ -678,11 +694,11 @@ function toggleMenu() {
 
     <!-- Новая секция "О нас" -->
     <section class="features-section" style="background-color: #F1F1F1;">
-        <div class="telegram-section">
-            <div class="telegram-content">
-                <span>Чтобы оформить виртуальную карту, вам нужен только Telegram</span>
-                <a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
+        <div class="text-section-container">
+            <div class="text-section">
+                Чтобы оформить виртуальную карту, вам нужен только Telegram
             </div>
+            <a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
         </div>
 
 <div class="features-container">
@@ -1300,7 +1316,7 @@ function toggleMenu() {
             <div class="reviewer">- Иван, Москва</div>
         </div>
         <div class="review-item">
-            <p>"AtlasCard действительно упрощает оплату подписок на любимые сервисы. Мне больше не нужно беспокоиться о том, как оплатить Spotify или Netflix."</p>
+            <p>"AtlasCard действительно упрощает оплату подписок   а любимые сер  исы. Мне больше не нужно беспокоиться о том, как оплатить Spotify или Netflix."</p>
             <div class="reviewer">- Анастасия, Санкт-Петербург</div>
         </div>
         <div class="review-item">
@@ -1528,7 +1544,7 @@ function toggleMenu() {
     }
 
     .hero-section div[style*="width: 450px"] div[style*="font-size"] {
-        font-size: 1.6rem !important; /* Умень��аем размер шрифта */
+        font-size: 1.6rem !important; /* Умень  аем размер шрифта */
     }
 
     /* Уменьшаем размер кружков на карте */
@@ -1598,7 +1614,6 @@ function toggleMenu() {
         width: auto !important;
         display: inline-block !important;
     }
-
 
 
     /* Карточки */
@@ -1905,40 +1920,5 @@ function toggleMenu() {
         min-width: 200px !important;
         max-width: 80% !important;
         text-align: center !important;
-    }
-}
-
-/* Добавьте эти стили */
-.telegram-section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto 40px auto;
-}
-
-.telegram-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 20px;
-}
-
-.telegram-content span {
-    font-size: 1.8rem;
-    color: #12401E;
-    font-weight: 700;
-}
-
-/* Медиа-запрос для мобильных устройств */
-@media screen and (max-width: 768px) {
-    .telegram-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .telegram-content span {
-        font-size: 2.8rem;
-        line-height: 1.3;
     }
 }
