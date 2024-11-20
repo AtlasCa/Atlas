@@ -1300,7 +1300,7 @@ function toggleMenu() {
             <div class="reviewer">- Иван, Москва</div>
         </div>
         <div class="review-item">
-            <p>"AtlasCard действительно упрощает оплату подписок на любимые сервисы. Мне больше не нужно беспокоиться о том, как оплатить Spotify или Netflix."</p>
+            <p>"AtlasCard действительно упрощает оплату подписок ��а любимые сер��исы. Мне больше не нужно беспокоиться о том, как оплатить Spotify или Netflix."</p>
             <div class="reviewer">- Анастасия, Санкт-Петербург</div>
         </div>
         <div class="review-item">
@@ -1528,7 +1528,7 @@ function toggleMenu() {
     }
 
     .hero-section div[style*="width: 450px"] div[style*="font-size"] {
-        font-size: 1.6rem !important; /* Уменьшаем размер шрифта */
+        font-size: 1.6rem !important; /* Умень��аем размер шрифта */
     }
 
     /* Уменьшаем размер кружков на карте */
@@ -1544,7 +1544,7 @@ function toggleMenu() {
     }
 
     .hero-section h2 {
-        font-size:2.5rem !important;
+        font-size:3.5rem !important;
         margin-left: 10px;
         margin-bottom: 10px !important;
     }
@@ -1850,7 +1850,7 @@ function toggleMenu() {
     .service-logos img {
         width: 125px !important; /* Увеличиваем размер каждого логотипа */
         height: auto !important;
-        margin: 15px !important; /* Добавляем отступы между логотипами */
+        margin: 10px !important; /* Добавляем отступы между логотипами */
     }
 
     /* Настраиваем сетку логотипов */
@@ -1867,5 +1867,42 @@ function toggleMenu() {
     .service-logos {
         width: 100% !important;
         margin: 30px auto !important;
+    }
+}
+
+/* Стили для десктопной версии */
+.text-section {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 30px !important;
+}
+
+.text-section ~ .small-hero-button {
+    margin-left: 20px !important;
+}
+
+/* Медиа-запрос для мобильной версии */
+@media screen and (max-width: 768px) {
+    .text-section {
+        flex-direction: column !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding: 20px !important;
+        margin: 0 auto !important;
+        font-size: 2.8rem !important;
+        color: #12401E !important;
+        line-height: 1.3 !important;
+    }
+
+    .text-section ~ .small-hero-button {
+        display: block !important;
+        margin: 20px auto 40px auto !important;
+        padding: 15px 30px !important;
+        font-size: 1.2rem !important;
+        width: auto !important;
+        min-width: 200px !important;
+        max-width: 80% !important;
+        text-align: center !important;
     }
 }
