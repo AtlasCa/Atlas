@@ -1842,3 +1842,28 @@ function toggleMenu() {
         color: #6A6A6A !important;
     }
 }
+
+@media screen and (max-width: 768px) {
+    /* Увеличиваем размер логотипов */
+    .service-logos img {
+        width: 150px !important; /* Увеличиваем размер каждого логотипа */
+        height: auto !important;
+        margin: 15px !important; /* Добавляем отступы между логотипами */
+    }
+
+    /* Настраиваем сетку логотипов */
+    .service-logos > div {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 логотипа в ряд */
+        gap: 20px !important;
+        justify-items: center !important;
+        align-items: center !important;
+        padding: 20px !important;
+    }
+
+    /* Контейнер для логотипов */
+    .service-logos {
+        width: 100% !important;
+        margin: 30px auto !important;
+    }
+}
