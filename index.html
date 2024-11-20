@@ -1468,16 +1468,16 @@ function toggleMenu() {
         margin: 30px auto !important;
         animation: floatCard 3s ease-in-out infinite !important;
         position: relative;
-        left: 20px; /* Сдвигаем карту вправо на 20px */
+        left: 8px; /* Сдвигаем карту вправо на 20px */
     }
 
     /* Определяем keyframes для анимации, если их еще нет */
     @keyframes floatCard {
         0%, 100% {
-            transform: perspective(1000px) rotateY(0deg) translateY(0) translateX(20px);
+            transform: perspective(1000px) rotateY(0deg) translateY(0) translateX(8px);
         }
         50% {
-            transform: perspective(1000px) rotateY(0deg) translateY(-15px) translateX(20px);
+            transform: perspective(1000px) rotateY(0deg) translateY(-15px) translateX(8px);
         }
     }
 
