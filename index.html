@@ -714,7 +714,7 @@ function toggleMenu() {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         padding: 20px;
-        text-align: center;
+        text-align: left;
         transition: transform 0.3s ease;
         height: 100%; /* Чтобы все карточки были одной высоты */
     }
@@ -1748,6 +1748,13 @@ function toggleMenu() {
     }
 }
 
+<footer id="footer" class="footer">
+    <section id="contact" class="contact">
+        <p>&copy; 2024 AtlasCard. Все права защищены.</p>
+        <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
+    </section>
+</footer>
+
 @media screen and (max-width: 768px) {
     /* Центрирование заголовка "Оцените все преимущества" */
     .features-section {
@@ -1783,10 +1790,42 @@ function toggleMenu() {
     }
 }
 
-<footer id="footer" class="footer">
-    <section id="contact" class="contact">
-        <p>&copy; 2024 AtlasCard. Все права защищены.</p>
-        <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
-    </section>
-</footer>
+@media screen and (max-width: 768px) {
+    /* Центрирование заголовка "Оцените все преимущества" */
+    .features-section {
+        text-align: center !important;
+        width: 100% !important;
+        padding: 40px 0 !important;
+        margin: 0 auto !important;
+    }
 
+    .features-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        color: #12401E !important;
+        width: 100% !important;
+        margin: 0 auto 30px auto !important;
+        padding: 0 20px !important;
+        display: block !important;
+    }
+
+    /* Контейнер для карточек */
+    .features-container {
+        width: 90% !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+        padding: 0 !important;
+    }
+
+    /* Стили для карточек */
+    .feature-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+}
