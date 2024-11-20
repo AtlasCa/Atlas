@@ -1454,8 +1454,8 @@ function toggleMenu() {
     .hero-section {
         padding: 20px;
         padding-top: 80px;
-        min-height: 100vh; /* Минимальная высота на весь экран */
-        width: 100px;
+        min-height: 10vh; /* Минимальная высота на весь экран */
+        max-width: 40%; /* Ограничиваем максимальную ширину для адаптивности 
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -1485,6 +1485,18 @@ function toggleMenu() {
         padding: 20px;
     }
 
+/* Стили для мобильной версии */
+@media (max-width: 768px) {
+    .cards-online-container {
+        flex-direction: column; /* Изменяем расположение карточек на вертикальное */
+        gap: 20px; /* Расстояние между карточками для мобильных устройств */
+        align-items: center; /* Центрируем карточки на экране */
+    }
+
+    .card-type {
+        width: 70%; /* Карточки занимают всю ширину экрана на мобильных */
+    }
+}
 
     /* Кнопки */
     .hero-button, .small-hero-button, .modal-button {
