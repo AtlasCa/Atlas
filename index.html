@@ -683,7 +683,7 @@ function toggleMenu() {
 
 <div class="features-container">
             <div class="feature-card">
-                <img src="img/createvirtualcard.png" alt="Создайте виртуальную   арту в Telegram">
+                <img src="img/createvirtualcard.png" alt="Создайте виртуальную ату в Telegram">
                 <h3>Создайте виртуальную карту в Telegram</h3>
                 <p>С помощью AtlasCard вы сможете быстро и безопасно выпустить виртуальную карту.</p>
             </div>
@@ -1067,6 +1067,373 @@ function toggleMenu() {
 
 </html>
 
+<style>
+    /* Стили для выравнивания кнопок в карточках */
+    .feature-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Распределяем пространство между элементами карточки */
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        height: 100%; /* Чтобы все карточки были одной высоты */
+    }
+
+    .feature-card a {
+        margin-top: auto; /* Позиционируем кнопку внизу карточки */
+        display: block;
+        font-weight: 500;
+        color: #12401E;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .feature-card a:hover {
+        color: #FF9F00;
+    }
+
+        /* Styles for "Оформить зарубежную карту онлайн" section */
+        .cards-online-section {
+            padding: 80px 20px;
+            background-color: #F1F1F1;
+            text-align: center;
+        }
+
+        .cards-online-section h2 {
+            font-size: 3rem;
+            color: #12401E;
+            margin-bottom: 40px;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        .cards-online-container {
+    display: flex;
+    gap: 30px; /* Расстояние между карточками */
+    justify-content: center; /* Распределяем карточки с равными отступами */
+    max-width: 1200px;
+    margin: 0 auto; /* Центрируем секцию */
+        }
+
+        .card-type {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-type:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-type img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card-type h3 {
+            font-size: 1.8rem;
+            color: #12401E;
+            margin-bottom: 10px;
+        }
+
+        .card-type p {
+            font-size: 1.2rem;
+            color: #6A6A6A;
+            margin-bottom: 20px;
+        }
+
+        .card-type a {
+            color: #FFFFFF;
+            background-color: #FF9F00;
+            padding: 13px 23px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-type a:hover {
+            background-color: #12401E;
+        }
+
+        /* Button under columns in "Оформить зарубежную карту онлайн" section */
+        .cards-online-section .cards-online-button {
+            margin-top: 40px;
+            color: #FFFFFF;
+            background-color: #12401E;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .cards-online-section .cards-online-button:hover {
+            background-color: #FF9F00;
+        }
+
+        /* Positioning "Все сервисы" button lower */
+        .service-section-button {
+            margin-top: 40px;
+        }
+
+</style>
+
+
+<section class="features-section">
+        <h2 style="font-size: 3rem; color: #12401E; text-align: center; margin-bottom: 40px;">Оцените все преимущества</h2>
+    <div class="container">
+        <div class="feature-card">
+            <img src="img/debit-card.png" alt="Выбор тарифного плана" style="width: 70px; height: 70px;">
+            <h3>Выбор тарифного плана</h3>
+            <p>Подберите себе наиболее подходящий тариф</p>
+            <a href="tarrifs.html">Тарифы ></a>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-smartphone.png" alt="Мультивалютные платежи" style="width: 70px; height: 70px;">
+            <h3>Мультивалютные платежи</h3>
+            <p>Оплачивайте покупки по всему миру в иностранной валюте</p>
+<a href="#faq-section" class="learn-more">Подробнее ></a>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-help-desk.png" alt="Служба поддержки" style="width: 70px; height: 70px;">
+            <h3>Служба поддержки</h3>
+            <p>Наша служба поддержки всегда рада прийти на помощь</p>
+<a href="javascript:void(0);" onclick="openModal()">Задать вопрос ></a>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-central-bank.png" alt="Моментальный выпуск 24/7" style="width: 70px; height: 70px;">
+            <h3>Моментальный выпуск 24/7</h3>
+            <p>Карта готова к покупкам сразу после получения</p>
+<a href="javascript:void(0);" onclick="openModal()">Выпустить карту ></a>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-lock.png" alt="Поддержка 3D-Secure" style="width: 70px; height: 70px;">
+            <h3>Поддержка 3D-Secure</h3>
+            <p>Безопасные платежи с 3D-верификацией</p>
+<a href="#faq-section" class="learn-more">Подробнее ></a>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-shield.png" alt="Гарантия оплаты" style="width: 70px; height: 70px;">
+            <h3>Гарантия оплаты</h3>
+            <p>Гарантируем оплату или вернем вам средства</p>
+<a href="#faq-section" class="learn-more">FAQ ></a>
+        </div>
+    </div>
+</section>
+
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('open');
+            });
+        });
+    </script>
+
+<style>
+    .features-heading {
+        font-size: 3.5rem; /* Увеличенный размер текста для заголовка */
+        text-align: center;
+        margin-bottom: 40px;
+        color: #12401E;
+        font-weight: 700;
+    }
+
+    .features-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Устанавливаем 3 карточки в строке */
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .feature-card {
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature-icon {
+        width: 50px;  /* Уменьшенные иконки */
+        height: 50px; /* Сделаем их маленькими */
+        margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.8rem;
+        color: #12401E;
+        margin-bottom: 15px;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+        color: #6A6A6A;
+        margin-bottom: 20px;
+    }
+
+    .feature-card a {
+        color: #12401E;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+
+        /* О нас Section Improvements */
+        .about-section {
+            padding: 60px 20px;
+            background-color: #F1F1F1;
+            text-align: center;
+            animation: fadeInAbout 1s ease-in-out;
+        }
+
+        .about-section h2 {
+            font-size: 3.5rem;
+            color: #12401E;
+            margin-bottom: 30px;
+            animation: slideInFromLeft 0.8s ease-in-out;
+        }
+
+        .about-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.6rem;
+            color: #6A6A6A;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInAboutImage 1s ease-in-out;
+        }
+
+        @keyframes fadeInAbout {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInAboutImage {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+
+</style>
+
+
+    <!-- "Оформить зарубежную карту онлайн" Section -->
+    <section class="cards-online-section">
+        <h2>Оформить зарубежную карту онлайн</h2>
+        <div class="cards-online-container">
+            <div class="card-type">
+                <img src="img/predoplachiniy.png" alt="Предоплаченная">
+                <h3>Предоплаченная</h3>
+                <p>Предоплаченная карта с фиксированным лимитом пополнения баланса от 5 $ до 200 $</p>
+<a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
+            </div>
+            <div class="card-type">
+                <img src="img/atlascard.png" alt="Виртуальная">
+                <h3>Виртуальная</h3>
+                <p>Виртуальная карта, пополняемая балансом и выгодными тарифами на пополнение от 5 $ до 100.000 $</p>
+<a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
+            </div>
+            <div class="card-type">
+                <img src="img/podarichniy.png" alt="Подарочная">
+                <h3>Подарочная</h3>
+                <p>Коды активации или ваучеры, предназначенные для покупок на определенных сервисах и сайтах</p>
+<a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
+            </div>
+        </div>
+        <a href="tarrifs.html" class="cards-online-button">Узнать тарифы</a>
+    </section>
+
+<!-- "Что можно оплатить виртуальными картами?" Section -->
+<section class="services-section" style="background-color: #F1F1F1;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 80px 20px;">
+        <div class="service-text" style="flex: 1; padding-right: 40px;">
+            <h2 style="font-size: 3rem; color: #12401E; margin-bottom: 20px;">Что можно оплатить виртуальными картами?</h2>
+            <p style="font-size: 1.4rem; color: #000000; margin-bottom: 30px;">Оплачивайте товары в интернет-магазинах, подписки, игры и программы и услуги.</p>
+                <a href="services.html" class="all-services-button">Все сервисы</a>
+        </div>
+        <div class="service-logos" style="flex: 1;">
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                <img src="img/i/service-logo1.png" alt="Service Logo 1" style="width: 100px;">
+                <img src="img/i/service-logo2.png" alt="Service Logo 2" style="width: 100px;">
+                <img src="img/i/service-logo3.png" alt="Service Logo 3" style="width: 100px;">
+                <img src="img/i/service-logo4.png" alt="Service Logo 4" style="width: 100px;">
+                <img src="img/i/service-logo5.png" alt="Service Logo 5" style="width: 100px;">
+                <img src="img/i/service-logo6.png" alt="Service Logo 6" style="width: 100px;">
+                <img src="img/i/service-logo7.png" alt="Service Logo 7" style="width: 100px;">
+                <img src="img/i/service-logo8.png" alt="Service Logo 8" style="width: 100px;">
+                <img src="img/i/service-logo9.png" alt="Service Logo 7" style="width: 100px;">
+                <img src="img/i/service-logo10.png" alt="Service Logo 8" style="width: 100px;">
+                <img src="img/i/service-logo11.png" alt="Service Logo 1" style="width: 100px;">
+                <img src="img/i/service-logo12.png" alt="Service Logo 2" style="width: 100px;">
+                <img src="img/i/service-logo13.png" alt="Service Logo 3" style="width: 100px;">
+                <img src="img/i/service-logo14.png" alt="Service Logo 4" style="width: 100px;">
+                <img src="img/i/service-logo15.png" alt="Service Logo 5" style="width: 100px;">
+                <img src="img/i/service-logo16.png" alt="Service Logo 6" style="width: 100px;">
+                <img src="img/i/service-logo17.png" alt="Service Logo 7" style="width: 100px;">
+                <img src="img/i/service-logo18.png" alt="Service Logo 8" style="width: 100px;">
+                <img src="img/i/service-logo19.png" alt="Service Logo 7" style="width: 100px;">
+                <img src="img/i/service-logo20.png" alt="Service Logo 8" style="width: 100px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Остальная час��ь кода (секции "О нас", преимущества и т.д.) остаются неизменными -->
+</body>
+
+</html>
+
 
     <!-- "О нас" Section -->
 <section id="about-section" class="about-section">
@@ -1083,7 +1450,7 @@ function toggleMenu() {
         <div class="faq-item">
             <button class="faq-question">Что такое AtlasCard и как он работает?</button>
             <div class="faq-answer">
-                <p>Виртуальная карта работает так же, как обычная банковская карта, с той раз  ицей, что она не имеет физического носителя. Вы можете использовать её данные для безопасных покупок и оплат онлайн по всему миру.</p>
+                <p>Виртуальная карта работает так же, как обычная банковская карта, с той разицей, что она не имеет физического носителя. Вы можете использовать её данные для безопасных покупок и оплат онлайн по всему миру.</p>
             </div>
         </div>
         <div class="faq-item">
@@ -1108,7 +1475,7 @@ function toggleMenu() {
         <div class="faq-item">
             <button class="faq-question">Принцип работы виртуальной карты</button>
             <div class="faq-answer">
-                <p>Использование виртуальной карты не отличается от с  андартной: просто вводите её данные при оплате. Это позволяет безопасно совершать покупки, не раскрывая данные вашей личной карты..</p>
+                <p>Использование виртуальной карты не отличается от сандартной: просто вводите её данные при оплате. Это позволяет безопасно совершать покупки, не раскрывая данные вашей личной карты..</p>
             </div>
         </div>
         <div class="faq-item">
