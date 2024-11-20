@@ -845,7 +845,7 @@ function toggleMenu() {
         <div class="feature-card">
             <img src="img/icon-help-desk.png" alt="Служба поддержки" style="width: 70px; height: 70px;">
             <h3>Служба поддержки</h3>
-            <p>Наша служба поддержки всегда рада прийти на помощь</p>
+            <p>Наша служба поддержки в��егда рада прийти на помощь</p>
 <a href="javascript:void(0);" onclick="openModal()">Задать вопрос ></a>
         </div>
         <div class="feature-card">
@@ -1463,7 +1463,7 @@ function toggleMenu() {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        object-fit: cover; /* Обрезка видео для заполнения контейнера */
+        object-fit: cover; /* ��брезка видео ��ля заполнения контейнера */
     }
 
 
@@ -1638,7 +1638,7 @@ function toggleMenu() {
     }
 }
 
-    /* Секция "Начать" */
+    /* Се��ция "Начать" */
     .start-section .container {
         flex-direction: column;
         text-align: center;
@@ -1710,6 +1710,42 @@ function toggleMenu() {
 
 .mobile-menu.active {
     transform: translateX(0);
+}
+
+@media screen and (max-width: 768px) {
+    /* Центрирование текстовой секции */
+    .text-section {
+        text-align: center !important;
+        width: 100% !important;
+        padding: 0 20px !important;
+        margin: 40px auto !important;
+        font-size: 2.2rem !important; /* Увеличиваем размер текста */
+    }
+
+    /* Центрирование кнопки под текстом */
+    .text-section + .small-hero-button {
+        display: block !important;
+        margin: 20px auto !important;
+        width: fit-content !important;
+    }
+
+    /* Центрирование заголовка "Оцените все преимущества" */
+    .features-section h2 {
+        text-align: center !important;
+        width: 100% !important;
+        font-size: 2.5rem !important;
+        margin: 30px auto !important;
+        padding: 0 20px !important;
+    }
+
+    /* Контейнер для карточек преимуществ */
+    .features-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+        width: 90% !important;
+    }
 }
 
 </style>
