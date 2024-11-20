@@ -676,9 +676,11 @@ function toggleMenu() {
 
     <!-- Новая секция "О нас" -->
     <section class="features-section" style="background-color: #F1F1F1;">
-        <div class="text-section" style="margin-bottom: 40px;">Чтобы оформить виртуальную карту, вам нужен только Telegram
-<a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
-
+        <div class="text-section-container">
+            <div class="text-section">
+                Чтобы оформить виртуальную карту, вам нужен только Telegram
+            </div>
+            <a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
         </div>
 
 <div class="features-container">
@@ -1717,9 +1719,14 @@ function toggleMenu() {
     .text-section {
         text-align: center !important;
         width: 100% !important;
-        padding: 0 20px !important;
-        margin: 40px auto !important;
-        font-size: 2.2rem !important; /* Увеличиваем размер текста */
+        padding: 20px !important;
+        margin: 0 auto !important;
+        font-size: 2.2rem !important;
+        color: #12401E !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
     }
 
     /* Центрирование кнопки под текстом */
@@ -1727,24 +1734,20 @@ function toggleMenu() {
         display: block !important;
         margin: 20px auto !important;
         width: fit-content !important;
+        position: relative !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
     }
 
-    /* Центрирование заголовка "Оцените все преимущества" */
-    .features-section h2 {
-        text-align: center !important;
+    /* Контейнер для этой секции */
+    .text-section-container {
         width: 100% !important;
-        font-size: 2.5rem !important;
-        margin: 30px auto !important;
-        padding: 0 20px !important;
-    }
-
-    /* Контейнер для карточек преимуществ */
-    .features-container {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        margin: 0 auto !important;
-        width: 90% !important;
+        justify-content: center !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
     }
 }
 
