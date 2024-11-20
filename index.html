@@ -1451,35 +1451,14 @@ function toggleMenu() {
 
 
     /* Герой секция */
-@media (max-width: 768px)
-    /* Стили для контейнера карты */
-    .hero-section div[style*="width: 450px"] {
-        width: 300px !important; /* Уменьшаем ширину карты */
-        height: 180px !important; /* Уменьшаем высоту пропорционально */
-        margin: 30px auto !important;
-        transform: perspective(1000px) rotateY(0deg) !important;
-        position: relative;
-        z-index: 1;
-    }
-
-    /* Уменьшаем размеры элементов внутри карты */
-    .hero-section div[style*="width: 450px"] div {
-        padding: 15px !important; /* Уменьшаем внутренние отступы */
-    }
-
-    /* Уменьшаем размер шрифта на карте */
-    .hero-section div[style*="width: 450px"] div[style*="font-size: 2.2rem"] {
-        font-size: 1.6rem !important;
-    }
-
-    .hero-section div[style*="width: 450px"] div[style*="font-size: 1.2rem"] {
-        font-size: 1rem !important;
-    }
-
-    /* Уменьшаем размер кружков на карте */
-    .hero-section div[style*="width: 450px"] div[style*="width: 35px"] {
-        width: 25px !important;
-        height: 25px !important;
+    .hero-section {
+        padding-top: 80px;
+        min-height: 100vh; /* Минимальная высота на весь экран */
+        width: 100px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero-section h1 {
