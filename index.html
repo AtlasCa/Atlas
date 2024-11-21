@@ -324,15 +324,16 @@
 }
 
         .text-section {
-            text-align: center;
             font-size: 1.8rem;
             color: #12401E;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin: 0;
+            white-space: nowrap; /* Предотвращаем перенос текста */
         }
 
 .text-section-container .small-hero-button {
-    margin: 0; /* Убираем margin у кнопки */
+    margin: 0;
+    white-space: nowrap;
 }
 
 
@@ -1900,13 +1901,12 @@ function toggleMenu() {
 /* Медиа-запрос для мобильной версии */
 @media screen and (max-width: 768px) {
     .text-section {
+        flex-direction: column !important;
         text-align: center !important;
         width: 100% !important;
         padding: 20px !important;
         margin: 0 auto !important;
         font-size: 2.8rem !important;
-        white-space: normal; /* Разрешаем перенос текста на мобильных */
-        display: inline; /* Делаем текст строчным элементом */
         color: #12401E !important;
         line-height: 1.3 !important;
     }
@@ -1920,5 +1920,44 @@ function toggleMenu() {
         min-width: 200px !important;
         max-width: 80% !important;
         text-align: center !important;
+    }
+}
+
+.text-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.text-section {
+    font-size: 1.8rem;
+    color: #12401E;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap; /* Предотвращаем перенос текста */
+}
+
+.text-section-container .small-hero-button {
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Мобильные стили */
+@media screen and (max-width: 768px) {
+    .text-section-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text-section {
+        margin-bottom: 20px;
+        font-size: 2.8rem;
+        white-space: normal; /* Разрешаем перенос текста на мобильных */
+        display: inline; /* Делаем текст строчным элементом */
+        line-height: 1.3;
     }
 }
