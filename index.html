@@ -502,12 +502,12 @@
 </div>
 <nav class="mobile-menu" id="mobileMenu">
     <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#tariffs.html">Тарифы</a></li>
-        <li><a href="#faq-section" class="learn-more">FAQ</a></li>
-        <li><a href="#about-section">О нас</a></li>
-        <li><a href="docs.html">Статьи</a></li>
-        <li><a href="#contact">Контакты</a></li>
+        <li><a href="index.html" onclick="toggleMenu()">Главная</a></li>
+        <li><a href="tarrifs.html" onclick="toggleMenu()">Тарифы</a></li>
+        <li><a href="#faq-section" onclick="scrollToSection('faq-section'); toggleMenu()">FAQ</a></li>
+        <li><a href="#about-section" onclick="scrollToSection('about-section'); toggleMenu()">О нас</a></li>
+        <li><a href="docs.html" onclick="toggleMenu()">Статьи</a></li>
+        <li><a href="#footer" onclick="scrollToSection('footer'); toggleMenu()">Контакты</a></li>
     </ul>
 </nav>
 
@@ -526,6 +526,31 @@ function toggleMenu() {
         document.body.style.overflow = 'hidden';
     }
 }
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        // Добавляем небольшую задержку для мобильного меню
+        setTimeout(() => {
+            const headerOffset = 80; // Высота хедера
+            const elementPosition = section.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }, 100);
+    }
+}
+
+// Исправляем ссылку на тарифы, если URL неверный
+document.addEventListener('DOMContentLoaded', function() {
+    const tariffLinks = document.querySelectorAll('a[href="tarrifs.html"]');
+    tariffLinks.forEach(link => {
+        link.href = "tariffs.html"; // Проверьте правильность написания URL
+    });
+});
 </script>
 
     </style>
@@ -540,15 +565,15 @@ function toggleMenu() {
     </section>
 
     <header>
-<a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
+    <a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
         <div class="nav-container">
             <nav>
                 <a href="index.html">Главная</a>
                 <a href="tarrifs.html">Тарифы</a>
-                <a href="#faq-section" class="learn-more">FAQ</a>
-                <a href="#about-section">О нас</a>
+                <a href="#faq-section" onclick="scrollToSection('faq-section')">FAQ</a>
+                <a href="#about-section" onclick="scrollToSection('about-section')">О нас</a>
                 <a href="docs.html">Статьи</a>
-                <a href="#contact">Контакты</a>
+                <a href="#footer" onclick="scrollToSection('footer')">Контакты</a>
             </nav>
         </div>
     </header>
