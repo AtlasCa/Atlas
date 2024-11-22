@@ -1,3 +1,10 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+
 <header class="main-header">
     <div class="container">
         <div class="brand">
@@ -26,13 +33,15 @@
 </div>
 
 <section class="card-animation-section">
-    <div class="container card-layout">
-        <div class="card-animation">
-            <img src="img/animated-card.png" alt="Animated Card" class="animated-card">
-        </div>
-        <div class="card-info">
-            <h2>Выпустить зарубежную карту</h2>
-            <p>Стоимость выпуска виртуальных и предоплаченных карт AtlasCard</p>
+    <div class="container">
+        <div class="card-layout">
+            <div class="card-animation">
+                <img src="img/animated-card.png" alt="Animated Card" class="animated-card">
+            </div>
+            <div class="card-info">
+                <h2>Выпустить зарубежную карту</h2>
+                <p>Стоимость выпуска виртуальных и предоплаченных карт AtlasCard</p>
+            </div>
         </div>
     </div>
 </section>
@@ -748,46 +757,28 @@
     }
 
 
-@media only screen and (max-width: 768px) {
-    .card-animation-section {
-        padding: 30px 20px;
-    }
-    
+@media (max-width: 768px) {
     .card-layout {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
-    
+
     .card-animation {
-        width: 100%;
         margin-bottom: 30px;
     }
-    
+
     .animated-card {
-        width: 100%;
         max-width: 300px;
-        margin: 0 auto;
-        display: block;
     }
-    
-    .card-info {
-        width: 100%;
-        margin-left: 0;
-        text-align: center;
-        padding: 0 15px;
-    }
-    
+
     .card-info h2 {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
+        font-size: 2rem;
     }
-    
+
     .card-info p {
         font-size: 1rem;
-        line-height: 1.4;
     }
 }
-
 </style>
 
 <script>
