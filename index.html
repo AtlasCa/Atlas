@@ -1987,6 +1987,62 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }
 
+@media screen and (max-width: 768px) {
+    /* Используем специфичный класс для секции преимуществ */
+    .features-section {
+        padding: 40px 20px;
+    }
+
+    /* Центрируем только заголовок этой секции */
+    .features-section > h2 {
+        text-align: center;
+        font-size: 2.8rem;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    /* Контейнер только для карточек преимуществ */
+    .features-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Стили только для карточек в секции преимуществ */
+    .features-container > .feature-card {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Изображения в карточках преимуществ */
+    .features-container .feature-card img {
+        width: 80%;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    /* Заголовки в карточках преимуществ */
+    .features-container .feature-card h3 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Текст в карточках преимуществ */
+    .features-container .feature-card p {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
     /* Добавьте эти стили для мобильной версии */
 @media screen and (max-width: 768px) {
     .modal-content {
