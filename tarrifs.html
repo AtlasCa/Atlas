@@ -748,53 +748,44 @@
     }
 
 
-@media screen and (max-width: 768px) {
-    /* Стили для карточной секции */
+@media only screen and (max-width: 768px) {
     .card-animation-section {
-        padding: 20px !important;
+        padding: 30px 20px;
     }
-
+    
     .card-layout {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
+        flex-direction: column;
+        align-items: center;
     }
-
+    
     .card-animation {
-        width: 100% !important;
-        max-width: none !important;
-        margin-bottom: 30px !important;
+        width: 100%;
+        margin-bottom: 30px;
     }
-
+    
     .animated-card {
-        width: 80% !important;
-        max-width: 400px !important;
-        height: auto !important;
-        margin: 0 auto !important;
-        display: block !important;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
     }
-
+    
     .card-info {
-        width: 100% !important;
-        margin-left: 0 !important;
-        text-align: center !important;
-        padding: 0 20px !important;
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding: 0 15px;
     }
-
-    /* Обновленные размеры шрифтов */
+    
     .card-info h2 {
-        font-size: 1.8rem !important;
-        margin-bottom: 10px !important;
-        line-height: 1.2 !important;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
     }
-
+    
     .card-info p {
-        font-size: 1rem !important;
-        line-height: 1.4 !important;
-        margin-top: 5px !important;
+        font-size: 1rem;
+        line-height: 1.4;
     }
-
-    /* Удалите дублирующиеся стили для hero-layout и hero-card-animation */
 }
 
 </style>
