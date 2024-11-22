@@ -856,173 +856,77 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    /* Сброс масштабирования */
-    body {
-        zoom: 0.8; /* Общее масштабирование для мобильных устройств */
+/* Базовые стили */
+html, body {
+    width: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
     overflow-x: hidden;
-    }
+}
 
-    /* Контейнер на всю ширину */
-    .container {
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
+/* Стили для заголовка */
+.main-header {
+    background-color: #FFFFFF;
+    width: 100vw;
+    padding: 10px 0;
+}
 
-@media screen and (max-width: 768px) 
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-header .brand {
+    flex: 0 0 auto;
+}
+
+.main-header .main-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.main-header .main-nav ul.center-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-header .main-nav ul li a {
+    color: #12401E;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Медиа-запросы */
+@media screen and (max-width: 768px) {
     body {
-        transform: scale(0.8);
+        transform: scale(0.85);
         transform-origin: top left;
-        width: 125%; /* Компенсируем масштабирование */
-        max-width: 125%;
-        overflow-x: hidden;
-    }
-
-
-@media screen and (max-width: 480px) {
-    body {
-        transform: scale(0.7);
-        width: 143%; /* 100% / 0.7 */
-        max-width: 143%;
-    }
-
-    .container,
-    .card-animation-section,
-    .tariffs-section,
-    .features-section {
-        width: 143%;
-        max-width: 143%;
-    }
-
-    /* Карточки на всю ширину */
-    .feature-card {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    /* Секция с картами */
-    .card-animation-section {
-        padding: 30px 15px;
-    }
-
-    .card-layout {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card-animation {
-        width: 100%;
-    }
-
-    .animated-card {
-        width: 100%;
-        max-width: none;
-    }
-
-    .card-info {
-        width: 100%;
-        margin: 0;
-        padding: 20px;
-        text-align: center;
-    }
-
-    /* Таблица тарифов */
-    .tariffs-section {
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    .tariffs-table {
-        font-size: 0.9rem;
-    }
-
-    /* Кнопки табов */
-    .tabs {
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .tab-button {
-        margin: 5px;
-        width: calc(33.33% - 10px);
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    /* Features секция */
-    .features-section .container {
-        flex-direction: column;
-        width: 100%;
-    }
-    .card-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px;
-    }
-
-    .card-info {
-        max-width: 100%;
-        padding: 0 15px;
-    }
-
-    /* Уменьшаем размеры в карточной секции */
-    .card-info h2 {
-        font-size: 2rem;
-    }
-
-    .card-info h3 {
-        font-size: 2rem;
-    }
-
-    .card-info p {
-        font-size: 1.2rem;
-    }
-
-    /* Корректировка всех секций */
-    .card-animation-section,
-    .tariffs-section,
-    .features-section {
-        width: 125%;
-        max-width: 125%;
-
-
-    /* Настройка таблицы для мобильных */
-    .tariffs-table {
-        width: 100%;
-        font-size: 0.9rem;
-        display: block;
-        overflow-x: auto;
-    }
-
-    .tariffs-table th,
-    .tariffs-table td {
-        padding: 8px;
-        min-width: 120px; /* Минимальная ширина ячеек */
-    }
-
-
-    .main-header .main-nav ul.center-nav {
-        gap: 5px;
-        padding: 0 5px;
-    }
-
-    .main-header .main-nav ul li a {
-        font-size: 0.9rem;
-        white-space: nowrap;
-    }
-
-    .main-header .brand a {
-        font-size: 2rem; /* Уменьшаем размер логотипа */
+        width: 117.65%; /* 100% / 0.85 */
     }
 
     .main-header .container {
-        padding: 0 10px;
+        width: 117.65%;
+        padding: 0 15px;
+    }
+
+    .main-header .main-nav ul.center-nav {
+        gap: 20px;
+    }
+
+    .main-header .main-nav ul li a {
+        font-size: 1rem;
     }
 }
 
