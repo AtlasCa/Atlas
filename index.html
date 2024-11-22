@@ -1869,6 +1869,10 @@ document.addEventListener('DOMContentLoaded', function() {
     .feature-card {
         padding: 25px !important; /* Увеличиваем отступы внутри карточки */
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
     }
 
     .feature-card p {
@@ -1886,6 +1890,15 @@ document.addEventListener('DOMContentLoaded', function() {
         padding: 0 20px;
         width: 100%;
         text-align: center;
+    }
+
+    /* Заголовки в карточках */
+    .feature-card h3 {
+        text-align: center;
+        width: 100%;
+        font-size: 1.8rem;
+        color: #12401E;
+        margin-bottom: 15px;
     }
 
  /* Контейнер карточек */
