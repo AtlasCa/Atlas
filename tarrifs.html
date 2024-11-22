@@ -426,7 +426,7 @@
     /* Footer Styling */
     .footer {
         background-color: #F1F1F1;
-        color: #FFFFFF;
+        color: #000000;
         padding: 20px;
         text-align: center;
         margin-top: 40px;
@@ -825,7 +825,7 @@
 
 @media screen and (max-width: 768px) {
     .hero-card-section {
-        padding: 40px 20px;
+        padding: 20px 10px;  /* уменьшаем отступы */
     }
 
     .hero-layout {
@@ -836,28 +836,30 @@
 
     .hero-card-animation {
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .hero-card {
-        width: 100%;
-        max-width: none;
+        width: 70% !important;  /* уменьшаем размер карты */
+        max-width: 300px !important;  /* ограничиваем максимальную ширину */
+        margin: 0 auto;
+        display: block;
     }
 
     .hero-info {
         width: 100%;
         margin-left: 0;
         text-align: center;
-        padding: 0 20px;
+        padding: 0 15px;
     }
 
     .hero-info h2 {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
+        font-size: 2rem;
+        margin-bottom: 10px;
     }
 
     .hero-info p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
