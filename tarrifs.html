@@ -368,6 +368,40 @@
 </section>
 
 <style>
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    zoom: 0.7; /* Для старых браузеров */
+    -moz-transform: scale(0.7); /* Firefox */
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.7); /* Opera */
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.7); /* Safari и Chrome */
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.7); /* Стандартное свойство */
+    transform-origin: 0 0;
+}
+
+.container {
+    max-width: 1440px; /* Увеличиваем максимальную ширину контейнера */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Уменьшаем размеры шрифтов */
+.card-info h2 {
+    font-size: 3.5rem; /* Было 5rem */
+}
+
+.card-info p {
+    font-size: 1.8rem; /* Было 2.5rem */
+}
+
     .features-section {
         padding: 60px 20px;
         background-color: #F1F1F1
