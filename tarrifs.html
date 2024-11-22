@@ -373,6 +373,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-size: 14px;
 }
 
 body {
@@ -787,49 +788,91 @@ body {
         color: #12401E;
     }
 
+/* Медиа-запрос для мобильных устройств */
 @media screen and (max-width: 768px) {
-    /* Секция с картой */
-    .card-animation-section {
-        padding: 40px 20px;
+    html {
+        font-size: 16px; /* Увеличиваем базовый размер шрифта для мобильных */
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
     }
 
     .card-layout {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        width: 100%;
     }
 
     .card-animation {
         width: 100%;
-        margin-bottom: 30px;
     }
 
-    /* Увеличиваем размер карты */
     .animated-card {
-        width: 90% !important; /* Увеличиваем ширину карты */
-        max-width: 400px; /* Максимальная ширина */
-        height: auto;
+        width: 80%;
+        max-width: none;
         margin: 0 auto;
-        display: block;
     }
 
-    /* Стили для текстового блока */
     .card-info {
         width: 100%;
         margin-left: 0;
         text-align: center;
+        padding: 0;
     }
 
+    /* Корректировка размеров текста */
     .card-info h2 {
-        font-size: 3rem;
-        margin-bottom: 15px;
+        font-size: 2rem;
+        margin: 20px 0;
     }
 
     .card-info p {
-        font-size: 1.8rem;
-        padding: 0 20px;
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    /* Исправление обрезки контента */
+    .features-section .container {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Корректировка таблицы */
+    .tariffs-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
+
+/* Дополнительный медиа-запрос для очень маленьких экранов */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .card-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-info p {
+        font-size: 1rem;
+    }
+
+    .tab-button {
+        padding: 10px 15px;
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+}
+
 </style>
 
 <script>
