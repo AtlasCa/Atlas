@@ -778,6 +778,7 @@
 
 
 @media screen and (max-width: 768px) {
+    /* Стили для карточной секции */
     .card-animation-section {
         padding: 20px !important;
     }
@@ -790,13 +791,13 @@
 
     .card-animation {
         width: 100% !important;
-        max-width: none !important; /* Убираем ограничение максимальной ширины */
+        max-width: none !important;
         margin-bottom: 30px !important;
     }
 
     .animated-card {
-        width: 80% !important; /* Увеличиваем размер карты до 80% от ширины контейнера */
-        max-width: 400px !important; /* Устанавливаем максимальную ширину */
+        width: 80% !important;
+        max-width: 400px !important;
         height: auto !important;
         margin: 0 auto !important;
         display: block !important;
@@ -809,30 +810,20 @@
         padding: 0 20px !important;
     }
 
+    /* Обновленные размеры шрифтов */
     .card-info h2 {
-        font-size: 2.5rem !important;
-        margin-bottom: 15px !important;
-    }
-
-    .card-info p {
-        font-size: 1.5rem !important;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* ... существующие стили ... */
-
-    .card-info h2 {
-        font-size: 1.8rem !important; /* Уменьшаем с 2.5rem до 1.8rem */
+        font-size: 1.8rem !important;
         margin-bottom: 10px !important;
-        line-height: 1.2 !important; /* Добавляем для лучшей читаемости */
+        line-height: 1.2 !important;
     }
 
     .card-info p {
-        font-size: 1rem !important; /* Уменьшаем с 1.5rem до 1rem */
+        font-size: 1rem !important;
         line-height: 1.4 !important;
         margin-top: 5px !important;
     }
+
+    /* Удалите дублирующиеся стили для hero-layout и hero-card-animation */
 }
 
 </style>
