@@ -747,49 +747,40 @@
         color: #12401E;
     }
 
+
+.card-info {
+    width: 60%;
+    text-align: left;
+    margin-left: -200px;
+}
+
+.card-info h2 {
+    font-size: 3.5rem; /* Уменьшено с 5rem */
+    color: #12401E;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    white-space: nowrap; /* Заголовок в одну строку */
+}
+
+.card-info p {
+    font-size: 1.8rem; /* Уменьшено с 2.5rem */
+    color: #6A6A6A;
+    line-height: 1.4;
+    max-width: 80%; /* Ограничиваем ширину текста */
+}
+
+/* Медиа-запрос для мобильных устройств */
 @media screen and (max-width: 768px) {
-    /* Секция с картой */
-    .card-animation-section {
-        padding: 40px 20px;
-    }
-
-    .card-layout {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .card-animation {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    /* Увеличиваем размер карты */
-    .animated-card {
-        width: 90% !important; /* Увеличиваем ширину карты */
-        max-width: 400px; /* Максимальная ширина */
-        height: auto;
-        margin: 0 auto;
-        display: block;
-    }
-
-    /* Стили для текстового блока */
-    .card-info {
-        width: 100%;
-        margin-left: 0;
-        text-align: center;
-    }
-
     .card-info h2 {
-        font-size: 3rem;
-        margin-bottom: 15px;
+        font-size: 2.5rem;
     }
 
     .card-info p {
-        font-size: 1.8rem;
-        padding: 0 20px;
+        font-size: 1.4rem;
+        max-width: 100%;
     }
 }
+
 </style>
 
 <script>
