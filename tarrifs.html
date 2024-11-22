@@ -749,42 +749,32 @@
 
 
 @media screen and (max-width: 768px) {
+    .hero-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .hero-card-animation {
-        width: 100% !important;
-        max-width: 300px !important;
-        margin: 0 auto !important;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .hero-card {
-        width: 200px !important;
-        height: auto !important;
-        margin: 0 auto !important;
-        display: block !important;
-    }
-
-    .hero-card-section {
-        padding: 20px !important;
-    }
-
-    .hero-layout {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 20px !important;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
     }
 
     .hero-info {
-        width: 100% !important;
-        margin: 0 !important;
-        text-align: center !important;
-        padding: 0 10px !important;
+        padding: 0 20px;
     }
 
     .hero-info h2 {
-        font-size: 24px !important;
+        font-size: 2rem;
     }
 
     .hero-info p {
-        font-size: 16px !important;
+        font-size: 1.2rem;
     }
 }
 
