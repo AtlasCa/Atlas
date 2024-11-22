@@ -824,42 +824,42 @@
 }
 
 @media screen and (max-width: 768px) {
-    .hero-card-section {
-        padding: 20px 10px;  /* уменьшаем отступы */
-    }
-
-    .hero-layout {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
     .hero-card-animation {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 100% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
     }
 
     .hero-card {
-        width: 30% !important;  /* уменьшаем размер карты */
-        max-width: 100px !important;  /* ограничиваем максимальную ширину */
-        margin: 0 auto;
-        display: block;
+        width: 200px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+
+    .hero-card-section {
+        padding: 20px !important;
+    }
+
+    .hero-layout {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
     }
 
     .hero-info {
-        width: 100%;
-        margin-left: 0;
-        text-align: center;
-        padding: 0 15px;
+        width: 100% !important;
+        margin: 0 !important;
+        text-align: center !important;
+        padding: 0 10px !important;
     }
 
     .hero-info h2 {
-        font-size: 2rem;
-        margin-bottom: 10px;
+        font-size: 24px !important;
     }
 
     .hero-info p {
-        font-size: 1.2rem;
+        font-size: 16px !important;
     }
 }
 
