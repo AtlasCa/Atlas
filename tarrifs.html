@@ -851,24 +851,86 @@ body {
     }
 }
 
-/* Дополнительный медиа-запрос для очень маленьких экранов */
-@media screen and (max-width: 480px) {
-    html {
-        font-size: 14px;
+@media screen and (max-width: 768px) {
+    /* Сброс масштабирования */
+    body {
+        transform: none;
+        width: 100vw;
+        overflow-x: hidden;
     }
 
-    .card-info h2 {
-        font-size: 1.8rem;
+    /* Контейнер на всю ширину */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        margin: 0;
     }
 
-    .card-info p {
-        font-size: 1rem;
+    /* Карточки на всю ширину */
+    .feature-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Секция с картами */
+    .card-animation-section {
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .card-layout {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-animation {
+        width: 100%;
+    }
+
+    .animated-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .card-info {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Таблица тарифов */
+    .tariffs-section {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .tariffs-table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    /* Кнопки табов */
+    .tabs {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .tab-button {
-        padding: 10px 15px;
+        margin: 5px;
+        width: calc(33.33% - 10px);
         font-size: 1rem;
-        margin: 0 10px;
+        padding: 10px;
+    }
+
+    /* Features секция */
+    .features-section .container {
+        flex-direction: column;
+        width: 100%;
     }
 }
 
