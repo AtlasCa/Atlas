@@ -748,48 +748,48 @@
     }
 
 @media screen and (max-width: 768px) {
-    /* Секция с картой */
+    /* Стили для верхней секции с большой картой */
     .card-animation-section {
-        padding: 40px 20px;
+        padding: 40px 20px !important;
     }
 
     .card-layout {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
     }
 
     .card-animation {
-        width: 100%;
-        margin-bottom: 30px;
+        width: 100% !important;
+        margin-bottom: 30px !important;
     }
 
-    /* Увеличиваем размер карты */
-    .animated-card {
-        width: 90% !important; /* Увеличиваем ширину карты */
-        max-width: 400px; /* Максимальная ширина */
-        height: auto;
-        margin: 0 auto;
-        display: block;
+    /* Стили для большой карты в верхней секции */
+    .card-animation .animated-card {
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
     }
 
-    /* Стили для текстового блока */
-    .card-info {
-        width: 100%;
-        margin-left: 0;
-        text-align: center;
+    /* Стили для текста рядом с картой */
+    .card-layout .card-info {
+        width: 100% !important;
+        margin-left: 0 !important;
+        text-align: center !important;
+        padding: 0 20px !important;
     }
 
-    .card-info h2 {
-        font-size: 3rem;
-        margin-bottom: 15px;
+    .card-layout .card-info h2 {
+        font-size: 2.5rem !important;
+        margin-bottom: 15px !important;
     }
 
-    .card-info p {
-        font-size: 1.8rem;
-        padding: 0 20px;
+    .card-layout .card-info p {
+        font-size: 1.5rem !important;
     }
 }
+
 </style>
 
 <script>
