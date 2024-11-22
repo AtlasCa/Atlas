@@ -859,22 +859,28 @@ body {
 
     /* Контейнер на всю ширину */
     .container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 10px;
+        width: 125%;
+        max-width: 125%;
+        padding: 0 15px;
     }
 
 @media screen and (max-width: 768px) 
     body {
         transform: scale(0.8);
         transform-origin: top left;
+        width: 125%; /* Компенсируем масштабирование */
+        max-width: 125%;
+        overflow-x: hidden;
     }
 
 
 @media screen and (max-width: 480px) {
     body {
-        transform: scale(0.7);
+        transform: scale(0.8);
         transform-origin: top left;
+        width: 125%; /* Компенсируем масштабирование */
+        max-width: 125%;
+        overflow-x: hidden;
     }
 
 
@@ -963,6 +969,14 @@ body {
         font-size: 1.2rem;
     }
 
+    /* Корректировка всех секций */
+    .card-animation-section,
+    .tariffs-section,
+    .features-section {
+        width: 125%;
+        max-width: 125%;
+
+
     /* Настройка таблицы для мобильных */
     .tariffs-table {
         width: 100%;
@@ -980,14 +994,15 @@ body {
 
     .main-header .main-nav ul.center-nav {
         gap: 15px;
-        flex-wrap: nowrap; /* Предотвращаем перенос элементов */
+        flex-wrap: nowrap;
         justify-content: space-between;
-        padding: 0 10px;
+        width: 100%;
     }
 
     .main-header .main-nav ul li a {
-        font-size: 0.9rem; /* Уменьшаем размер шрифта */
+        font-size: 1rem;
         padding: 0 5px;
+        white-space: nowrap;
     }
 }
 
