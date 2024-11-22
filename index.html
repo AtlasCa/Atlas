@@ -1782,12 +1782,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }
 
-<footer id="footer" class="footer">
-    <section id="contact" class="contact">
-        <p>&copy; 2024 AtlasCard. Все права защищены.</p>
-        <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
-    </section>
-</footer>
+@media screen and (max-width: 768px) {
+    /* Стили для секции "Оцените все преимущества" */
+    .features-section .feature-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features-section .feature-card h3 {
+        text-align: center;
+        width: 100%;
+        font-size: 1.8rem;
+        color: #12401E;
+        margin-bottom: 15px;
+    }
+
+    .features-section .feature-card img {
+        width: 70px; /* Фиксированная ширина для иконок */
+        height: 70px; /* Фиксированная высота для иконок */
+        margin: 0 auto 20px;
+    }
+
+    /* Стили для секции с большими изображениями */
+    .features-container .feature-card img[src*="createvirtualcard.png"],
+    .features-container .feature-card img[src*="control.png"],
+    .features-container .feature-card img[src*="rubles.png"] {
+        width: 100%; /* Полная ширина для больших изображений */
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     /* Центрирование заголовка "Оцените все преимущества" */
