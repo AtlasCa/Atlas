@@ -854,18 +854,29 @@ body {
 @media screen and (max-width: 768px) {
     /* Сброс масштабирования */
     body {
-        transform: none;
-        width: 100vw;
-        overflow-x: hidden;
+        zoom: 0.8; /* Общее масштабирование для мобильных устройств */
     }
 
     /* Контейнер на всю ширину */
     .container {
         width: 100%;
         max-width: 100%;
-        padding: 0 15px;
-        margin: 0;
+        padding: 0 10px;
     }
+
+@media screen and (max-width: 768px) 
+    body {
+        transform: scale(0.8);
+        transform-origin: top left;
+    }
+
+
+@media screen and (max-width: 480px) {
+    body {
+        transform: scale(0.7);
+        transform-origin: top left;
+    }
+
 
     /* Карточки на всю ширину */
     .feature-card {
@@ -966,13 +977,17 @@ body {
         min-width: 120px; /* Минимальная ширина ячеек */
     }
 
+
     .main-header .main-nav ul.center-nav {
         gap: 15px;
+        flex-wrap: nowrap; /* Предотвращаем перенос элементов */
+        justify-content: space-between;
+        padding: 0 10px;
     }
 
     .main-header .main-nav ul li a {
-        padding: 0 8px;
-        font-size: 1rem;
+        font-size: 0.9rem; /* Уменьшаем размер шрифта */
+        padding: 0 5px;
     }
 }
 
