@@ -25,12 +25,12 @@
     </div>
 </div>
 
-<section class="card-animation-section">
-    <div class="container card-layout">
-        <div class="card-animation">
-            <img src="img/animated-card.png" alt="Animated Card" class="animated-card">
+<section class="hero-card-section">
+    <div class="container hero-layout">
+        <div class="hero-card-animation">
+            <img src="img/animated-card.png" alt="Animated Card" class="hero-card">
         </div>
-        <div class="card-info">
+        <div class="hero-info">
             <h2>Выпустить зарубежную карту</h2>
             <p>Стоимость выпуска виртуальных и предоплаченных карт AtlasCard</p>
         </div>
@@ -787,6 +787,77 @@
 
     .card-layout .card-info p {
         font-size: 1.5rem !important;
+    }
+.hero-card-section {
+    padding: 60px 210px;
+}
+
+.hero-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-card-animation {
+    width: 75%;
+}
+
+.hero-card {
+    width: 50%;
+    animation: floatCard 3s ease-in-out infinite;
+}
+
+.hero-info {
+    width: 60%;
+    text-align: left;
+    margin-left: -200px;
+}
+
+.hero-info h2 {
+    font-size: 5rem;
+    color: #12401E;
+}
+
+.hero-info p {
+    font-size: 2.5rem;
+    color: #6A6A6A;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-card-section {
+        padding: 40px 20px;
+    }
+
+    .hero-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-card-animation {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .hero-info {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .hero-info h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-info p {
+        font-size: 1.5rem;
     }
 }
 
