@@ -775,8 +775,49 @@
     .hero-info p {
         font-size: 1.2rem;
     }
-}
 
+
+@media screen and (max-width: 768px) {
+    .card-animation-section {
+        padding: 20px !important;
+    }
+
+    .card-layout {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .card-animation {
+        width: 100% !important;
+        max-width: none !important; /* Убираем ограничение максимальной ширины */
+        margin-bottom: 30px !important;
+    }
+
+    .animated-card {
+        width: 80% !important; /* Увеличиваем размер карты до 80% от ширины контейнера */
+        max-width: 400px !important; /* Устанавливаем максимальную ширину */
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+
+    .card-info {
+        width: 100% !important;
+        margin-left: 0 !important;
+        text-align: center !important;
+        padding: 0 20px !important;
+    }
+
+    .card-info h2 {
+        font-size: 2.5rem !important;
+        margin-bottom: 15px !important;
+    }
+
+    .card-info p {
+        font-size: 1.5rem !important;
+    }
+}
 </style>
 
 <script>
