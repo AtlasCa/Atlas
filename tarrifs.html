@@ -1,5 +1,5 @@
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -789,8 +789,12 @@ body {
 
 /* Медиа-запрос для мобильных устройств */
 @media screen and (max-width: 768px) {
-    html {
-        font-size: 16px; /* Увеличиваем базовый размер шрифта для мобильных */
+   
+ html, body {
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
 
     .container {
@@ -876,13 +880,18 @@ body {
 
 @media screen and (max-width: 480px) {
     body {
-        transform: scale(0.8);
-        transform-origin: top left;
-        width: 125%; /* Компенсируем масштабирование */
-        max-width: 125%;
-        overflow-x: hidden;
+        transform: scale(0.7);
+        width: 143%; /* 100% / 0.7 */
+        max-width: 143%;
     }
 
+    .container,
+    .card-animation-section,
+    .tariffs-section,
+    .features-section {
+        width: 143%;
+        max-width: 143%;
+    }
 
     /* Карточки на всю ширину */
     .feature-card {
