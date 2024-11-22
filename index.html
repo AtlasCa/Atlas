@@ -1487,6 +1487,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /* Секции */
     .hero-section,
+    .features-section,
     .cards-online-section,
     .services-section,
     .reviews-section,
@@ -1639,62 +1640,12 @@ document.addEventListener('DOMContentLoaded', function() {
         display: inline-block !important;
     }
 
-@media screen and (max-width: 768px) {
-    /* Стили для секции */
-    .features-section {
-        padding: 40px 20px;
-        text-align: center;
-    }
 
-    /* Заголовок секции */
-    .features-section h2 {
-        font-size: 2.8rem;
-        text-align: center;
-        margin-bottom: 40px;
-        padding: 0 15px;
-    }
-
-    /* Контейнер с карточками */
-    .features-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 0 15px;
-    }
-
-    /* Стили для карточек */
+    /* Карточки */
     .feature-card {
         width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 25px;
+        margin: 10px 0;
     }
-
-    /* Изображения в карточках */
-    .feature-card img {
-        width: 80%;
-        height: auto;
-        margin: 0 auto 20px;
-        display: block;
-    }
-
-    /* Заголовки карточек */
-    .feature-card h3 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    /* Текст в карточках */
-    .feature-card p {
-        font-size: 1.4rem;
-        line-height: 1.4;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-}
 
     /* Модальное окно */
     .modal-content {
