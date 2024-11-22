@@ -805,12 +805,11 @@ body {
 
     .card-layout {
         flex-direction: column;
-        align-items: center;
-        width: 100%;
+        padding: 0 15px;
     }
 
     .card-animation {
-        width: 100%;
+        max-width: 90%;
     }
 
     .animated-card {
@@ -820,21 +819,17 @@ body {
     }
 
     .card-info {
-        width: 100%;
-        margin-left: 0;
+        max-width: 100%;
         text-align: center;
-        padding: 0;
     }
 
     /* Корректировка размеров текста */
     .card-info h2 {
-        font-size: 2rem;
-        margin: 20px 0;
+        font-size: 2.5rem;
     }
 
     .card-info p {
-        font-size: 1.2rem;
-        margin: 10px 0;
+        font-size: 1.5rem;
     }
 
     /* Исправление обрезки контента */
@@ -891,22 +886,71 @@ html, body {
 }
 
 .main-header .main-nav ul.center-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Два столбца */
+        gap: 10px;
+        text-align: center;
 }
 
+    .main-header .main-nav ul li {
+        margin: 0;
+    }
+
+
 .main-header .main-nav ul li a {
-    color: #12401E;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    white-space: nowrap;
+        display: block;
+        padding: 8px;
+        font-size: 0.9rem;
 }
+
+
+/* Стили для секции с картой */
+.card-animation-section {
+    padding: 60px 0;
+    width: 100%;
+}
+
+.card-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.card-animation {
+    flex: 1;
+    max-width: 60%;
+}
+
+.animated-card {
+    width: 100%;
+    height: auto;
+    animation: floatCard 3s ease-in-out infinite;
+}
+
+.card-info {
+    flex: 1;
+    max-width: 40%;
+    text-align: left;
+    margin-left: 0;
+}
+
+.card-info h2 {
+    font-size: 4.5rem;
+    color: #12401E;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.card-info p {
+    font-size: 2.2rem;
+    color: #6A6A6A;
+    line-height: 1.4;
+}
+
 
 /* Медиа-запросы */
 @media screen and (max-width: 768px) {
