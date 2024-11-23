@@ -10,13 +10,23 @@
         
         <div class="burger-menu" onclick="toggleMenu()">☰</div>
         
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#tariffs-section">Тарифы</a></li>
+                <li><a href="#faq-section">FAQ</a></li>
+                <li><a href="#about-section">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+
         <nav class="main-nav">
             <ul class="center-nav">
-                <li><a href="index.html" class="nav-link">Главная</a></li>
-                <li><a href="#tariffs-section" class="nav-link">Тарифы</a></li>
-                <li><a href="index.html" class="learn-more">FAQ</a></li>
-                <li><a href="index.html" class="nav-link">О нас</a></li>
-                <li><a href="index.html" class="nav-link">Контакты</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#tariffs-section">Тарифы</a></li>
+                <li><a href="#faq-section">FAQ</a></li>
+                <li><a href="#about-section">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
     </div>
@@ -978,9 +988,32 @@ body {
 
 .mobile-menu {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #12401E;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.mobile-menu a {
+    color: #12401E;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 </style>
@@ -1003,15 +1036,15 @@ body {
 
 <script>
 function toggleMenu() {
-    const nav = document.querySelector('.main-nav');
-    nav.classList.toggle('active');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('active');
 }
 
 // Закрытие меню при клике на пункт меню
-document.querySelectorAll('.nav-link').forEach(link => {
+document.querySelectorAll('.mobile-menu a').forEach(link => {
     link.addEventListener('click', () => {
-        const nav = document.querySelector('.main-nav');
-        nav.classList.remove('active');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.remove('active');
     });
 });
 </script>
