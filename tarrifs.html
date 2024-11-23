@@ -1,605 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=1.0, user-scalable=no">
+    <title>AtlasCard - Тарифы, FAQ, Новости, О нас</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-
-
-<header class="main-header">
-    <div class="container">
-        <div class="brand">
-<a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
-        </div>
-        <nav class="main-nav">
-            <ul class="center-nav">
-                <li><a href="index.html" class="nav-link">Главная</a></li>
-                <li><a href="#tariffs-section" class="nav-link">Тарифы</a></li>
-        <li><a href="index.html" onclick="scrollToSection('about-section'); toggleMenu()">О нас</a></li>
-        <li><a href="docs.html" onclick="toggleMenu()">Статьи</a></li>
-                <li><a href="index.html" class="nav-link">Контакты</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<div id="qr-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        
-        <!-- QR код для десктопа -->
-        <img src="img/QRcode.png" alt="QR Code to chat bot" class="qr-code">
-        
-        <!-- Новый контейнер для изображения на мобильных -->
-        <div class="modal-image-container">
-            <img src="img/vipustit.png" alt="Mobile promotion" class="mobile-image">
-        </div>
-        
-        <h2>AtlasCard - это удобное мини-приложение в Telegram</h2>
-        <p>Нажмите "Продолжить", чтобы открыть с текущего устройства</p>
-        <a href="https://t.me/AtlasCard_bot" class="continue-button">Продолжить →</a>
-    </div>
-</div>
-
-<section class="card-animation-section">
-    <div class="container card-layout">
-        <div class="card-animation">
-            <img src="img/animated-card.png" alt="Animated Card" class="animated-card">
-        </div>
-        <div class="card-info">
-            <h2>Выпустить зарубежную карту</h2>
-            <p>Стоимость выпуска виртуальных и предоплаченных карт AtlasCard</p>
-        </div>
-    </div>
-</section>
-
-<section class="tariffs-section" id="tariffs-section">
-    <div class="container">
-        <div class="tabs">
-            <button class="tab-button active" data-tab="prepaid">Предоплаченная</button>
-            <button class="tab-button" data-tab="virtual">Виртуальная</button>
-            <button class="tab-button" data-tab="gift">Подарочная</button>
-        </div>
-        
-        <!-- Секция для Предоплаченной карты -->
-        <div class="tab-content" id="prepaid" style="display: block;">
-            <div class="card-content">
-                <img src="img/prepaid-card.png" alt="Prepaid Card" style="width: 30%;" class="animated-card">
-                <div class="card-info">
-                    <h3>Предоплаченная</h3>
-                    <p>Предоплаченная карта с фиксированным номиналом баланса от 5 $ до 1,000 $</p>
-                    <button class="card-button open-qr-modal">Выпустить карту</button>
-                </div>
-            </div>
-            <table class="tariffs-table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Prepaid</th>
-                    <th>Virtual</th>
-                    <th>Gift (ваучеры)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Выпуск карты</td>
-                    <td>от 790 RUB*</td>
-                    <td>3,490 RUB</td>
-                    <td>от 1,280 RUB</td>
-                </tr>
-                <tr>
-                    <td>Ежемесячное обслуживание</td>
-                    <td>0 RUB</td>
-                    <td>690 RUB</td>
-                    <td>0 RUB</td>
-                </tr>
-                <tr>
-                    <td>Валюта баланса</td>
-                    <td>USD/EUR</td>
-                    <td>USD/EUR</td>
-                    <td>USD</td>
-                </tr>
-                <tr>
-                    <td>Номиналы карт</td>
-                    <td>от 5 до 1,000 USD</td>
-                    <td>до 100,000 USD</td>
-                    <td>от 10 до 100 USD</td>
-                </tr>
-                <tr>
-                    <td>Срок действия карты</td>
-                    <td>60 дней</td>
-                    <td>36 месяцев</td>
-                    <td>Одноразовая</td>
-                </tr>
-                <tr>
-                    <td>Пополнение баланса</td>
-                    <td>Нет</td>
-                    <td>Да</td>
-                    <td>Нет</td>
-                </tr>
-                <tr>
-                    <td>Apple & Google Pay</td>
-                    <td>Нет</td>
-                    <td>Да</td>
-                    <td>Нет</td>
-                </tr>
-                <tr>
-                    <td>Поддержка 3D-secure</td>
-                    <td>Да</td>
-                    <td>Да</td>
-                    <td>Да</td>
-                </tr>
-                    <tr>
-                        <td>Пополнение в USDT</td>
-                        <td>Нет</td>
-                        <td>Да</td>
-                        <td>Нет</td>
-                    </tr>
-                    <tr>
-                        <td>Возврат/Обмен</td>
-                        <td>Нет**</td>
-                        <td>Нет**</td>
-                        <td>Нет**</td>
-                    </tr>
-                    <tr>
-                        <td>Служба поддержки</td>
-                        <td>Да</td>
-                        <td>Да</td>
-                        <td>Да</td>
-                    </tr>
-            </tbody>
-
-            </table>
-        <p class="tariffs-note">*стоимость карты включена в стоимость номинала согласно тарифам Telegram-бота<br>
-        **возврат карты возможен только при технической неисправности самой карты и соблюдении условий, читайте более подробно условия возврата и использования в разделе FAQ</p>
-        </div>
-
-        <!-- Секция для Виртуальной карты -->
-        <div class="tab-content" id="virtual" style="display: none;">
-            <div class="card-content">
-                <img src="img/virtual-card.png" alt="Virtual Card" style="width: 30%;" class="animated-card">
-                <div class="card-info">
-                    <h3>Виртуальная</h3>
-                    <p>Виртуальная карта с балансом и выгодными тарифами на пополнение от 5 $ до 100,000 $</p>
-                    <button class="card-button open-qr-modal">Выпустить карту</button>
-                </div>
-            </div>
-            <table class="tariffs-table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Prepaid</th>
-                    <th>Virtual</th>
-                    <th>Gift (ваучеры)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Выпуск карты</td>
-                    <td>от 790 RUB*</td>
-                    <td>3,490 RUB</td>
-                    <td>от 1,280 RUB</td>
-                </tr>
-                <tr>
-                    <td>Ежемесячное обслуживание</td>
-                    <td>0 RUB</td>
-                    <td>690 RUB</td>
-                    <td>0 RUB</td>
-                </tr>
-                <tr>
-                    <td>Валюта баланса</td>
-                    <td>USD/EUR</td>
-                    <td>USD/EUR</td>
-                    <td>USD</td>
-                </tr>
-                <tr>
-                    <td>Номиналы карт</td>
-                    <td>от 5 до 1,000 USD</td>
-                    <td>до 100,000 USD</td>
-                    <td>от 10 до 100 USD</td>
-                </tr>
-                <tr>
-                    <td>Срок действия карты</td>
-                    <td>60 дней</td>
-                    <td>36 месяцев</td>
-                    <td>Одноразовая</td>
-                </tr>
-                <tr>
-                    <td>Пополнение баланса</td>
-                    <td>Нет</td>
-                    <td>Да</td>
-                    <td>Нет</td>
-                </tr>
-                <tr>
-                    <td>Apple & Google Pay</td>
-                    <td>Нет</td>
-                    <td>Да</td>
-                    <td>Нет</td>
-                </tr>
-                <tr>
-                    <td>Поддержка 3D-secure</td>
-                    <td>Да</td>
-                    <td>Да</td>
-                    <td>Да</td>
-                </tr>
-                    <tr>
-                        <td>Пополнение в USDT</td>
-                        <td>Нет</td>
-                        <td>Да</td>
-                        <td>Нетtd>
-                    </tr>
-                    <tr>
-                        <td>Возврат/Обмен</td>
-                        <td>Нет**</td>
-                        <td>Нет**</td>
-                        <td>Нет**</td>
-                    </tr>
-                    <tr>
-                        <td>Служба поддержки</td>
-                        <td>Да</td>
-                        <td>Да</td>
-                        <td>Да</td>
-                    </tr>
-            </tbody>
-
-            </table>
-        <p class="tariffs-note">*стоимость карты включена в стоимость номинала согласно тарифам Telegram-бота<br>
-        **возврат карты возможен только при технической неисправности самой карты и соблюдении условий, читайте более подробно условия возврата и использования в разделе FAQ</p>
-        </div>
-
-        <!-- Секция для Подарочной карты -->
-        <div class="tab-content" id="gift" style="display: none;">
-            <div class="card-content">
-                <img src="img/gift-card.png" alt="Gift Card" style="width: 30%;" class="animated-card">
-                <div class="card-info">
-                    <h3>Подарочная</h3>
-                    <p>Подарочная карта с фиксированным номиналом баланса от 10$ до 100$</p>
-                    <button class="card-button open-qr-modal">Выпустить карту</button>
-                </div>
-            </div>
-            <table class="tariffs-table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Prepaid</th>
-                    <th>Virtual</th>
-                    <th>Gift (ваучеры)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Выпуск карты</td>
-                    <td>от 790 RUB*</td>
-                    <td>3,490 RUB</td>
-                    <td>от 1,280 RUB</td>
-                </tr>
-                <tr>
-                    <td>Ежемесячное обслуживание</td>
-                    <td>0 RUB</td>
-                    <td>690 RUB</td>
-                    <td>0 RUB</td>
-                </tr>
-                <tr>
-                    <td>Валюта баланса</td>
-                    <td>USD/EUR</td>
-                    <td>USD/EUR</td>
-                    <td>USD</td>
-                </tr>
-                <tr>
-                    <td>Номиналы карт</td>
-                    <td>от 5 до 1,000 USD</td>
-                    <td>до 100,000 USD</td>
-                    <td>от 10 до 100 USD</td>
-                </tr>
-                <tr>
-                    <td>Срок действия карты</td>
-                    <td>60 дней</td>
-                    <td>36 месяцев</td>
-                    <td>Одноразовая</td>
-                </tr>
-                <tr>
-                    <td>Пополнение баланса</td>
-                    <td>Нет</td>
-                    <td>Да</td>
-                    <td>Нет</td>
-                </tr>
-                <tr>
-                    <td>Apple & Google Pay</td>
-                    <td>Нет</td>
-                    <td>Да</td>
-                    <td>Нет</td>
-                </tr>
-                <tr>
-                    <td>Поддержка 3D-secure</td>
-                    <td>Да</td>
-                    <td>Да</td>
-                    <td>Да</td>
-                </tr>
-                    <tr>
-                        <td>Пополнение в USDT</td>
-                        <td>Нет</td>
-                        <td>Да</td>
-                        <td>Нетtd>
-                    </tr>
-                    <tr>
-                        <td>Возврат/Обмен</td>
-                        <td>Нет**</td>
-                        <td>Нет**</td>
-                        <td>Нет**</td>
-                    </tr>
-                    <tr>
-                        <td>Служба поддержки</td>
-                        <td>Да</td>
-                        <td>Да</td>
-                        <td>Да</td>
-                    </tr>
-            </tbody>
-
-            </table>
-        <p class="tariffs-note">*стоимость карты включена в стоимость номинала согласно тарифам Telegram-бота<br>
-        **возврат карты возможен только при технической неисправности самой карты и соблюдении условий, читайте более подробно условия возврата и использования в разделе FAQ</p>
-        </div>
-    </div>
-</section>
-
-
-<section class="features-section">
-    <div class="container">
-        <div class="feature-card">
-            <img src="img/debit-card.png" alt="Мультивалютные платежи">
-            <h3>Мультивалютные платежи</h3>
-            <p>Оплачивайте покупки по всему миру в иностранной валюте</p>
-        </div>
-        <div class="feature-card">
-            <img src="img/icon-lock.png" alt="Поддержка 3D-Secure">
-            <h3>Поддержка 3D-Secure</h3>
-            <p>Безопасные платежи с 3D-верификацией</p>
-        </div>
-        <div class="feature-card">
-            <img src="img/icon-shield.png" alt="Гарантия оплаты">
-            <h3>Гарантия оплаты</h3>
-            <p>Гарантируем оплату или вернем вам средства</p>
-        </div>
-    </div>
-<!-- Button for All Services -->
-<div class="all-services-button-container">
-    <a href="services.html" class="all-services-button-link">
-        <button class="all-services-button">Все сервисы</button>
-    </a>
-</div>
-
-
-</section>
-
-<style>
-    .features-section {
-        padding: 60px 20px;
-        background-color: #F1F1F1
-    }
-
-    .features-section .container {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .feature-card {
-        background-color: #00154D;
-        color: #FFFFFF;
-        padding: 20px;
-        border-radius: 15px;
-        width: 30%;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-
-    .feature-card img {
-        width: 60px;
-        height: auto;
-        margin-bottom: 15px;
-    }
-
-    .feature-card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-    }
-
-    .feature-card p {
-        font-size: 1.5rem;
-        color: #D1D1D1;
-    }
-
-    .all-services-button-container {
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    .all-services-button {
-        background-color: #FF9F00;
-        color: #FFFFFF;
-        padding: 15px 30px;
-        border: none;
-        border-radius: 10px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .all-services-button:hover {
-        background-color: #12401E;
-    }
-</style>
-
-<style>
-
-/* Стили для ссылки политики конфиденциальности */
-.privacy-policy-button {
-    background-color: transparent;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.privacy-policy-button:hover {
-    color: #FF9F00;
-}
-
-@media screen and (max-width: 768px) {
-    .privacy-policy-button {
-        background-color: #F1F1F1;
-        color: #FFFFFF;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 10px;
-        font-size: 1rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-}
-
-    /* Main Header Styling */
-    body {
-        background-color: #F1F1F1;
-        color: #12401E;
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    .main-header {
-        background-color: #FFFFFF;
-        padding: 5px;
-    }
-
-    .main-header .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .main-header .brand img {
-        max-height: 50px;
-        margin-right: auto;
-    }
-
-    .main-header .main-nav {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-    }
-
-    .main-header .main-nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-    }
-
-    .main-header .main-nav ul.center-nav {
-        justify-content: center;
-        margin: 0 auto;
-    }
-
-    .main-header .main-nav ul li {
-        margin-left: 20px;
-    }
-
-    .main-header .main-nav ul li a {
-        color: #12401E;
-        text-decoration: none;
-        font-size: 1.2rem;
-        transition: color 0.3s;
-        font-weight: bold; /* Добавляем жирный шрифт */
-    }
-
-    .main-header .main-nav ul li a:hover {
-        color: #FF9F00;
-    }
-
-.footer {
-    background-color: #F1F1F1;
-        color: #000000;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-.footer-content {
-    text-align: center;
-}
-
-.privacy-link {
-    color: #12401E;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top: 10px;
-    transition: color 0.3s;
-}
-
-.privacy-link:hover {
-    color: #FF9F00;
-}
-
-@media screen and (max-width: 768px) {
-    .footer {
-        padding: 15px 0;
-    }
-    
-    .privacy-link {
-        font-size: 1.2rem;
-        padding: 8px 16px;
-    }
-}
-
-    /* Modal Styling */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+    /* Добавьте эти стили в самом начале */
+    html, body {
         width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.5);
-        justify-content: center;
-        align-items: center;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
     }
 
-    .modal-content {
-        background-color: #fefefe;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 40%;
-        margin: auto;
-        position: relative;
-        text-align: center;
-    }
+/* Добавляем контейнер для всего контента */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+        body {
+            background-color: #F1F1F1;
+            color: #6A6A6A;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-    .close-button {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        color: #aaa;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+        header {
+            background-color: #FFFFFF;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    .close-button:hover, .close-button:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
+        .nav-container {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        header nav {
+            display: flex;
+            gap: 30px;
+            position: relative;
+            left: -100px;
+        }
+
+        header a {
+            color: #12401E;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: #FF9F00;
+        }
+
+        .hero-section {
+            background-color: #F1F1F1;
+            padding: 50px 20px; /* Увеличиваем отступы сверху и снизу */
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-section p {
+            font-size: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-button {
+            background-color: #FF9F00;
+            color: #FFFFFF;
+            border: none;
+            padding: 28px 70px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            margin-top: 40px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-button:hover {
+            background-color: #12401E;
+            transform: translateY(-5px);
+        }
+
+        .small-button {
+            background-color: #FF9F00;
+            color: #FFFFFF;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-left: 20px;
+        }
+
+        .small-button:hover {
+            background-color: #12401E;
+            transform: translateY(-5px);
+        }
+
+        .cards-section {
+            padding: 40px 20px;
+            background-color: #F1F1F1;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        .marquee-section {
+            padding: 50px;
+            background-color: #F1F1F1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee {
+            display: flex;
+            animation: marquee 35s linear infinite;
+            gap: 70px;
+            opacity: 0.8;
+        }
+
+        .marquee img {
+            width: 100px;
+            height: auto;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-350.333%);
+            }
+        }
+
+        .marquee-overlay {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .marquee-fade-left,
+        .marquee-fade-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 10%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .marquee-fade-left {
+            left: 0;
+            background: linear-gradient(to right, rgba(241, 241, 241, 1), rgba(241, 241, 241, 0));
+        }
+
+        .marquee-fade-right {
+            right: 0;
+            background: linear-gradient(to left, rgba(241, 241, 241, 1), rgba(241, 241, 241, 0));
+        }
+
+        .small-hero-button {
+            background-color: #FF9F00;
+            color: #FFFFFF;
+            border: none;
+            padding: 25px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.25rem;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .small-hero-button:hover {
+            background-color: #12401E;
+            transform: translateY(-3px);
+        }
+
+        .features-section {
+            padding: 30px 20px;
+            background-color: #F1F1F1;
+        }
+
+        .features-section h2 {
+            font-size: 3rem;
+            color: #12401E;
+            margin-bottom: 40px;
+            animation: slideIn 0.5s ease-in-out; 
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .feature-card {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            align-items: flex-start;
+            animation: fadeInCard 0.8s ease-in-out;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        @keyframes fadeInCard {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .feature-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.8rem;
+            color: #12401E;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            font-size: 1.4rem;
+            color: #6A6A6A;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .feature-card a {
+            margin-top: auto;
+            align-self: center;
+        }
+
+        .qr-section {
+            text-align: right;
+            padding: 20px;
+        }
+
+.text-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+        .text-section {
+            font-size: 1.8rem;
+            color: #12401E;
+            font-weight: 700;
+            margin: 0;
+            white-space: nowrap; /* Предотвращаем перенос текста */
+        }
+
+.text-section-container .small-hero-button {
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+        .button-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #12401E;
+            margin: 5% auto;
+            padding: 50px;
+            border-radius: 90px;
+            width: 80%;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeIn 0.6s;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
     .continue-button {
         background-color: #FF9F00;
@@ -611,46 +396,18 @@
     }
 
     .continue-button:hover {
-        background-color: #12401E;
-    }
-
-    /* Card Animation Section */
-    .card-animation-section {
-        padding: 60px 210px;
-    }
-
-    .card-layout {
-        display: flex;
-        align-items: left;
-        justify-content: space-between;
-        flex-direction: row; /* Фотография слева, текст справа */
-    }
-
-    .card-animation {
-        width: 75%;
-        animation: floatCard 3s ease-in-out infinite;
-    }
-
-    .card-info {
-        width: 60%;
-        text-align: left;
-  margin-left: -200px; /* Сдвинуть текст левее */
-    }
-
-    .animated-card {
-        width: 50%;
-        animation: floatCard 3s ease-in-out infinite;
-    }
-
-    .card-info h2 {
-        font-size: 5rem;
+        background-color: #FFFFFF;
         color: #12401E;
     }
 
-    .card-info p {
-        font-size: 2.5rem;
-        color: #6A6A6A;
-    }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
     @keyframes floatCard {
         0%, 100% {
@@ -660,497 +417,1737 @@
             transform: translateY(-15px);
         }
     }
-</style>
 
-<style>
-    .tariffs-section {
-        padding: 60px 20px;
-        background-color: #F1F1F1;
+        .modal-left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-right {
+            flex: 1;
+            text-align: center;
+        }
+
+        .modal-right h2 {
+            font-size: 2rem;
+            color: #FFFFFF;
+            margin-bottom: 40px;
+        }
+
+        .modal-button {
+            background-color: #FF9F00;
+            color: #FFFFFF;
+            border: none;
+            padding: 15px 130px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .modal-button:hover {
+            background-color: #12401E;
+        }
+
+        /* Видеосекция на всю ширину и высоту экрана */
+        .video-section {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Высота на всю видимую часть экрана */
+            overflow: hidden;
+        }
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%) scale(0.7); /* Центрирование видео */
+            object-fit: cover; /* Обрезка видео для заполнения */
+        }
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #12401E;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+    </style>
+</head>
+
+<body>
+
+<div class="burger-menu" onclick="toggleMenu()">
+    ☰
+</div>
+<nav class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="index.html" onclick="toggleMenu()">Главная</a></li>
+        <li><a href="tarrifs.html" onclick="toggleMenu()">Тарифы</a></li>
+        <li><a href="#faq-section" onclick="scrollToSection('faq-section'); toggleMenu()">FAQ</a></li>
+        <li><a href="#about-section" onclick="scrollToSection('about-section'); toggleMenu()">О нас</a></li>
+        <li><a href="docs.html" onclick="toggleMenu()">Статьи</a></li>
+        <li><a href="#footer" onclick="scrollToSection('footer'); toggleMenu()">Контакты</a></li>
+    </ul>
+</nav>
+
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const burger = document.querySelector('.burger-menu');
+    
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        burger.innerHTML = '☰';
+        document.body.style.overflow = '';
+    } else {
+        menu.classList.add('active');
+        burger.innerHTML = '✕';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        // Добавляем небольшую задержку для мобильного меню
+        setTimeout(() => {
+            const headerOffset = 80; // Высота хедера
+            const elementPosition = section.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }, 100);
+    }
+}
+
+// Исправляем ссылку на тарифы, если URL неверный
+document.addEventListener('DOMContentLoaded', function() {
+    const tariffLinks = document.querySelectorAll('a[href="tarrifs.html"]');
+    tariffLinks.forEach(link => {
+        link.href = "tarrifs.html"; // Проверьте правильность написания URL
+    });
+});
+</script>
+
+    </style>
+    <!-- Видеосекция -->
+    <section class="video-section">
+        <video autoplay loop muted playsinline>
+            <source src="img/video.mp4" type="video/mp4">
+            Ваш браузер не поддерживает элемент видео.
+        </video>
+        <div class="video-overlay-content">
+        </div>
+    </section>
+
+    <header>
+    <a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
+        <div class="nav-container">
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="tarrifs.html">Тарифы</a>
+                <a href="#faq-section" onclick="scrollToSection('faq-section')">FAQ</a>
+                <a href="#about-section" onclick="scrollToSection('about-section')">О нас</a>
+                <a href="docs.html">Статьи</a>
+                <a href="#footer" onclick="scrollToSection('footer')">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section" style="background-color: #F1F1F1; padding-top: 30px;">
+        <div style="margin-top: -50px;">
+            <h1 style="font-size: 6rem; color: #12401E; font-weight: bold; margin-bottom: 10px;">AtlasCard</h1>
+            <h2 style="font-size: 2.5rem; color: #12401E; font-weight: 500; margin-bottom: 20px; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">
+                международные карты<br>для интернет покупок
+            </h2>
+            <p style="font-size: 1.5rem; color: #12401E;">Telegram-приложение для моментального выпуска<br>виртуальных карт</p>
+            
+            <div style="position: relative; width: 450px; height: 270px; margin: 50px auto 30px auto; transform: perspective(1000px) rotateY(0deg); transition: transform 0.6s ease-out; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);animation: floatCard 3s ease-in-out infinite;">
+                <div style="position: absolute; inset: 0; background: linear-gradient(145deg, #3A7C2A, #0E3315, #12401E); border-radius: 20px; padding: 25px; color: white; box-shadow: inset 0 0 60px rgba(255, 255, 255, 0.1), 0 0 20px rgba(0, 255, 0, 0.3); display: flex; flex-direction: column; justify-content: space-between; background-blend-mode: multiply;">
+                    <div style="font-weight: bold; font-size: 2.2rem; letter-spacing: 2px; text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);">AtlasCard</div>
+                    <div style="margin-top: 40px; font-size: 1rem;">Card Holder Name</div>
+                    <div style="font-size: 1.2rem; font-weight: 600; text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);">Your Name</div>
+                    <div style="position: absolute; bottom: 20px; left: 20px; display: flex; align-items: center;">
+                        <div style="font-size: 1rem; margin-right: 10px;">00/00</div>
+                        <div style="display: flex;">
+                            <div style="width: 35px; height: 35px; background: radial-gradient(circle, #FF5A5F, #C2383B); border-radius: 50%; margin-right: 8px; box-shadow: 0 0 15px rgba(255, 90, 95, 0.5);"></div>
+                            <div style="width: 35px; height: 35px; background: radial-gradient(circle, #FF9F00, #C27800); border-radius: 50%; box-shadow: 0 0 15px rgba(255, 159, 0, 0.5);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 70px;"></div>
+<!-- Button to open the modal -->
+<a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту сейчас</a>
+
+        </div>
+    </section>
+
+    <!-- Бегущая строка с иконками сервисов -->
+    <div class="marquee-section">
+        <div class="marquee-overlay">
+            <div class="marquee">
+                <img src="img/Spotify_logo.png" alt="Spotify">
+                <img src="img/Xbox_logo.png" alt="Xbox">
+                <img src="img/PlayStation_logo.png" alt="PlayStation">
+                <img src="img/YouTube_logo.png" alt="YouTube">
+                <img src="img/Apple_logo.png" alt="Apple">
+                <img src="img/Google_Play_logo.png" alt="Google Play">
+                <img src="img/Discord_logo.png" alt="Discord">
+                <img src="img/Tidal_logo.png" alt="Tidal">
+                <img src="img/Amazon_logo.png" alt="Amazon">
+                <img src="img/Zoom_logo.png" alt="Zoom">
+                <img src="img/Midjourney_logo.png" alt="Midjourney">
+                <img src="img/i/service-logo12.png" alt="service-logo12">
+                <img src="img/i/service-logo13.png" alt="Xbox">
+                <img src="img/i/service-logo14.png" alt="PlayStation">
+                <img src="img/i/service-logo15.png" alt="YouTube">
+                <img src="img/i/service-logo16.png" alt="Apple">
+                <img src="img/i/service-logo17.png" alt="Google Play">
+                <img src="img/i/service-logo18.png" alt="Discord">
+                <img src="img/i/service-logo19.png" alt="Tidal">
+                <img src="img/i/service-logo20.png" alt="Amazon">
+                <!-- Дублируем логотипы для создания эффекта бесконечности -->
+                <img src="img/Spotify_logo.png" alt="Spotify">
+                <img src="img/Xbox_logo.png" alt="Xbox">
+                <img src="img/PlayStation_logo.png" alt="PlayStation">
+                <img src="img/YouTube_logo.png" alt="YouTube">
+                <img src="img/Apple_logo.png" alt="Apple">
+                <img src="img/Google_Play_logo.png" alt="Google Play">
+                <img src="img/Discord_logo.png" alt="Discord">
+                <img src="img/Tidal_logo.png" alt="Tidal">
+                <img src="img/Amazon_logo.png" alt="Amazon">
+                <img src="img/Zoom_logo.png" alt="Zoom">
+                <img src="img/Midjourney_logo.png" alt="Midjourney">
+                <img src="img/i/service-logo12.png" alt="service-logo12">
+                <img src="img/i/service-logo13.png" alt="Xbox">
+                <img src="img/i/service-logo14.png" alt="PlayStation">
+                <img src="img/i/service-logo15.png" alt="YouTube">
+                <img src="img/i/service-logo16.png" alt="Apple">
+                <img src="img/i/service-logo17.png" alt="Google Play">
+                <img src="img/i/service-logo18.png" alt="Discord">
+                <img src="img/i/service-logo19.png" alt="Tidal">
+                <img src="img/i/service-logo20.png" alt="Amazon">
+                <img src="img/Spotify_logo.png" alt="Spotify">
+                <img src="img/Xbox_logo.png" alt="Xbox">
+                <img src="img/PlayStation_logo.png" alt="PlayStation">
+                <img src="img/YouTube_logo.png" alt="YouTube">
+                <img src="img/Apple_logo.png" alt="Apple">
+                <img src="img/Google_Play_logo.png" alt="Google Play">
+                <img src="img/Discord_logo.png" alt="Discord">
+                <img src="img/Tidal_logo.png" alt="Tidal">
+                <img src="img/Amazon_logo.png" alt="Amazon">
+                <img src="img/Zoom_logo.png" alt="Zoom">
+                <img src="img/Midjourney_logo.png" alt="Midjourney">
+                <img src="img/i/service-logo12.png" alt="service-logo12">
+                <img src="img/i/service-logo13.png" alt="Xbox">
+                <img src="img/i/service-logo14.png" alt="PlayStation">
+                <img src="img/i/service-logo15.png" alt="YouTube">
+                <img src="img/i/service-logo16.png" alt="Apple">
+                <img src="img/i/service-logo17.png" alt="Google Play">
+                <img src="img/i/service-logo18.png" alt="Discord">
+                <img src="img/i/service-logo19.png" alt="Tidal">
+                <img src="img/i/service-logo20.png" alt="Amazon">
+            </div>
+            <div class="marquee-fade-left"></div>
+            <div class="marquee-fade-right"></div>
+        </div>
+    </div>
+
+
+<!-- Modal window -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+<button class="close-button" onclick="closeModal()">&#10005;</button>
+
+        <div class="modal-left">
+            <img src="img/vipustit.png" alt="AtlasCard Phone" style="max-width: 250%; height: auto;">
+        </div>
+        <div class="modal-right">
+            <h2>AtlasCard - это удобное мини-приложение в Telegram</h2>
+            <img src="img/QRcode.png" alt="QR code" style="max-width: 300px; height: auto;">
+            <p>Нажмите "Продолжить", чтобы открыть с текущего устройства</p>
+            <a href="https://t.me/AtlasCard_bot" class="hero-button" style="padding: 8px 20px; font-size: 1rem;">Продолжить</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        const modal = document.getElementById("modal");
+        modal.style.display = "flex";
     }
 
-    .tabs {
+    function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        const modal = document.getElementById("modal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+    <!-- Новая секция "О нас" -->
+    <section class="features-section" style="background-color: #F1F1F1;">
+        <div class="text-section-container">
+            <div class="text-section">
+                Чтобы оформить виртуальную карту, вам нужен только Telegram
+            </div>
+            <a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
+        </div>
+
+<div class="features-container">
+            <div class="feature-card">
+                <img src="img/createvirtualcard.png" alt="Создайте виртуальную   арту в Telegram">
+                <h3>Создайте виртуальную карту в Telegram</h3>
+                <p>С помощью AtlasCard вы сможете быстро и безопасно выпустить виртуальную карту.</p>
+            </div>
+            <div class="feature-card">
+                <img src="img/control.png" alt="Контроль расходов и операций">
+                <h3>Контроль расходов и операций</h3>
+                <p>Следите за своими финансами в режиме реального времени и управляйте расходами с удобством.</p>
+            </div>
+            <div class="feature-card">
+                <img src="img/rubles.png" alt="Пополняйте баланс в Рублях или USDT">
+                <h3>Пополнение баланса</h3>
+                <p>Пополняйте свой счет в любой удобной валюте — рубли или USDT.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<style>
+    /* Стили для выравнивания кнопок в карточках */
+    .feature-card {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between; /* Распределяем пространство между элементами карточки */
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 20px;
+        text-align: left;
+        transition: transform 0.3s ease;
+        height: 100%; /* Чтобы все карточки были одной высоты */
+    }
+
+    .feature-card a {
+        margin-top: auto; /* Позиционируем кнопку внизу карточки */
+        display: block;
+        font-weight: 500;
+        color: #12401E;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .feature-card a:hover {
+        color: #FF9F00;
+    }
+
+        /* Styles for "Оформить зарубежную карту онлайн" section */
+        .cards-online-section {
+            padding: 80px 20px;
+            background-color: #F1F1F1;
+            text-align: center;
+        }
+
+        .cards-online-section h2 {
+            font-size: 3rem;
+            color: #12401E;
+            margin-bottom: 40px;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        .cards-online-container {
+    display: flex;
+    gap: 30px; /* Расстояние между карточками */
+    justify-content: center; /* Распределяем карточки с равными отступами */
+    max-width: 1200px;
+    margin: 0 auto; /* Центрируем секцию */
+        }
+
+        .card-type {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-type:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-type img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card-type h3 {
+            font-size: 1.8rem;
+            color: #12401E;
+            margin-bottom: 10px;
+        }
+
+        .card-type p {
+            font-size: 1.2rem;
+            color: #6A6A6A;
+            margin-bottom: 20px;
+        }
+
+        .card-type a {
+            color: #FFFFFF;
+            background-color: #FF9F00;
+            padding: 13px 23px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-type a:hover {
+            background-color: #12401E;
+        }
+
+        /* Button under columns in "Оформить зарубежную карту онлайн" section */
+        .cards-online-section .cards-online-button {
+            margin-top: 40px;
+            color: #FFFFFF;
+            background-color: #12401E;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .cards-online-section .cards-online-button:hover {
+            background-color: #FF9F00;
+        }
+
+        /* Positioning "Все сервисы" button lower */
+        .service-section-button {
+            margin-top: 40px;
+        }
+
+.footer {
+    background-color: #F1F1F1;
+    color: #12401E; /* Изменил цвет текста на более контрастный */
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #12401E; /* Изменил цвет ссылок для лучшей видимости */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #FF9F00;
+}
+
+/* Добавляем стили для параграфов в футере */
+.footer p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Мобильные стили */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 30px 15px;
+    }
+    
+    .footer p {
+        font-size: 1rem;
+    }
+}
+
+</style>
+
+
+<section class="features-section">
+        <h2 style="font-size: 3rem; color: #12401E; text-align: center; margin-bottom: 40px;">Оцените все преимущества</h2>
+    <div class="container">
+        <div class="feature-card">
+            <img src="img/debit-card.png" alt="Выбор тарифного плана" style="width: 70px; height: 70px;">
+            <h3>Выбор тарифного плана</h3>
+            <p>Подберите себе наиболее подходящий тариф</p>
+            <a href="tarrifs.html">Тарифы ></a>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-smartphone.png" alt="Мультивалютные платежи" style="width: 70px; height: 70px;">
+            <h3>Мультивалютные платежи</h3>
+            <p>Оплачивайте покупки по всему миру в иностранной валюте</p>
+<a href="#faq-section" class="learn-more">Подробнее ></a>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-help-desk.png" alt="Служба поддержки" style="width: 70px; height: 70px;">
+            <h3>Служба поддержки</h3>
+            <p>Наша служба поддержки всегда рада прийти на помощь</p>
+<a href="javascript:void(0);" onclick="openModal()">Задать вопрос ></a>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-central-bank.png" alt="Моментальный выпуск 24/7" style="width: 70px; height: 70px;">
+            <h3>Моментальный выпуск 24/7</h3>
+            <p>Карта готова к покупкам сразу после получения</p>
+<a href="javascript:void(0);" onclick="openModal()">Выпустить карту ></a>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-lock.png" alt="Поддержка 3D-Secure" style="width: 70px; height: 70px;">
+            <h3>Поддержка 3D-Secure</h3>
+            <p>Безопасные платежи с 3D-верификацией</p>
+<a href="#faq-section" class="learn-more">Подробнее ></a>
+        </div>
+        <div class="feature-card">
+            <img src="img/icon-shield.png" alt="Гарантия оплаты" style="width: 70px; height: 70px;">
+            <h3>Гарантия оплаты</h3>
+            <p>Гарантируем оплату или вернем вам средства</p>
+<a href="#faq-section" class="learn-more">FAQ ></a>
+        </div>
+    </div>
+</section>
+
+
+    <script>
+        document.querySelector(".hero-button").addEventListener("click", function() {
+            // Add modal popup code here if needed in future
+        });
+    </script>
+
+<style>
+    .features-heading {
+        font-size: 3.5rem; /* Увеличенный размер текста для заголовка */
+        text-align: center;
+        margin-bottom: 40px;
+        color: #12401E;
+        font-weight: 700;
+    }
+
+    .features-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Устанавливаем 3 карточки в строке */
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .feature-card {
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature-icon {
+        width: 50px;  /* Уменьшенные иконки */
+        height: 50px; /* Сделаем их маленькими */
+        margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.8rem;
+        color: #12401E;
+        margin-bottom: 15px;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+        color: #6A6A6A;
         margin-bottom: 20px;
     }
 
-    .tab-button {
-        background-color: #12401E;
-        color: #FFFFFF;
-        border: none;
-        padding: 15px 30px;
-        margin: 0 35px;
-        cursor: pointer;
-        font-size: 1.5rem;
-        font-weight: bold;
-        border-radius: 10px;
-        transition: background-color 0.3s, transform 0.3s;
+    .feature-card a {
+        color: #12401E;
+        text-decoration: none;
+        font-weight: 500;
     }
 
-    .tab-button.active {
-        background-color: #FF9F00;
-        transform: scale(1.1);
+
+        /* О нас Section Improvements */
+        .about-section {
+            padding: 60px 20px;
+            background-color: #F1F1F1;
+            text-align: center;
+            animation: fadeInAbout 1s ease-in-out;
+        }
+
+        .about-section h2 {
+            font-size: 3.5rem;
+            color: #12401E;
+            margin-bottom: 30px;
+            animation: slideInFromLeft 0.8s ease-in-out;
+        }
+
+        .about-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.6rem;
+            color: #6A6A6A;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .about-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInAboutImage 1s ease-in-out;
+        }
+
+        @keyframes fadeInAbout {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInAboutImage {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+
+</style>
+
+
+    <!-- "Оформить зарубежную карту онлайн" Section -->
+    <section class="cards-online-section">
+        <h2>Оформить зарубежную карту онлайн</h2>
+        <div class="cards-online-container">
+            <div class="card-type">
+                <img src="img/predoplachiniy.png" alt="Предоплаченная">
+                <h3>Предоплаченная</h3>
+                <p>Предоплаченная карта с фиксированным лимитом пополнения баланса от 5 $ до 200 $</p>
+<a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
+            </div>
+            <div class="card-type">
+                <img src="img/atlascard.png" alt="Виртуальная">
+                <h3>Виртуальная</h3>
+                <p>Виртуальная карта, пополняемая балансом и выгодными тарифами на пополнение от 5 $ до 100.000 $</p>
+<a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
+            </div>
+            <div class="card-type">
+                <img src="img/podarichniy.png" alt="Подарочная">
+                <h3>Подарочная</h3>
+                <p>Коды активации или ваучеры, предназначенные для покупок на определенных сервисах и сайтах</p>
+<a href="javascript:void(0);" class="small-hero-button" onclick="openModal()">Выпустить карту</a>
+            </div>
+        </div>
+        <a href="tarrifs.html" class="cards-online-button">Узнать тарифы</a>
+    </section>
+
+<!-- "Что можно оплатить виртуальными картами?" Section -->
+<section class="services-section" style="background-color: #F1F1F1;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 80px 20px;">
+        <div class="service-text" style="flex: 1; padding-right: 40px;">
+            <h2 style="font-size: 3rem; color: #12401E; margin-bottom: 20px;">Что можно оплатить виртуальными картами?</h2>
+            <p style="font-size: 1.4rem; color: #000000; margin-bottom: 30px;">Оплачивайте товары в интернет-магазинах, подписки, игры и программы и услуги.</p>
+                <a href="services.html" class="all-services-button">Все сервисы</a>
+        </div>
+        <div class="service-logos" style="flex: 1;">
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                <img src="img/i/service-logo1.png" alt="Service Logo 1" style="width: 100px;">
+                <img src="img/i/service-logo2.png" alt="Service Logo 2" style="width: 100px;">
+                <img src="img/i/service-logo3.png" alt="Service Logo 3" style="width: 100px;">
+                <img src="img/i/service-logo4.png" alt="Service Logo 4" style="width: 100px;">
+                <img src="img/i/service-logo5.png" alt="Service Logo 5" style="width: 100px;">
+                <img src="img/i/service-logo6.png" alt="Service Logo 6" style="width: 100px;">
+                <img src="img/i/service-logo7.png" alt="Service Logo 7" style="width: 100px;">
+                <img src="img/i/service-logo8.png" alt="Service Logo 8" style="width: 100px;">
+                <img src="img/i/service-logo9.png" alt="Service Logo 7" style="width: 100px;">
+                <img src="img/i/service-logo10.png" alt="Service Logo 8" style="width: 100px;">
+                <img src="img/i/service-logo11.png" alt="Service Logo 1" style="width: 100px;">
+                <img src="img/i/service-logo12.png" alt="Service Logo 2" style="width: 100px;">
+                <img src="img/i/service-logo13.png" alt="Service Logo 3" style="width: 100px;">
+                <img src="img/i/service-logo14.png" alt="Service Logo 4" style="width: 100px;">
+                <img src="img/i/service-logo15.png" alt="Service Logo 5" style="width: 100px;">
+                <img src="img/i/service-logo16.png" alt="Service Logo 6" style="width: 100px;">
+                <img src="img/i/service-logo17.png" alt="Service Logo 7" style="width: 100px;">
+                <img src="img/i/service-logo18.png" alt="Service Logo 8" style="width: 100px;">
+                <img src="img/i/service-logo19.png" alt="Service Logo 7" style="width: 100px;">
+                <img src="img/i/service-logo20.png" alt="Service Logo 8" style="width: 100px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Остальная часть кода (секции "О нас", преимущества и т.д.) остаются неизменными -->
+</body>
+
+</html>
+
+
+    <!-- "О нас" Section -->
+    <section id="about-section" class="about-section">
+        <h2>О нас</h2>
+        <p>AtlasCard - это ваша возможность получить международные виртуальные карты для удобных и безопасных покупок по всему миру. Мы гордимся тем, что предоставляем простой и быстрый способ оформления карты, который позволяет вам оплачивать онлайн-сервисы, подписки и товары, не выходя из дома. Наша миссия - обеспечить удобство и безопасность всем пользователям.</p>
+        <img src="logo.png" alt="О нас" class="about-image">
+    </section>
+
+
+<!-- "Часто задаваемые вопросы (FAQ)" Section -->
+<section id="faq-section" class="faq-section">
+    <h2>Часто задаваемые вопросы (FAQ)</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Что такое AtlasCard и как он работает?</button>
+            <div class="faq-answer">
+                <p>Виртуальная карта работает так же, как обычная банковская карта, с той раз  ицей, что она не имеет физического носителя. Вы можете использовать её данные для безопасных покупок и оплат онлайн по всему миру.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Где можно расплачиваться виртуальной картой?</button>
+            <div class="faq-answer">
+                <p>Виртуальная карта подходит для покупок и оплат в интернет-магазинах, принимающих онлайн-оплаты, преимущественно в долларах США и других валютах, за исключением российского рубля. Инструкцию по использованию виртуальной карты можно найти в разделе "Инструкции".</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Поддержка 3D-Secure</button>
+            <div class="faq-answer">
+                <p>Виртуальные карты AtlasCard поддерживают 3D-Secure для безопасных платежей. Карты с тарифами Easy и Pro имеют пополняемый баланс и отправляют уведомления о транзакциях в Telegram-бот. Также, вы можете отслеживать движения по счету в разделе "Транзакции" личного кабинета.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Что делать, если срок карты истёк?</button>
+            <div class="faq-answer">
+                <p>Если срок действия виртуальной карты завершился, ваши средства сохраняются и могут быть перенесены на новую карту или зачислены на баланс вашего внутреннего кошелька. Проверить баланс можно через личный кабинет в Telegram.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Принцип работы виртуальной карты</button>
+            <div class="faq-answer">
+                <p>Использование виртуальной карты не отличается от с  андартной: просто вводите её данные при оплате. Это позволяет безопасно совершать покупки, не раскрывая данные вашей личной карты..</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Срок действия виртуальной карты</button>
+            <div class="faq-answer">
+                <p>Тариф Pro — 36 месяцев Тариф Easy — 180 дней По окончании срока действия остаток средств зачисляется на баланс вашего кошелька в личном кабинете, за исключением кодов активации.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Можно ли пополнить баланс виртуальной карты?</button>
+            <div class="faq-answer">
+                <p>Да, карты с тарифами, не требующими код активации, можно пополнять по курсу с учётом комиссии. Карты с кодом активации пополнению не подлежат.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Служба поддержки</button>
+            <div class="faq-answer">
+                <p>По вопросам использования виртуальных карт вы можете обратиться в <a href="https://t.me/AtlasCardSupportBot" target="_blank">службу поддержки AtlasCard</a>. Мы на связи с 08:00 до 20:00 по московскому времени и готовы помочь вам с любыми вопросами.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* FAQ Section with Two Columns */
+    .faq-section {
+        padding: 80px 20px;
+        background-color: #F1F1F1;
+        text-align: center;
     }
 
-    .card-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        padding: 20px 0;
-    }
-
-    .tab-button:hover {
-        background-color: #FF9F00;
-        transform: scale(1.1);
-    }
-
-    .card-info {
-        max-width: 40%;
-    }
-
-    .card-info h3 {
+    .faq-section h2 {
         font-size: 3rem;
         color: #12401E;
+        margin-bottom: 40px;
+        animation: slideIn 0.5s ease-in-out;
     }
 
-    .card-info p {
-        font-size: 1.8rem;
-        color: #6A6A6A;
-    }
-
-    .card-button {
-        background-color: #FF9F00;
-        color: #FFFFFF;
-        padding: 20px 30px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        cursor: pointer;
-        border: none;
-    }
-
-    .card-button:hover {
-        background-color: #12401E;
-    }
-
-    .tariffs-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-
-    .tariffs-table th, .tariffs-table td {
-        border: 1px solid #ddd;
-        padding: 12px;
+    .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
         text-align: left;
     }
 
-    .tariffs-table th {
+    .faq-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #E0E0E0;
+        padding-bottom: 10px;
+    }
+
+    .faq-question {
         background-color: #12401E;
         color: #FFFFFF;
-    }
-
-    .tariffs-table td {
-        color: #6A6A6A;
-    }
-
-</style>
-
-<style>
-    /* Existing styles */
-    .modal-content {
-        background-color: #12401E; /* Замените этот цвет на нужный вам */
-        color: #FFFFFF; /* Цвет текста в модальном окне */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 40%;
-        margin: auto;
-        position: relative;
-        text-align: center;
-    }
-
-    .close-button {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        color: #FFFFFF; /* Цвет крестика */
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .close-button:hover, .close-button:focus {
-        color: #FF9F00; /* Цвет крестика при наведении */
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .continue-button {
-        background-color: #FF9F00;
-        color: #FFFFFF;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .continue-button:hover {
-        background-color: #FFFFFF;
-        color: #12401E;
-    }
-
-@media screen and (max-width: 768px) {
-    /* Секция с картой */
-    .card-animation-section {
-        padding: 40px 20px;
-    }
-
-    .card-layout {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 30px; /* Добавляем отступ между картой и текстом */
-    }
-
-    .card-animation {
+        font-size: 1.8rem;
+        font-weight: 500;
+        padding: 15px 20px;
         width: 100%;
-        order: -1; /* Перемещаем карту наверх */
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
         display: flex;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
     }
 
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 15px; /* Уменьшаем расстояние между кнопками */
-}
-
-.tab-button {
-    background-color: #12401E;
-    color: #FFFFFF;
-    border: none;
-    padding: 12px 20px; /* Уменьшаем внутренние отступы */
-    margin: 0; /* Убираем внешние отступы */
-    cursor: pointer;
-    font-size: 1.2rem; /* Уменьшаем размер шрифта */
-    font-weight: bold;
-    border-radius: 8px; /* Немного уменьшаем скругление углов */
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-/* Медиа-запрос для мобильных устройств */
-@media screen and (max-width: 768px) {
-    .tabs {
-        gap: 35px; /* Еще меньше расстояние на мобильных */
+    .faq-question:hover {
+        background-color: #FF9F00;
     }
 
-    .tab-button {
-        padding: 10px 15px; /* Меньше отступы на мобильных */
-        font-size: 1.5rem; /* Меньше шрифт на мобильных */
-    }
-}
-
-    /* Увеличиваем размер карты */
-    .animated-card {
-        width: 80% !important; /* Уменьшаем немного ширину карты */
-        max-width: 350px; /* Максимальная ширина */
-        height: auto;
-        margin: 0 auto;
-        display: block;
-    }
-
-    /* Стили для текстового блока */
-    .card-info {
-        width: 100%;
-        max-width: 100%;
-        margin-left: 0;
-        text-align: center;
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        opacity: 0;
         padding: 0 20px;
     }
 
-    .card-info h2 {
-        font-size: 2.5rem; /* Уменьшаем размер заголовка */
-        margin-bottom: 15px;
-        margin-top: 0;
+    .faq-answer p {
+        font-size: 1.4rem;
+        color: #6A6A6A;
+        margin-top: 10px;
     }
 
-    .card-info p {
-        font-size: 1.6rem; /* Уменьшаем размер текста */
+    .faq-item.open .faq-answer {
+        max-height: 150px;
+        opacity: 1;
+        padding-top: 10px;
+    }
+
+    .faq-question::after {
+        content: '+';
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+    .faq-item.open .faq-question::after {
+        content: '-';
+    }
+
+
+        /* Updated Reviews Section */
+        .reviews-section {
+            padding: 80px 20px;
+            background-color: #F1F1F1;
+            text-align: center;
+        }
+
+        .reviews-section h2 {
+            font-size: 3rem;
+            color: #12401E;
+            margin-bottom: 40px;
+        }
+
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .review-item {
+            background-color: #FFFFFF;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            position: relative;
+            animation: fadeInCard 0.8s ease-in-out;
+        }
+
+        .review-item p {
+            font-size: 1.2rem;
+            color: #6A6A6A;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .review-item .reviewer {
+            font-size: 1rem;
+            color: #12401E;
+            font-weight: bold;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+        }
+
+            .footer {
+            background-color: #12401E;
+            color: #FFFFFF;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .footer a {
+            color: #FF9F00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #FFFFFF;
+        }
+</style>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('open');
+        });
+    });
+</script>
+
+
+<section class="reviews-section">
+    <h2>Отзывы клиентов</h2>
+    <div class="reviews-container">
+        <div class="review-item">
+            <p>"Сначала сомневался, но все оказалось очень просто. Оформление карты прошло быстро, и уже через пару минут я смог использовать ее для своих покупок."</p>
+            <div class="reviewer">- Иван, Москва</div>
+        </div>
+        <div class="review-item">
+            <p>"AtlasCard действительно упрощает оплату подписок   а любимые сер  исы. Мне больше не нужно беспокоиться о том, как оплатить Spotify или Netflix."</p>
+            <div class="reviewer">- Анастасия, Санкт-Петербург</div>
+        </div>
+        <div class="review-item">
+            <p>"Потрясающий сервис! Карту можно оформить буквально за пару минут, а поддержка быстро отвечает на все вопросы. Очень удобно!"</p>
+            <div class="reviewer">- Алексей, Казань</div>
+        </div>
+        <div class="review-item">
+            <p>"Мне понравилось, что карты можно выпускать мгновенно, и они сразу готовы к использованию. Очень удобно, особенно когда нужно что-то быстро оплатить."</p>
+            <div class="reviewer">- Екатерина, Екатеринбург</div>
+        </div>
+        <div class="review-item">
+            <p>"Карта оказалась идеальной для покупок на иностранных сайтах. Я пользуюсь ею для оплаты всего, что мне нужно. Работает отлично!"</p>
+            <div class="reviewer">- Михаил, Новосибирск</div>
+        </div>
+        <div class="review-item">
+            <p>"Удобное приложение и легкое оформление. Все работает так, как обещали. Теперь у меня есть карта для покупок по всему миру."</p>
+            <div class="reviewer">- Ольга, Ростов-на-Дону</div>
+        </div>
+    </div>
+</section>
+
+
+<section class="start-section">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 80px 20px;">
+        <h2>Не знаете с чего начать?</h2>
+        <p>Свяжитесь с нашей службой поддержки AtlasCard и мы ответим на все интересующие вас вопросы.</p>
+        <div class="button-container">
+            <a href="#" class="start-button" onclick="openModal()">Связаться</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Improved "Не знаете с чего начать?" section */
+    .start-section {
+        padding: 80px 20px;
+        background-color: #014A5E;
+        text-align: center;
+    }
+
+    .start-section h2 {
+        font-size: 3rem;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .start-section p {
+        font-size: 1.4rem;
+        color: #97A6AB;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button-container {
+        margin-top: 20px;
+    }
+
+    .start-button {
+        background-color: #FF9F00;
+        color: #FFFFFF;
+        padding: 15px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .start-button:hover {
+        background-color: #12401E;
+    }
+
+@media (max-width: 768px) {
+
+    /* Основные элементы */
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+
+
+    .nav-container {
+        display: none; /* Скрываем стандартное меню */
+    }
+
+    /* Бургер-меню */
+    .burger-menu {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        color: #12401E;
+        z-index: 1001;
+        background: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(18, 64, 30, 0.98);
+        padding: 80px 20px 20px;
+        padding-top: 70px;
+        z-index: 999;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .mobile-menu.active {
+        display: block;
+        transform: translateX(0);
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
         margin: 0;
+    }
+
+    .mobile-menu li {
+        margin: 20px 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding-bottom: 15px;
+    }
+
+    .mobile-menu a {
+        color: white;
+        font-size: 1.4rem;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+    }
+
+    /* Секции */
+    .hero-section,
+    .features-section,
+    .cards-online-section,
+    .services-section,
+    .reviews-section,
+    .faq-section,
+    .start-section {
+        padding: 40px 15px;
+    }
+
+    /* Видео секция */
+@media (max-width: 768px) 
+    .video-section {
+        height: 70vh; /* Увеличение высоты контейнера на 70% от видимой части экрана */
+    }
+
+    video {
+        height: 100vh; /* Видео занимает 100% высоты экрана */
+        width: auto; /* Автоматическая ширина, чтобы сохранить пропорции */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover; /* Обрезка видео для заполнения контейнера */
+    }
+
+
+@media (max-width: 768px) {
+    /* Герой секция */
+    .hero-section {
+        padding-top: 40px;
+        margin-top: -20px !important; /* Поднимаем скцию ближе к видео */
+        min-height: auto !important; /* Убираем фиксированную высоту */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        zoom: 0.8; /* Добавляем масштабирование для мобильных устройств */
+        -moz-transform: scale(0.8); /* Для Firefox */
+        -moz-transform-origin: 0 0;
+        min-height: auto !important;
+    }
+
+    /* Корректируем размеры контента */
+    .hero-section > div {
+        transform: scale(1);
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    }
+
+    /* Карта */
+    .hero-section div[style*="width: 450px"] {
+        width: 650px !important; /* Уменьшаем ширину */
+        height: 390px !important; /* Уменьшаем высоту пропорционально */
+    margin-top: 60px !important; /* Добавляем отступ от текста */
+        animation: floatCard 3s ease-in-out infinite !important;
+        left: 8px; /* Сдвигаем карту вправо на 20px */
+        position: relative;
+    }
+
+    /* Определяем keyframes для анимации, если их еще нет */
+    @keyframes floatCard {
+        0%, 100% {
+            transform: perspective(1000px) rotateY(0deg) translateY(0) translateX(8px);
+        }
+        50% {
+            transform: perspective(1000px) rotateY(0deg) translateY(-15px) translateX(8px);
+        }
+    }
+
+    /* Уменьшаем отступ после карты */
+    .hero-section div[style*="margin-top: 70px"] {
+        margin-top: 30px !important;
+    }
+
+    .hero-section div[style*="width: 450px"] div[style*="font-size"] {
+        font-size: 1.6rem !important; /* Умень  аем размер шрифта */
+    }
+
+    /* Уменьшаем размер кружков на карте */
+    .hero-section div[style*="width: 450px"] div[style*="width: 35px"] {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    .hero-section h1 {
+        font-size: 7rem !important;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+
+    .hero-section h2 {
+        font-size:2.5rem !important;
+        margin-left: 10px;
+        margin-bottom: 10px !important;
+    }
+
+    .hero-section p {
+        font-size: 1.8rem !important;
+        margin-left: 10px;
+        margin-bottom: 15px !important;
+    }
+
+    /* Кнопка */
+    .hero-section .small-hero-button {
+        margin-left: 20px;
+    }
+
+    /* Приближаем бегущую строку к кнопке */
+    .marquee-section {
+        padding-top: 40px !important; /* Увеличиваем верхний отступ */
+        margin-top: 20px !important; /* Добавляем отступ сверху */
+    }
+
+    /* Контейнер бегущей строки */
+    .marquee-overlay {
+        margin-top: 20px !important; /* Дополнительный отступ для контента */
+    }
+
+
+    /* Контейнеры и сетки */
+    .container,
+    .features-container,
+    .reviews-container {
+        grid-template-columns: 1fr !important;
+        gap: 80px;
+        padding: 20px;
+    }
+
+/* Стили для мобильной версии */
+@media (max-width: 768px) {
+    .cards-online-container {
+        flex-direction: column; /* Изменяем расположение карточек на вертикальное */
+        gap: 20px; /* Расстояние между карточками для мобильных устройств */
+        align-items: center; /* Центрируем карточки на экране */
+    }
+
+    .card-type {
+        width: 70%; /* Карточки занимают всю ширину экрана на мобильных */
+    }
+}
+
+    /* Кнопки */
+    .hero-button, .small-hero-button, .modal-button {
+        padding: 15px 25px !important;
+        font-size: 1.6rem !important;
+        width: auto !important;
+        display: inline-block !important;
+    }
+
+
+    /* Карточки */
+    .feature-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Модальное окно */
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+        flex-direction: column;
+        margin: 5% auto;
+        border-radius: 15px;
+    }
+
+    .modal-left img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Секция сервисов */
+    .services-section .container {
+        flex-direction: column !important;
+    }
+
+    .service-logos img {
+        width: 90px !important;
+    }
+
+    /* Бегущая строка */
+@media (max-width: 768px) {
+    .marquee {
+        animation: marquee 20s linear infinite; /* Ускоряем анимацию для мобильных устройств до 20 секунд */
+        gap: 25px; /* Уменьшаем расстояние между логотипами на мобильной версии */
+    }
+
+    .marquee img {
+        width: 120px; /* Увеличиваем ширину логотипов для мобильных устройств */
+        height: auto; /* Сохраняем пропорции логотипов */
+    }
+}
+
+    /* Секция "Начать" */
+    .start-section .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    /* Отступы секций */
+    section {
+        padding: 40px 15px;
+    }
+}
+
+/* Дополнительные медиа-запросы для очень маленьких экранов */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+
+    .hero-button, 
+    .small-hero-button {
+        padding: 12px 20px !important;
+        font-size: 1rem !important;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .feature-card,
+    .review-item {
+        padding: 15px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .feature-card p {
+        font-size: 1rem;
+    }
+}
+
+    /* FAQ секция */
+    .faq-question {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    /* Отзывы */
+    .reviews-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Начальная секция */
+    .start-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .start-section p {
+        font-size: 1.2rem;
+    }
+
+}
+
+.mobile-menu {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+@media screen and (max-width: 768px) {
+    /* Центрирование текстовой секции с Telegram */
+    .text-section {
+        text-align: center !important;
+        width: 100% !important;
+        padding: 20px !important;
+        margin: 0 auto !important;
+        font-size: 2.8rem !important; /* Увеличили размер */
+        color: #12401E !important;
+        line-height: 1.3 !important; /* Добавили высоту строки для читаемости */
+    }
+
+    /* Уменьшенная центрированная кнопка */
+    .text-section ~ .small-hero-button {
+        display: inline-block !important;
+        margin: 20px auto 40px auto !important;
+        padding: 15px 30px !important; /* Уменьшаем padding */
+        font-size: 1.2rem !important; /* Уменьшаем размер шрифта */
+        width: auto !important;
+        min-width: 200px !important; /* Минимальная ширина */
+        max-width: 80% !important; /* Максимальная ширина */
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Стили для секции "Оцените все преимущества" */
+    .features-section .feature-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features-section .feature-card h3 {
+        text-align: center;
+        width: 100%;
+        font-size: 1.8rem;
+        color: #12401E;
+        margin-bottom: 15px;
+    }
+
+    .features-section .feature-card img {
+        width: 70px; /* Фиксированная ширина для иконок */
+        height: 70px; /* Фиксированная высота для иконок */
+        margin: 0 auto 20px;
+    }
+
+    /* Стили для секции с большими изображениями */
+    .features-container .feature-card img[src*="createvirtualcard.png"],
+    .features-container .feature-card img[src*="control.png"],
+    .features-container .feature-card img[src*="rubles.png"] {
+        width: 100%; /* Полная ширина для больших изображений */
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Центрирование заголовка "Оцените все преимущества" */
+    .features-section {
+        text-align: center !important;
+        padding: 40px 20px !important;
+    }
+
+    .features-section h2 {
+        text-align: center !important;
+        font-size: 2.5rem !important;
+        color: #12401E !important;
+        width: 100% !important;
+        margin: 0 auto 30px auto !important;
+        padding: 0 !important;
+    }
+
+    /* Контейнер для карточек */
+    .features-container {
+        width: 100% !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+    }
+
+    /* Стили для карточек */
+    .feature-card {
+        width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Центрирование заголовка "Оцените все преимущества" */
+    .features-section {
+        text-align: center !important;
+        width: 100% !important;
+        padding: 40px 0 !important;
+        margin: 0 auto !important;
+    }
+
+    .features-section h2 {
+        text-align: center !important;
+        font-size: 3.3rem !important; /* Увеличили размер заголовка */
+        color: #12401E !important;
+        width: 100% !important;
+        margin: 0 auto 40px auto !important;
+        padding: 0 20px !important;
+        display: block !important;
+    }
+
+    /* Контейнер для карточек */
+    .features-container {
+        width: 90% !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+        padding: 0 !important;
+    }
+
+    /* Стили для карточек */
+    .feature-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Текст в карточках секции "Оцените все преимущества" */
+    .feature-card {
+        padding: 25px !important; /* Увеличиваем отступы внутри карточки */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .feature-card p {
+        font-size: 1.5rem !important; /* Значительно увеличиваем размер текста */
+        line-height: 1.4 !important;
+        margin: 15px 0 !important;
+        color: #6A6A6A !important;
+        text-align: center;
+    }
+
+    /* Заголовок секции */
+    .features-section h2 {
+        font-size: 3.3rem;
+        margin: 0 auto 40px;
+        padding: 0 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Заголовки в карточках */
+    .feature-card h3 {
+        text-align: center;
+        width: 100%;
+        font-size: 1.8rem;
+        color: #12401E;
+        margin-bottom: 15px;
+    }
+
+ /* Контейнер карточек */
+    .features-container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
         padding: 0;
     }
 
-.card-info h3 {
-    font-size: 2rem; /* Уменьшаем с 3rem до 2rem */
-    color: #12401E;
-    margin-bottom: 10px;
-}
-
-.card-button {
-    background-color: #FF9F00;
-    color: #FFFFFF;
-    padding: 20px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    margin-top: 25px; /* Добавляем отступ сверху */
-    font-size: 1.6rem; /* Увеличиваем размер текста */
-    transition: background-color 0.3s;
-}
-
-/* Для мобильных устройств */
-@media screen and (max-width: 768px) {
-    .card-button {
-        margin-top: 20px; /* Немного меньший отступ на мобильных */
-        font-size: 1.4rem; /* Немного меньший размер шрифта на мобильных */
-        padding: 15px 25px; /* Корректируем padding для мобильных */
-    }
-}
-
-.card-button:hover {
-    background-color: #12401E;
-}
-
-/* Для мобильных устройств можно сделать еще меньше */
-@media screen and (max-width: 768px) {
-    .card-info h3 {
-        font-size: 2.5rem;
-        margin-bottom: 8px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .tariffs-table {
+    /* Карточки */
+    .feature-card {
         width: 100%;
-        font-size: 1.2rem; /* Увеличиваем базовый размер шрифта */
-        margin: 30px 0; /* Добавляем отступы сверху и снизу */
+        max-width: 350px;
+        margin: 0 auto;
+        padding: 25px;
+        text-align: center;
     }
 
-    .tariffs-table th, 
-    .tariffs-table td {
-        padding: 15px 12px; /* Увеличиваем внутренние отступы */
-        font-size: 1.1rem; /* Увеличиваем размер текста в ячейках */
+    /* Изображения в карточках */
+    .feature-card img {
+        width: 80%;
+        margin: 0 auto 20px;
+        display: block;
     }
 
-    .tariffs-table th {
-        font-size: 1.2rem; /* Увеличиваем размер заголовков */
-        font-weight: bold;
+    /* Текст в карточках других секций */
+    .card-type p {
+        font-size: 1.5rem !important; /* Увеличиваем размер текста */
+        line-height: 1.4 !important;
+        margin: 15px 0 !important;
+        color: #6A6A6A !important;
     }
-
-    /* Увеличиваем размер примечаний под таблицей */
-    .tariffs-note {
-        font-size: 1.1rem;
-        margin-top: 20px;
-        line-height: 1.4;
-    }
-
-
-/* Стили для модального окна */
-.modal-content {
-    background-color: #12401E;
-    color: #FFFFFF;
-    padding: 30px 20px;
-    border-radius: 15px;
-    width: 90%; /* Базовая ширина */
-    max-width: 500px;
-    margin: auto;
-    position: relative;
-    text-align: center;
 }
 
-/* Стили для изображения */
-.modal-content img {
-    width: 60%;
-    max-width: 200px;
-    height: auto;
-    margin: 15px auto;
+@media screen and (max-width: 768px) {
+    /* Увеличиваем размер логотипов */
+    .service-logos img {
+        width: 125px !important; /* Увеличиваем размер каждого логотипа */
+        height: auto !important;
+        margin: 8px !important; /* Добавляем отступы между логотипами */
+    }
+
+    /* Настраиваем сетку логотипов */
+    .service-logos > div {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important; /* 2 логотипа в ряд */
+        gap: 20px !important;
+        justify-items: center !important;
+        align-items: center !important;
+        padding: 20px !important;
+    }
+
+    /* Контейнер для логотипов */
+    .service-logos {
+        width: 100% !important;
+        margin: 30px auto !important;
+    }
 }
 
-.modal-content h2 {
+/* Стили для десктопной версии */
+.text-section {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 30px !important;
+}
+
+.text-section ~ .small-hero-button {
+    margin-left: 20px !important;
+}
+
+/* Медиа-запрос для мобильной версии */
+@media screen and (max-width: 768px) {
+    .text-section {
+        flex-direction: column !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding: 20px !important;
+        margin: 0 auto !important;
+        font-size: 2.8rem !important;
+        color: #12401E !important;
+        line-height: 1.3 !important;
+    }
+
+    .text-section ~ .small-hero-button {
+        display: block !important;
+        margin: 20px auto 40px auto !important;
+        padding: 15px 30px !important;
+        font-size: 1.2rem !important;
+        width: auto !important;
+        min-width: 200px !important;
+        max-width: 80% !important;
+        text-align: center !important;
+    }
+}
+
+.text-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.text-section {
     font-size: 1.8rem;
-    margin: 15px 0;
+    color: #12401E;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap; /* Предотвращаем перенос текста */
 }
 
-.modal-content p {
-    font-size: 1.2rem;
-    margin: 15px 0;
+.text-section-container .small-hero-button {
+    margin: 0;
+    white-space: nowrap;
 }
 
+/* Мобильные стили */
+@media screen and (max-width: 768px) {
+    .text-section-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text-section {
+        margin-bottom: 20px;
+        font-size: 2.8rem;
+        white-space: normal; /* Разрешаем перенос текста на мобильных */
+        display: inline; /* Делаем текст строчным элементом */
+        line-height: 1.3;
+    }
+}
+
+    /* Добавьте эти стили для мобильной версии */
 @media screen and (max-width: 768px) {
     .modal-content {
-        width: 140%;
+        margin: 30% auto 0;
         padding: 20px;
-        margin: 20px auto;
+        width: 85%;
+        max-width: 350px;
     }
 
-    .modal-image-container {
-        width: 100%;
+    .modal-right img {
+        display: none; /* Скрываем QR-код на мобильных */
+    }
+
+    .modal-right h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .modal-right p {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .modal-left img {
+        width: 1080px;
         height: auto;
         margin: 10px 0;
     }
 
-    .mobile-image {
-        width: 100% !important;
-        height: 600px !important; /* Увеличиваем фиксированную высоту */
-        min-width: 300px !important;
-        max-width: none !important;
-        max-height: none !important;
-        object-fit: contain !important;
-        object-position: center !important;
-        transform: scale(1.4) !important; /* Увеличиваем изображение на 20% */
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .qr-code {
-        display: none !important;
-    }
-
-    /* Уменьшаем отступы */
-    .modal-content h2 {
-        font-size: 1.8rem;
-        margin: 10px 0;
-    }
-
-    .modal-content p {
-        font-size: 1.4rem;
-        margin: 10px 0;
-    }
-
-    .continue-button {
-        width: 80%;
-        margin: 10px auto;
-        padding: 15px;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    /* Стили для крестика закрытия */
-    .close-button {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        color: #FFFFFF;
-        font-size: 35px; /* Увеличиваем размер */
-        font-weight: bold;
-        cursor: pointer;
-        z-index: 1000; /* Добавляем высокий z-index */
-        width: 40px; /* Увеличиваем область нажатия */
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.2); /* Добавляем полупрозрачный фон */
-        border-radius: 50%; /* Делаем круглым */
-        padding: 0;
-        margin: 0;
-    }
-
-    .close-button:hover {
-        color: #FF9F00;
-        background: rgba(0, 0, 0, 0.4);
-    }
-
-    /* Убедимся, что модальное окно тоже имеет z-index */
-    .modal {
-        z-index: 999;
-    }
-
-    .modal-content {
-        z-index: 1000;
+    /* Делаем кнопку "Продолжить" более заметной */
+    .modal-right .hero-button {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        margin-top: 15px;
+        display: inline-block;
     }
 }
 
 </style>
 
-<script>
-    // Tabs functionality
-    document.querySelectorAll('.tab-button').forEach(button => {
-        button.addEventListener('click', function() {
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
-            document.getElementById(this.getAttribute('data-tab')).style.display = 'block';
-            this.classList.add('active');
-        });
-    });
-</script>
-
-<script>
-    // Modal functionality for QR code
-    document.querySelectorAll('.open-qr-modal').forEach(button => {
-        button.addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('qr-modal').style.display = 'flex';
-        });
-    });
-
-    document.querySelector('.close-button').addEventListener('click', function() {
-        document.getElementById('qr-modal').style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target == document.getElementById('qr-modal')) {
-            document.getElementById('qr-modal').style.display = 'none';
-        }
-    });
-
-    // Tabs functionality
-    document.querySelectorAll('.tab-button').forEach(button => {
-        button.addEventListener('click', function() {
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
-            document.getElementById(this.getAttribute('data-tab')).style.display = 'block';
-            this.classList.add('active');
-        });
-    });
-
-<script>
-    // Tabs functionality to switch between Prepaid, Pro, and Gift sections
-    document.querySelectorAll('.tab-button').forEach(button => {
-        button.addEventListener('click', function () {
-            // Remove active class from all buttons
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            // Add active class to the clicked button
-            this.classList.add('active');
-
-            // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
-
-            // Show the selected tab content
-            const tabId = this.getAttribute('data-tab');
-            document.getElementById(tabId).style.display = 'block';
-        });
-    });
-</script>
-
-<script>
-    // Modal functionality for QR code
-    document.querySelectorAll('.open-qr-modal').forEach(button => {
-        button.addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('qr-modal').style.display = 'flex';
-        });
-    });
-
-    document.querySelector('.close-button').addEventListener('click', function() {
-        document.getElementById('qr-modal').style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target == document.getElementById('qr-modal')) {
-            document.getElementById('qr-modal').style.display = 'none';
-        }
-    });
-</script>
 <footer id="footer" class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <p>&copy; 2024 AtlasCard. Все права защищены.</p>
-            <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
-            <a href="privacy.html" class="privacy-link">Политика конфиденциальности</a>
-        </div>
-    </div>
+    <section id="contact" class="contact">
+        <p>&copy; 2024 AtlasCard. Все права защищены.</p>
+        <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
+        <p><a href="privacy.html">Политика конфиденциальности</a></p>
+    </section>
 </footer>
+
+</body>
+</html>
