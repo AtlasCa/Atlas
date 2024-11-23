@@ -30,7 +30,7 @@
         
         <!-- Новый контейнер для изображения на мобильных -->
         <div class="modal-image-container">
-            <img src="img/control.png" alt="Mobile promotion" class="mobile-image">
+            <img src="img/vipustit.png" alt="Mobile promotion" class="mobile-image">
         </div>
         
         <h2>AtlasCard - это удобное мини-приложение в Telegram</h2>
@@ -957,10 +957,10 @@
     .modal-image-container {
         display: block;
         width: 100%;
-        max-width: 300px;
-        height: 200px;
+        max-width: 400px; /* Увеличиваем максимальную ширину */
+        height: 300px; /* Увеличиваем высоту */
         margin: 20px auto;
-        background-color: #FFFFFF;
+        background-color: transparent; /* Убираем белый фон */
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -968,10 +968,19 @@
     }
 
     .modal-image-container img {
-        display: block; /* Показываем новое изображение */
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
+        display: block;
+        width: 100%; /* Занимает всю ширину контейнера */
+        height: 100%; /* Занимает всю высоту контейнера */
+        object-fit: contain; /* Сохраняет пропорции */
+        background-color: transparent; /* Убираем фон у изображения *
+    }
+
+    /* Увеличиваем размер модального окна */
+    .modal-content {
+        width: 95%;
+        padding: 25px 20px;
+        margin: 10px;
+        background-color: #12401E;
     }
 
     .modal-content h2 {
