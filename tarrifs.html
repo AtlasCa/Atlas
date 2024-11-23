@@ -367,9 +367,10 @@
 </div>
 
 
+<!-- Замените кнопку на ссылку -->
 <div class="footer">
     <div class="container">
-        <button class="privacy-policy-button">Политика конфиденциальности</button>
+        <a href="privacy.html" class="privacy-policy-button">Политика конфиденциальности</a>
     </div>
 </div>
 
@@ -437,15 +438,27 @@
 </style>
 
 <style>
-    /* Footer Styling */
-    .footer {
-        background-color: #F1F1F1;
-        color: #000000;
-        padding: 20px;
-        text-align: center;
-        margin-top: 40px;
-    }
 
+/* Стили для ссылки политики конфиденциальности */
+.privacy-policy-button {
+    background-color: transparent;
+    color: #12401E;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.privacy-policy-button:hover {
+    color: #FF9F00;
+}
+
+@media screen and (max-width: 768px) {
     .privacy-policy-button {
         background-color: #F1F1F1;
         color: #FFFFFF;
@@ -457,11 +470,7 @@
         cursor: pointer;
         transition: background-color 0.3s;
     }
-
-    .privacy-policy-button:hover {
-        background-color: #FFFFFF;
-        color: #12401E;
-    }
+}
 
     /* Main Header Styling */
     body {
@@ -521,6 +530,41 @@
     .main-header .main-nav ul li a:hover {
         color: #FF9F00;
     }
+
+.footer {
+    background-color: #F1F1F1;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.privacy-link {
+    color: #12401E;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.privacy-link:hover {
+    color: #FF9F00;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 15px 0;
+    }
+    
+    .privacy-link {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
 
     /* Modal Styling */
     .modal {
@@ -1108,8 +1152,11 @@
     });
 </script>
 <footer id="footer" class="footer">
-    <section id="contact" class="contact">
-        <p>&copy; 2024 AtlasCard. Все права защищены.</p>
-        <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
-    </section>
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2024 AtlasCard. Все права защищены.</p>
+            <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
+            <a href="privacy.html" class="privacy-link">Политика конфиденциальности</a>
+        </div>
+    </div>
 </footer>
