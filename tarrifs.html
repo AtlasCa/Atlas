@@ -1,5 +1,5 @@
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -955,10 +955,12 @@
     }
 
     .mobile-image {
-        width: 100% !important;
-        height: 500px !important; /* Фиксированная высота */
+        width: 90vw !important; /* 90% от ширины экрана */
+        height: 70vh !important; /* 70% от высоты экрана */
         object-fit: contain !important;
-        margin: 0 auto;
+        object-position: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .qr-code {
