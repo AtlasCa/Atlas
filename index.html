@@ -869,6 +869,54 @@ document.addEventListener('DOMContentLoaded', function() {
             margin-top: 40px;
         }
 
+.footer {
+    background-color: #F1F1F1;
+    color: #12401E; /* Изменил цвет текста на более контрастный */
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #12401E; /* Изменил цвет ссылок для лучшей видимости */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #FF9F00;
+}
+
+/* Добавляем стили для параграфов в футере */
+.footer p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.privacy-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.privacy-link:hover {
+    color: #FFFFFF;
+
+/* Мобильные стили */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 30px 15px;
+    }
+    
+    .footer p {
+        font-size: 1rem;
+    }
+}
+
 </style>
 
 
@@ -2110,6 +2158,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <section id="contact" class="contact">
         <p>&copy; 2024 AtlasCard. Все права защищены.</p>
         <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
+            <a href="privacy.html" class="privacy-link">Политика конфиденциальности</a>
     </section>
 </footer>
 
