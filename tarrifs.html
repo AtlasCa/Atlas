@@ -807,8 +807,8 @@
 
     /* Увеличиваем размер карты */
     .animated-card {
-        width: 90% !important; /* Уменьшаем немного ширину карты */
-        max-width: 425px; /* Максимальная ширина */
+        width: 80% !important; /* Уменьшаем немного ширину карты */
+        max-width: 350px; /* Максимальная ширина */
         height: auto;
         margin: 0 auto;
         display: block;
@@ -839,6 +839,33 @@
     font-size: 2rem; /* Уменьшаем с 3rem до 2rem */
     color: #12401E;
     margin-bottom: 10px;
+}
+
+.card-button {
+    background-color: #FF9F00;
+    color: #FFFFFF;
+    padding: 20px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-top: 25px; /* Добавляем отступ сверху */
+    font-size: 1.6rem; /* Увеличиваем размер текста */
+    transition: background-color 0.3s;
+}
+
+/* Для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .card-button {
+        margin-top: 20px; /* Немного меньший отступ на мобильных */
+        font-size: 1.4rem; /* Немного меньший размер шрифта на мобильных */
+        padding: 15px 25px; /* Корректируем padding для мобильных */
+    }
+}
+
+.card-button:hover {
+    background-color: #12401E;
 }
 
 /* Для мобильных устройств можно сделать еще меньше */
