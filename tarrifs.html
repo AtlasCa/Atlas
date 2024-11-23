@@ -885,6 +885,40 @@ body {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .features-section .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature-card {
+        width: 100%; /* Карточки займут всю ширину экрана на маленьких устройствах */
+    }
+
+    .video-section {
+        height: 50vh; /* Уменьшаем высоту видео на мобильных устройствах */
+    }
+
+    .all-services-button {
+        width: 90%;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-content {
+        width: 90%; /* Увеличиваем ширину модального окна на мобильных устройствах */
+    }
+}
+
 /* Для мобильных устройств */
 @media screen and (max-width: 768px) {
     .main-header {
@@ -895,8 +929,55 @@ body {
         right: 0;
         transform: none;
     }
+
+.burger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #12401E;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .main-nav ul {
+        display: none;
+    }
 }
 </style>
+
+
+</script>
+
+<div class="burger-menu" onclick="toggleMenu()">
+    ☰
+</div>
+<nav class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#tariffs-section">Тарифы</a></li>
+        <li><a href="#faq-section">FAQ</a></li>
+        <li><a href="#about-section">О нас</a></li>
+        <li><a href="#contact">Контакты</a></li>
+    </ul>
+</nav>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
 
 <script>
     // Tabs functionality
