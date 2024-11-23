@@ -941,102 +941,65 @@
     margin: 15px 0;
 }
 
-/* Медиа-запрос для мобильных устройств */
 @media screen and (max-width: 768px) {
-
-    .modal {
-        padding: 0;
-    }
-
     .modal-content {
-        width: 100%;
-        height: 100vh;
-        padding: 20px;
-        margin: 0;
+        width: 90%;
+        height: auto;
+        padding: 30px 20px;
+        margin: 20px auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        border-radius: 15px;
     }
 
-    /* Скрываем QR-код */
+    /* Скрываем QR код */
     .qr-code {
-        display: none;
+        display: none !important;
     }
 
-    .modal-content img {
-        display: none; /* Скрываем QR код */
-    }
-
-    /* Добавляем новый контейнер для изображения */
-    .modal-image-container {
-        width: 100%;
-        max-width: none; /* Убираем ограничение максимальной ширины */
-        height: 400px; /* Значительно увеличиваем высоту */
-        margin: 20px auto;
-        background-color: transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-    }
-
-    .modal-image-container img {
-        display: block;
-        width: 90%; /* Занимает почти всю ширину */
-        height: 90%; /* Занимает почти всю высоту */
-        object-fit: contain;
-        background-color: transparent;
-        margin: 0 auto;
-    }
-
-    /* Увеличиваем размер модального окна */
-    .modal-content {
-        width: 100%;
-        padding: 25px 15px;
-        margin: 0;
-        height: auto;
-        background-color: #12401E;
-    }
-
-    /* Стили для нового изображения */
+    /* Стили для мобильного изображения */
     .mobile-image {
         display: block !important;
-        width: 90vw !important; /* Используем viewport width */
+        width: 100% !important;
         height: auto !important;
-        max-height: 40vh !important; /* Используем viewport height */
+        min-height: 300px !important;
+        max-height: none !important;
         object-fit: contain;
-        margin: 20px auto;
+        margin: 20px 0;
     }
 
+    .modal-image-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    /* Текстовые элементы */
     .modal-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin: 15px 0;
         padding: 0 10px;
     }
 
     .modal-content p {
-        font-size: 1.1rem;
-        margin: 10px 0;
+        font-size: 1.4rem;
+        margin: 15px 0;
         padding: 0 10px;
     }
 
+    /* Кнопка */
     .continue-button {
-        display: block;
-        width: 90%;
-        margin: 20px auto 10px;
-        padding: 15px;
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
-    .close-button {
-        top: 15px;
-        right: 15px;
-        font-size: 24px;
+        width: 80%;
+        margin: 20px 0;
+        padding: 15px 30px;
+        font-size: 1.4rem;
     }
 }
-
 </style>
 
 <script>
