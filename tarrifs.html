@@ -6,17 +6,26 @@
 <header class="main-header">
     <div class="container">
         <div class="brand">
-<a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
+            <a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
         </div>
-        <div class="burger-menu">☰</div>
+        <div class="burger-menu" onclick="toggleMenu()">☰</div>
         <nav class="mobile-menu" id="mobileMenu">
             <ul>
                 <li><a href="index.html">Главная</a></li>
-        <li><a href="docs.html" onclick="toggleMenu()">Статьи</a></li>
+                <li><a href="docs.html">Статьи</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
         <nav class="main-nav">
+    <ul>
+        <li><a href="index.html" onclick="toggleMenu()">Главная</a></li>
+        <li><a href="tarrifs.html" onclick="toggleMenu()">Тарифы</a></li>
+        <li><a href="#faq-section" onclick="scrollToSection('faq-section'); toggleMenu()">FAQ</a></li>
+        <li><a href="#about-section" onclick="scrollToSection('about-section'); toggleMenu()">О нас</a></li>
+        <li><a href="docs.html" onclick="toggleMenu()">Статьи</a></li>
+        <li><a href="#footer" onclick="scrollToSection('footer'); toggleMenu()">Контакты</a></li>
+    </ul>
+        </nav>
     </div>
 </header>
 
@@ -803,7 +812,7 @@
     }
 }
 
-/* Показываем только на мобильных устройствах */
+/* Мобильные стили */
 @media (max-width: 768px) {
     .burger-menu {
         display: block !important;
@@ -813,8 +822,8 @@
         margin-left: auto;
     }
 
-    .mobile-menu.active {
-        display: block !important;
+    .mobile-menu {
+        display: none;
         position: fixed;
         top: 60px;
         left: 0;
@@ -823,6 +832,10 @@
         padding: 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 1000;
+    }
+
+    .mobile-menu.active {
+        display: block;
     }
 
     .main-nav {
@@ -839,13 +852,15 @@ function toggleMenu() {
 }
 
 // Добавляем обработчик клика на бургер-меню
-document.querySelector('.burger-menu').addEventListener('click', toggleMenu);
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.burger-menu').addEventListener('click', toggleMenu);
 
-// Закрытие меню при клике на пункт меню
-document.querySelectorAll('.mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenu.classList.remove('active');
+    // Закрытие меню при клике на пункт меню
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.remove('active');
+        });
     });
 });
 <script>
@@ -929,6 +944,8 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
         }
     });
 </script>
+
+
 <footer id="footer" class="footer">
     <section id="contact" class="contact">
         <p>&copy; 2024 AtlasCard. Все права защищены.</p>
