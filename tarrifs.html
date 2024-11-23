@@ -955,37 +955,37 @@
 
     /* Добавляем новый контейнер для изображения */
     .modal-image-container {
-        display: block;
         width: 100%;
-        max-width: 400px; /* Увеличиваем максимальную ширину */
-        height: 300px; /* Увеличиваем высоту */
+        max-width: none; /* Убираем ограничение максимальной ширины */
+        height: 400px; /* Значительно увеличиваем высоту */
         margin: 20px auto;
-        background-color: transparent; /* Убираем белый фон */
-        border-radius: 10px;
+        background-color: transparent;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0;
     }
 
     .modal-image-container img {
         display: block;
-        width: 200%; /* Занимает всю ширину контейнера */
-        height: 200%; /* Занимает всю высоту контейнера */
-        object-fit: contain; /* Сохраняет пропорции */
-        background-color: transparent; /* Убираем фон у изображения *
+        width: 90%; /* Занимает почти всю ширину */
+        height: 90%; /* Занимает почти всю высоту */
+        object-fit: contain;
+        background-color: transparent;
+        margin: 0 auto;
     }
 
     /* Увеличиваем размер модального окна */
     .modal-content {
-        width: 95%;
-        padding: 25px 20px;
-        margin: 10px;
+        width: 100%;
+        padding: 25px 15px;
+        margin: 0;
+        height: auto;
         background-color: #12401E;
     }
 
     .modal-content h2 {
-        font-size: 1.5rem;
-        margin: 10px 0;
+        margin-top: 0;
     }
 
     .modal-content p {
