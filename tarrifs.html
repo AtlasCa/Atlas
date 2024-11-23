@@ -5,8 +5,11 @@
 <header class="main-header">
     <div class="container">
         <div class="brand">
-<a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
+            <a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
         </div>
+        
+        <div class="burger-menu" onclick="toggleMenu()">☰</div>
+        
         <nav class="main-nav">
             <ul class="center-nav">
                 <li><a href="index.html" class="nav-link">Главная</a></li>
@@ -18,6 +21,7 @@
         </nav>
     </div>
 </header>
+
 
 <div id="qr-modal" class="modal">
     <div class="modal-content">
@@ -934,7 +938,42 @@ body {
     display: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #FFFFFF;
+    color: #12401E;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        position: relative;
+    }
 }
 
 .mobile-menu {
@@ -944,15 +983,6 @@ body {
     background-color: #12401E;
 }
 
-@media (max-width: 768px) {
-    .burger-menu {
-        display: block;
-    }
-
-    .main-nav ul {
-        display: none;
-    }
-}
 </style>
 
 
@@ -963,7 +993,7 @@ body {
 </div>
 <nav class="mobile-menu" id="mobileMenu">
     <ul>
-        <li><a href="#">Главная</a></li>
+        <li><a href="index.html">Главная</a></li>
         <li><a href="#tariffs-section">Тарифы</a></li>
         <li><a href="#faq-section">FAQ</a></li>
         <li><a href="#about-section">О нас</a></li>
@@ -972,23 +1002,18 @@ body {
 </nav>
 
 <script>
-    function toggleMenu() {
-        const menu = document.getElementById('mobileMenu');
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    }
-</script>
+function toggleMenu() {
+    const nav = document.querySelector('.main-nav');
+    nav.classList.toggle('active');
+}
 
-
-<script>
-    // Tabs functionality
-    document.querySelectorAll('.tab-button').forEach(button => {
-        button.addEventListener('click', function() {
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
-            document.getElementById(this.getAttribute('data-tab')).style.display = 'block';
-            this.classList.add('active');
-        });
+// Закрытие меню при клике на пункт меню
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        const nav = document.querySelector('.main-nav');
+        nav.classList.remove('active');
     });
+});
 </script>
 
 <script>
@@ -1058,6 +1083,8 @@ body {
         }
     });
 </script>
+
+
 <footer id="footer" class="footer">
     <section id="contact" class="contact">
         <p>&copy; 2024 AtlasCard. Все права защищены.</p>
