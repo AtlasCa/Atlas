@@ -1,8 +1,3 @@
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
 <header class="main-header">
     <div class="container">
         <div class="brand">
@@ -752,40 +747,84 @@
         color: #12401E;
     }
 
-
-.card-info {
-    width: 60%;
-    text-align: left;
-    margin-left: -200px;
-}
-
-.card-info h2 {
-    font-size: 3.5rem; /* Уменьшено с 5rem */
-    color: #12401E;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    white-space: nowrap; /* Заголовок в одну строку */
-}
-
-.card-info p {
-    font-size: 1.8rem; /* Уменьшено с 2.5rem */
-    color: #6A6A6A;
-    line-height: 1.4;
-    max-width: 80%; /* Ограничиваем ширину текста */
-}
-
-/* Медиа-запрос для мобильных устройств */
 @media screen and (max-width: 768px) {
+    /* Секция с картой */
+    .card-animation-section {
+        padding: 40px 20px;
+    }
+
+    .card-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-animation {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /* Увеличиваем размер карты */
+    .animated-card {
+        width: 90% !important; /* Увеличиваем ширину карты */
+        max-width: 400px; /* Максимальная ширина */
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Стили для текстового блока */
+    .card-info {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
     .card-info h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        margin-bottom: 15px;
     }
 
     .card-info p {
-        font-size: 1.4rem;
-        max-width: 100%;
+        font-size: 1.8rem;
+        padding: 0 20px;
     }
+
+
+/* Стили для заголовка */
+.main-header {
+    background-color: #FFFFFF;
+    padding: 5px;
+    width: 100vw; /* На всю ширину viewport */
+    margin-left: calc(-50vw + 50%); /* Компенсация отступов */
+    margin-right: calc(-50vw + 50%);
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
 }
 
+.main-header .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .main-header {
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+    }
+}
 </style>
 
 <script>
