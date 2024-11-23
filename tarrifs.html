@@ -893,6 +893,19 @@ document.addEventListener('DOMContentLoaded', function() {
     font-size: 1.2rem;
 }
 
+.privacy-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.privacy-link:hover {
+    color: #FF9F00;
+
 /* Мобильные стили */
 @media screen and (max-width: 768px) {
     .footer {
@@ -2145,7 +2158,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <section id="contact" class="contact">
         <p>&copy; 2024 AtlasCard. Все права защищены.</p>
         <p>Свяжитесь с нами: <a href="https://t.me/AtlasCardSupportBot">t.me/AtlasCardSupportBot</a></p>
-        <p><a href="privacy.html">Политика конфиденциальности</a></p>
+            <a href="privacy.html" class="privacy-link">Политика конфиденциальности</a>
     </section>
 </footer>
 
