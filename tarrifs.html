@@ -1,30 +1,16 @@
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=0.85, user-scalable=no">
-    <link rel="stylesheet" href="styles.css">
-</head>
-
 <header class="main-header">
     <div class="container">
         <div class="brand">
-            <a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
+<a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
         </div>
-        <div class="burger-menu" onclick="toggleMenu()">☰</div>
-        <nav class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="docs.html">Статьи</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
         <nav class="main-nav">
-    <ul>
-        <li><a href="index.html" onclick="toggleMenu()">Главная</a></li>
-        <li><a href="tarrifs.html" onclick="toggleMenu()">Тарифы</a></li>
-        <li><a href="#faq-section" onclick="scrollToSection('faq-section'); toggleMenu()">FAQ</a></li>
-        <li><a href="#about-section" onclick="scrollToSection('about-section'); toggleMenu()">О нас</a></li>
-        <li><a href="docs.html" onclick="toggleMenu()">Статьи</a></li>
-        <li><a href="#footer" onclick="scrollToSection('footer'); toggleMenu()">Контакты</a></li>
-    </ul>
+            <ul class="center-nav">
+                <li><a href="index.html" class="nav-link">Главная</a></li>
+                <li><a href="#tariffs-section" class="nav-link">Тарифы</a></li>
+                <li><a href="index.html" class="learn-more">FAQ</a></li>
+                <li><a href="index.html" class="nav-link">О нас</a></li>
+                <li><a href="index.html" class="nav-link">Контакты</a></li>
+            </ul>
         </nav>
     </div>
 </header>
@@ -434,20 +420,13 @@
     .all-services-button:hover {
         background-color: #12401E;
     }
-
-/* Скрываем и бургер, и мобильное меню на десктопе */
-.burger-menu,
-.mobile-menu,
-#mobileMenu {
-    display: none !important;
-}
 </style>
 
 <style>
     /* Footer Styling */
     .footer {
         background-color: #F1F1F1;
-        color: #000000;
+        color: #FFFFFF;
         padding: 20px;
         text-align: center;
         margin-top: 40px;
@@ -811,59 +790,7 @@
         padding: 0 20px;
     }
 }
-
-/* Мобильные стили */
-@media (max-width: 768px) {
-    .burger-menu {
-        display: block !important;
-        font-size: 2rem;
-        cursor: pointer;
-        color: #12401E;
-        margin-left: auto;
-    }
-
-    .mobile-menu {
-        display: none;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #FFFFFF;
-        padding: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-    }
-
-    .mobile-menu.active {
-        display: block;
-    }
-
-    .main-nav {
-        display: none !important;
-    }
-}
 </style>
-
-
-<script>
-function toggleMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenu.classList.toggle('active');
-}
-
-// Добавляем обработчик клика на бургер-меню
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.burger-menu').addEventListener('click', toggleMenu);
-
-    // Закрытие меню при клике на пункт меню
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.remove('active');
-        });
-    });
-});
-<script>
 
 <script>
     // Tabs functionality
@@ -944,8 +871,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 </script>
-
-
 <footer id="footer" class="footer">
     <section id="contact" class="contact">
         <p>&copy; 2024 AtlasCard. Все права защищены.</p>
