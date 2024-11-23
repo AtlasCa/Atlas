@@ -957,7 +957,7 @@ body {
     }
 
     .main-nav {
-        display: none;
+        display: none !important;
         position: absolute;
         top: 100%;
         left: 0;
@@ -968,6 +968,10 @@ body {
     }
 
     .main-nav.active {
+        display: block;
+    }
+
+    .mobile-menu.active {
         display: block;
     }
 
@@ -1010,11 +1014,21 @@ body {
 }
 
 .mobile-menu a {
-    color: #12401E;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
+        color: #12401E;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: block;
+        padding: 10px 0;
 }
+
+    .mobile-menu a:hover {
+        color: #FF9F00;
+    }
+
+    .main-header .container {
+        padding: 10px 20px;
+    }
 
 </style>
 
