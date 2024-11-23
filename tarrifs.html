@@ -943,13 +943,13 @@
 
 @media screen and (max-width: 768px) {
     .modal-content {
-        width: 90%;
+        width: 140%;
         padding: 20px;
         margin: 20px auto;
     }
 
     .modal-image-container {
-        width: 120%;
+        width: 100%;
         height: auto;
         margin: 10px 0;
     }
@@ -962,7 +962,7 @@
         max-height: none !important;
         object-fit: contain !important;
         object-position: center !important;
-        transform: scale(1.6) !important; /* Увеличиваем изображение на 20% */
+        transform: scale(1.4) !important; /* Увеличиваем изображение на 20% */
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -986,6 +986,43 @@
         width: 80%;
         margin: 10px auto;
         padding: 15px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Стили для крестика закрытия */
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #FFFFFF;
+        font-size: 35px; /* Увеличиваем размер */
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1000; /* Добавляем высокий z-index */
+        width: 40px; /* Увеличиваем область нажатия */
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.2); /* Добавляем полупрозрачный фон */
+        border-radius: 50%; /* Делаем круглым */
+        padding: 0;
+        margin: 0;
+    }
+
+    .close-button:hover {
+        color: #FF9F00;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Убедимся, что модальное окно тоже имеет z-index */
+    .modal {
+        z-index: 999;
+    }
+
+    .modal-content {
+        z-index: 1000;
     }
 }
 
