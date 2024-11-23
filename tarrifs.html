@@ -24,7 +24,15 @@
 <div id="qr-modal" class="modal">
     <div class="modal-content">
         <span class="close-button">&times;</span>
-        <img src="img/QRcode.png" alt="QR Code to chat bot">
+        
+        <!-- QR код для десктопа -->
+        <img src="img/QRcode.png" alt="QR Code to chat bot" class="qr-code">
+        
+        <!-- Новый контейнер для изображения на мобильных -->
+        <div class="modal-image-container">
+            <img src="img/vipustit.png" alt="Mobile promotion" class="mobile-image">
+        </div>
+        
         <h2>AtlasCard - это удобное мини-приложение в Telegram</h2>
         <p>Нажмите "Продолжить", чтобы открыть с текущего устройства</p>
         <a href="https://t.me/AtlasCard_bot" class="continue-button">Продолжить →</a>
@@ -900,7 +908,98 @@
         margin-top: 20px;
         line-height: 1.4;
     }
+
+
+/* Стили для модального окна */
+.modal-content {
+    background-color: #12401E;
+    color: #FFFFFF;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 90%; /* Базовая ширина */
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+    text-align: center;
 }
+
+/* Стили для изображения */
+.modal-content img {
+    width: 60%;
+    max-width: 200px;
+    height: auto;
+    margin: 15px auto;
+}
+
+.modal-content h2 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 20px;
+    }
+
+    .modal-content img {
+        display: none; /* Скрываем QR код */
+    }
+
+    /* Добавляем новый контейнер для изображения */
+    .modal-image-container {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+        margin: 20px auto;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-image-container img {
+        display: block; /* Показываем новое изображение */
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .modal-content p {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+    .continue-button {
+        display: block;
+        width: 90%;
+        margin: 20px auto 10px;
+        padding: 15px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .close-button {
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+    }
+}
+
 </style>
 
 <script>
