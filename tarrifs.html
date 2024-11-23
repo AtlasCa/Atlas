@@ -943,10 +943,25 @@
 
 /* Медиа-запрос для мобильных устройств */
 @media screen and (max-width: 768px) {
+
+    .modal {
+        padding: 0;
+    }
+
     .modal-content {
-        width: 95%;
-        padding: 20px 15px;
-        margin: 20px;
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Скрываем QR-код */
+    .qr-code {
+        display: none;
     }
 
     .modal-content img {
@@ -984,13 +999,26 @@
         background-color: #12401E;
     }
 
+    /* Стили для нового изображения */
+    .mobile-image {
+        display: block !important;
+        width: 90vw !important; /* Используем viewport width */
+        height: auto !important;
+        max-height: 40vh !important; /* Используем viewport height */
+        object-fit: contain;
+        margin: 20px auto;
+    }
+
     .modal-content h2 {
-        margin-top: 0;
+        font-size: 1.5rem;
+        margin: 15px 0;
+        padding: 0 10px;
     }
 
     .modal-content p {
         font-size: 1.1rem;
         margin: 10px 0;
+        padding: 0 10px;
     }
 
     .continue-button {
