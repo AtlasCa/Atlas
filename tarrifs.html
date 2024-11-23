@@ -3,15 +3,15 @@
         <div class="brand">
 <a href="index.html" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 2.5rem; color: #12401E; text-decoration: none;">AtlasCard</a>
         </div>
-        <nav class="main-nav">
-            <ul class="center-nav">
-                <li><a href="index.html" class="nav-link">Главная</a></li>
-                <li><a href="#tariffs-section" class="nav-link">Тарифы</a></li>
-                <li><a href="index.html" class="learn-more">FAQ</a></li>
-                <li><a href="index.html" class="nav-link">О нас</a></li>
-                <li><a href="index.html" class="nav-link">Контакты</a></li>
+        <div class="burger-menu">☰</div>
+        <nav class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+        <li><a href="docs.html" onclick="toggleMenu()">Статьи</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
+        <nav class="main-nav">
     </div>
 </header>
 
@@ -825,6 +825,25 @@
     }
 }
 </style>
+
+
+<script>
+function toggleMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('active');
+}
+
+// Добавляем обработчик клика на бургер-меню
+document.querySelector('.burger-menu').addEventListener('click', toggleMenu);
+
+// Закрытие меню при клике на пункт меню
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenu.classList.remove('active');
+    });
+});
+<script>
 
 <script>
     // Tabs functionality
